@@ -1,0 +1,14 @@
+body {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $default;
+    @extend %dmsans-700px;
+    letter-spacing: 0.6px;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

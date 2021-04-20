@@ -2,4 +2,106 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+.header {
+    padding: 50px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    display: flex;
+    &__items {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+    &__link {
+        color: $title;
+        transition: color 0.5s;
+        @extend %rubik-500px;
+        font-size: 15px;
+        line-height: 1em;
+        font-weight: 700;
+    }
+    &__link:hover {
+        color: #fcd7b6;
+        /*изменить*/
+        /*поставить транзишин*/
+    }
+    &__link--active {
+        color: $accent;
+    }
+}
+
+
+/*75меду боковых  60 между средних*/
+
+.nav {
+    display: flex;
+    font-size: 33px;
+    /*пофиксеть отступ и черточку сделать*/
+    &__ht {
+        background-color: #edf1f4;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        /*решил написать каждому по 20пх */
+    }
+    &__bg {
+        padding: 25px;
+        width: 180px;
+        height: 50px;
+        background-color: #fcd7b6;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @extend %dmsans-400px;
+        line-height: 27px;
+        margin-right: 20px;
+        position: relative;
+    }
+    &__link-num {
+        position: relative;
+    }
+    &__bg::after {
+        content: '|';
+        position: absolute;
+        top: 9px;
+        color: #fde7d3;
+    }
+    &__link-num::before {
+        content: '0';
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        background-color: #ffffff;
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        line-height: 15px;
+        border-radius: 50%;
+        text-align: center;
+    }
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*
+.s {
+    margin-right: 20px;
+}*/
+
 @import 'media';
