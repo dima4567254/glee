@@ -1,14 +1,31 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-size: 16px;
-    line-height: 30px;
-    font-weight: 400;
+    line-height: 1;
+    font-weight: 700;
     color: $default;
     @extend %dmsans-700px;
     letter-spacing: 0.6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {
     max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }

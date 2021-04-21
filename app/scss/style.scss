@@ -24,7 +24,7 @@
         transition: color 0.5s;
         @extend %rubik-500px;
         font-size: 15px;
-        line-height: 1em;
+        line-height: 1;
         font-weight: 700;
     }
     &__link:hover {
@@ -93,15 +93,95 @@
     }
 }
 
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
+.footer {
+    list-style: none;
+    @extend %rubik-400px;
+    font-size: 14px;
+    color: #7b7b7b;
+    &__top {
+        padding: 80px 0 70px;
+        border-bottom: 1px solid #dae4e9;
+        display: flex;
+    }
+    &__contacts {
+        max-width: 210px;
+        margin-right: 85px;
+    }
+    &__services {
+        max-width: 170px;
+        margin-right: 175px;
+    }
+    &__account {
+        max-width: 100px;
+        margin-right: 210px;
+    }
+    &__newsletter {
+        max-width: 275px;
+    }
+    &__logo {
+        margin-bottom: 25px;
+        display: block;
+    }
+    &__text p {
+        margin-bottom: 16px;
+        font-style: normal;
+    }
+    &__link {
+        margin-bottom: 15px;
+    }
+    &__link span {
+        text-transform: uppercase;
+    }
+    &__title {
+        color: #1f2044;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+        letter-spacing: -0.4px;
+        line-height: 3;
+        font-size: 16px;
+    }
+    .footer-form__text {
+        margin-bottom: 30px;
+    }
+    &__imput {
+        max-width: 170px;
+        height: 40px;
+        padding: 15px;
+        border: none;
+        background-color: #fef7f0;
+        &::placeholder {
+            font-size: 12px;
+            color: #234969;
+        }
+    }
+    &__btn {
+        border: none;
+        background-color: #a3bbc8;
+        padding: 11px 20px 13px 17px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    &__bottom {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+    }
+    &__link-nav {
+        padding-right: 15px;
+        padding-left: 12px;
+    }
+    &__link-nav:last-child {
+        border-right: 1px solid;
+    }
+    /*
+     &__item::after {
+       content: "|";
+     }
+                    */
 }
-
-
-/*
-.s {
-    margin-right: 20px;
-}*/
 
 @import 'media';
