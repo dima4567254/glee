@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 .header {
     padding: 50px 0;
@@ -54,8 +55,20 @@
         align-items: center;
         margin-right: 20px;
         /*решил написать каждому по 20пх */
+        transition: background-color 0.3s;
     }
-    &__bg {
+    .nav__ht:hover {
+        background-color: #fcd7b6;
+        /*подумать может можно одним сделать */
+    }
+    /*
+    .nav__ht:not(:last-child) {
+        margin-right: 0px;
+    }
+    .nav__link:not(:last-child) {
+        margin-right: 0px;
+    }*/
+    &__purchases {
         padding: 25px;
         width: 180px;
         height: 50px;
@@ -68,6 +81,11 @@
         line-height: 27px;
         margin-right: 20px;
         position: relative;
+        transition: background-color 0.3s;
+        /*может можно 1 сделать  цвет кнопки  background-color #a3bbc8 */
+    }
+    .nav__bg:hover {
+        background-color: #fcd7b6;
     }
     &__link-num {
         position: relative;
@@ -91,7 +109,25 @@
         border-radius: 50%;
         text-align: center;
     }
+    .nav__burger {
+        background-color: #a3bbc8;
+        border-radius: 30px;
+        width: 50px;
+        font-size: 10px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    .nav__burger:hover {
+        background-color: #fcd7b6;
+        /*подумать может можно одним сделать  */
+    }
 }
+
+
+/*оформить форму как в wawe */
 
 .footer {
     list-style: none;
@@ -128,9 +164,13 @@
     }
     &__link {
         margin-bottom: 15px;
+        transition: color 0.3s;
     }
     &__link span {
         text-transform: uppercase;
+    }
+    &__link:hover {
+        color: #fcd7b6;
     }
     &__title {
         color: #1f2044;
@@ -149,6 +189,7 @@
         padding: 15px;
         border: none;
         background-color: #fef7f0;
+        width: 100%;
         &::placeholder {
             font-size: 12px;
             color: #234969;
@@ -167,21 +208,110 @@
         justify-content: space-between;
         align-items: center;
     }
+    /*
+    &__imput,
+    &__btn:focus {
+        outline: solid #00B2A0;
+    }*/
     &__list {
         display: flex;
     }
     &__link-nav {
         padding-right: 15px;
         padding-left: 12px;
+        transition: color 0.3s;
     }
     &__link-nav:last-child {
         border-right: 1px solid;
+    }
+    &__link-nav:hover {
+        color: #fcd7b6;
     }
     /*
      &__item::after {
        content: "|";
      }
                     */
+    /*убрать отступ у кнопки в хедере*/
+}
+
+.slider__inner {
+    background-color: #fcd7b6;
+    height: 820px;
+    display: flex;
+}
+
+.slider__content {
+    padding: 215px 90px 0 300px;
+}
+
+.slider__title {
+    font-size: 72px;
+    text-transform: uppercase;
+    max-width: 440px;
+    /*задавать ширену до картинки*/
+    margin-bottom: 25px;
+}
+
+.slider__text {
+    color: #436372;
+    font-size: 18px;
+    text-transform: none;
+    max-width: 395px;
+    line-height: 1.6;
+    @extend %rubik-400px;
+    margin-bottom: 40px;
+}
+
+.slider__btn {
+    padding: 22px 17px 22px 22px;
+    @extend %btn;
+    transition: outline 0.3s;
+}
+
+.slider__btn:focus {
+    outline: solid #000000;
+}
+
+.slider__btn:hover {
+    opacity: 0.7;
+}
+
+.slider__icon {
+    padding-left: 60px;
+}
+
+.slider__img {
+    padding-top: 100px;
+    background-image: 100%;
+    max-height: 730px;
+}
+
+.slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slick-dots li:not(:last-child) {
+    margin-right: 11px;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+    transform: translateY(-2px);
+    background-color: #ffffff;
+}
+
+.slick-dots button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #fde3cc;
 }
 
 @import 'media';
