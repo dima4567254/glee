@@ -314,4 +314,120 @@
     background-color: #fde3cc;
 }
 
+.services {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fef7f0;
+    }
+    &__item {
+        padding: 45px 150px 60px 225px;
+        background-repeat: no-repeat;
+        border-right: 1px solid #e8e4df;
+        position: relative;
+    }
+    .services__item::before {
+        content: "";
+        position: absolute;
+        top: 47px;
+        left: 147px;
+        height: 50px;
+        width: 60px;
+        background-size: 86%;
+        background-repeat: no-repeat;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: #414141;
+        margin-bottom: 15px;
+    }
+    &__text {
+        @extend %dmsans-400px;
+        color: #585858;
+        max-width: 200px;
+    }
+    .services__item--support::before {
+        background-image: url('../images/icons/support.svg');
+    }
+    .services__item--delevery::before {
+        background-image: url('../images/icons/delevery.svg');
+    }
+    .services__item--payment::before {
+        background-image: url('../images/icons/payment.svg');
+    }
+}
+
+.services__item::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    left: 20;
+    bottom: 30;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+}
+
+.products {
+    &__title {
+        padding-top: 75px;
+        text-align: center;
+        font-size: 36px;
+        color: #191919;
+        margin-bottom: 35px;
+    }
+    &__liss {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    &__items:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__link {
+        color: #1a1a1a;
+        transition: color 0.5s;
+    }
+    &__link:hover {
+        color: #fcd7b6;
+    }
+}
+
+.products__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products__item {
+    /*padding: 25px 40px 35px 30px;*/
+    padding-top: 25px;
+    width: 265px;
+    height: 380px;
+    /* background-color: red;*/
+    margin-right: 27px;
+    margin-bottom: 40px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products__img {
+    margin-bottom: 70px;
+    width: 200px;
+    height: 200px;
+    /*margin: 0 auto;*/
+}
+
+.products__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.products__text {
+    color: #a3bbc8;
+}
+
 @import 'media';
