@@ -42,15 +42,21 @@ $title: #436372;
     @extend %rubik-500px;
 }
 
+%title {
+    padding-top: 75px;
+    text-align: center;
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 35px;
+}
+
 
 /*@extend %btn*/
 
-
-/*
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
-}*/
+}

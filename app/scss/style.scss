@@ -30,8 +30,6 @@
     }
     &__link:hover {
         color: #fcd7b6;
-        /*изменить*/
-        /*поставить транзишин*/
     }
     &__link--active {
         color: $accent;
@@ -124,115 +122,6 @@
         background-color: #fcd7b6;
         /*подумать может можно одним сделать  */
     }
-}
-
-
-/*оформить форму как в wawe */
-
-.footer {
-    list-style: none;
-    @extend %rubik-400px;
-    font-size: 14px;
-    color: #7b7b7b;
-    &__top {
-        padding: 80px 0 70px;
-        border-bottom: 1px solid #dae4e9;
-        display: flex;
-    }
-    &__contacts {
-        max-width: 210px;
-        margin-right: 85px;
-    }
-    &__services {
-        max-width: 170px;
-        margin-right: 175px;
-    }
-    &__account {
-        max-width: 100px;
-        margin-right: 210px;
-    }
-    &__newsletter {
-        max-width: 275px;
-    }
-    &__logo {
-        margin-bottom: 25px;
-        display: block;
-    }
-    &__text p {
-        margin-bottom: 16px;
-        font-style: normal;
-    }
-    &__link {
-        margin-bottom: 15px;
-        transition: color 0.3s;
-    }
-    &__link span {
-        text-transform: uppercase;
-    }
-    &__link:hover {
-        color: #fcd7b6;
-    }
-    &__title {
-        color: #1f2044;
-        text-transform: uppercase;
-        margin-bottom: 11px;
-        letter-spacing: -0.4px;
-        line-height: 3;
-        font-size: 16px;
-    }
-    .footer-form__text {
-        margin-bottom: 30px;
-    }
-    &__imput {
-        max-width: 170px;
-        height: 40px;
-        padding: 15px;
-        border: none;
-        background-color: #fef7f0;
-        width: 100%;
-        &::placeholder {
-            font-size: 12px;
-            color: #234969;
-        }
-    }
-    &__btn {
-        border: none;
-        background-color: #a3bbc8;
-        padding: 11px 20px 13px 17px;
-        color: #ffffff;
-        cursor: pointer;
-    }
-    &__bottom {
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /*
-    &__imput,
-    &__btn:focus {
-        outline: solid #00B2A0;
-    }*/
-    &__list {
-        display: flex;
-    }
-    &__link-nav {
-        padding-right: 15px;
-        padding-left: 12px;
-        transition: color 0.3s;
-    }
-    &__link-nav:last-child {
-        border-right: 1px solid;
-    }
-    &__link-nav:hover {
-        color: #fcd7b6;
-    }
-    /*
-     &__item::after {
-       content: "|";
-     }
-                    */
-    /*убрать отступ у кнопки в хедере*/
 }
 
 .slider__inner {
@@ -370,14 +259,10 @@
 }
 
 .products {
-    &__title {
-        padding-top: 75px;
-        text-align: center;
-        font-size: 36px;
-        color: #191919;
-        margin-bottom: 35px;
+    .title {
+        @extend %title;
     }
-    &__liss {
+    &__list {
         display: flex;
         justify-content: center;
         margin-bottom: 80px;
@@ -385,18 +270,19 @@
     &__items:not(:last-child) {
         margin-right: 30px;
     }
-    &__link {
+    &__btn {
         color: #1a1a1a;
         transition: color 0.5s;
+        border: none;
+        background-color: #ffffff;
     }
-    &__link:hover {
+    &__btn:hover {
         color: #fcd7b6;
     }
 }
 
 .products__content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -412,22 +298,263 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    content: "";
 }
 
 .products__img {
-    margin-bottom: 70px;
-    width: 200px;
-    height: 200px;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+.products__link {
+    position: relative;
 }
 
 .products__subtitle {
     font-size: 16px;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .products__text {
     color: #a3bbc8;
+}
+
+.mixitup-control-active {
+    color: $accent;
+}
+
+.products__item-box-link {
+    display: flex;
+    position: absolute;
+    top: 144px;
+    left: 17px;
+    width: 100%;
+    height: 200px;
+    transform: translateY(300%);
+}
+
+.products__item:hover {
+    .products__item-box-link {
+        transform: translateY(0);
+    }
+}
+
+.products__item-box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.products__item-link {
+    background-color: #fefefe;
+    border-radius: 30px;
+    width: 50px;
+    font-size: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    /*
+    position: absolute;
+    top: 0px;
+    left: 0px;*/
+}
+
+
+/*
+.products__item-link::before {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+*/
+
+.basket {
+    background-color: #a3bac7;
+}
+
+
+/*
+.products__item--search::before {
+    background-image: url('../images/icons/search.svg');
+}
+
+.products__item--basket::before {
+    background-image: url('../images/icons/basket.svg');
+}
+
+.products__item--heart::before {
+    background-image: url('../images/icons/heart.svg');
+}
+*/
+
+
+/*подумать можно ли сделать другой цвет без класса*/
+
+.nav__links-basket {
+    background-color: #a3bbc8;
+    border-radius: 30px;
+    width: 50px;
+    font-size: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin-right: 12px;
+}
+
+
+/*
+    .products__item-links {
+        background-color: #a3bbc8;
+        height: 50px;
+        width: 50px;
+        border-radius: 30px;
+    }
+    .products__content:hover {
+        transform: translateY(0);
+    }
+    .products__item-link:hover {
+        transform: translateY(0);
+    }
+}
+
+.box {
+    overflow: hidden;
+}
+
+.products__item-box:hover {
+    transform: translateY(0);
+}
+*/
+
+
+/*---------------------------------------------------------------------------*/
+
+
+/*оформить форму как в wawe */
+
+.footer {
+    list-style: none;
+    @extend %rubik-400px;
+    font-size: 14px;
+    color: #7b7b7b;
+    &__top {
+        padding: 80px 0 70px;
+        border-bottom: 1px solid #dae4e9;
+        display: flex;
+    }
+    &__contacts {
+        max-width: 210px;
+        margin-right: 85px;
+    }
+    &__services {
+        max-width: 170px;
+        margin-right: 175px;
+    }
+    &__account {
+        max-width: 100px;
+        margin-right: 210px;
+    }
+    &__newsletter {
+        max-width: 275px;
+    }
+    &__logo {
+        margin-bottom: 25px;
+        display: block;
+    }
+    &__text p {
+        margin-bottom: 16px;
+        font-style: normal;
+    }
+    &__link {
+        margin-bottom: 15px;
+        transition: color 0.3s;
+    }
+    &__link span {
+        text-transform: uppercase;
+    }
+    &__link:hover {
+        color: #fcd7b6;
+    }
+    &__title {
+        color: #1f2044;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+        letter-spacing: -0.4px;
+        line-height: 3;
+        font-size: 16px;
+    }
+    .footer-form__text {
+        margin-bottom: 30px;
+    }
+    &__imput {
+        max-width: 170px;
+        height: 40px;
+        padding: 15px;
+        border: none;
+        background-color: #fef7f0;
+        width: 100%;
+        &::placeholder {
+            font-size: 12px;
+            color: #234969;
+        }
+    }
+    &__btn {
+        border: none;
+        background-color: #a3bbc8;
+        padding: 11px 20px 13px 17px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    &__bottom {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*
+    &__imput,
+    &__btn:focus {
+        outline: solid #00B2A0;
+    }*/
+    &__list {
+        display: flex;
+    }
+    &__link-nav {
+        padding-right: 15px;
+        padding-left: 12px;
+        transition: color 0.3s;
+    }
+    /*
+    &__link-nav::before:last-child {
+        position: absolute;
+        content: "|";
+    }*/
+    /*
+    &__link-nav:before {
+        content: "|"
+    }*/
+    &__link-nav:hover {
+        color: #fcd7b6;
+    }
+    ul li+li:before {
+        content: "|"
+    }
+    /*
+     &__item::after {
+       content: "|";
+     }
+                    */
+    /*убрать отступ у кнопки в хедере*/
 }
 
 @import 'media';
