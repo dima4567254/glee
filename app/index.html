@@ -154,8 +154,8 @@
             <div class="container">
                 <div class="services">
                     <ul class="services__items">
-                        <li class="services__item services__item--support">
 
+                        <li class="services__item services__item--support">
                             <h2 class="services__subtitle">
                                 Support 24/7.
                             </h2>
@@ -167,7 +167,6 @@
                         </li>
 
                         <li class="services__item services__item--delevery">
-
                             <h2 class="services__subtitle">
                                 Delivery.
                             </h2>
@@ -179,7 +178,6 @@
                         </li>
 
                         <li class="services__item  services__item--payment">
-
                             <h2 class="services__subtitle">
                                 100% Payment secure.
                             </h2>
@@ -201,31 +199,26 @@
                             <button class="products__btn" type="button" data-filter="all">
                                 All
                             </button>
-
                         </li>
                         <li class="products__items ">
                             <button class="products__btn" type="button" data-filter=".category-a">
                                 Furnitures
                             </button>
-
                         </li>
                         <li class="products__items ">
                             <button class="products__btn" type="button" data-filter=".category-b">
                                 Chairs
                             </button>
-
                         </li>
                         <li class="products__items ">
                             <button class="products__btn" type="button" data-filter=".category-c">
                                 Lighting
                             </button>
-
                         </li>
                         <li class="products__items ">
                             <button class="products__btn" type="button" data-filter=".category-d">
                                 Decor
                             </button>
-
                         </li>
                     </ul>
 
@@ -254,12 +247,6 @@
                                 <p>$29.00</p>
                             </div>
                         </li>
-
-
-
-
-
-
 
                         <li class="products__item mix category-a">
                             <div class="products__item-box">
@@ -530,7 +517,9 @@
                         </p>
                     </div>
                     <form class="footer__form" action="#">
-                        <input class="footer__imput" type="email" placeholder="Email address" required oninvalid="this.setCustomValidity('fill in this field!')">
+                        <label class="sr-only" for="Email">Введите ваш емейл
+                            <input class="footer__imput" id="Email" type="email" placeholder="Email address" required
+                                oninvalid="this.setCustomValidity('fill in this field!')"></label>
                         <button class="footer__btn" type="submit">
                             <!--написать форме 100%-->
                             Subscribe

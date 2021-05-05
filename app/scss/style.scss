@@ -285,24 +285,17 @@
         }
         
         .products__item {
-            /*padding: 25px 40px 35px 30px;*/
-            padding-top: 25px;
-            width: 265px;
-            height: 380px;
-            /* background-color: red;*/
+            padding: 25px 35px 35px 30px;
             margin-right: 27px;
             margin-bottom: 40px;
             box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
-            content: "";
         }
         
         .products__img {
             margin: 0 auto;
-            position: relative;
         }
         
         .products__link {
@@ -312,7 +305,6 @@
         .products__subtitle {
             font-size: 16px;
             margin-bottom: 15px;
-            position: relative;
         }
         
         .products__text {
@@ -328,9 +320,9 @@
             position: absolute;
             top: 144px;
             left: 17px;
-            width: 100%;
-            height: 200px;
             transform: translateY(300%);
+            transition: color 0.5s;
+            /*не работает*/
         }
         
         .products__item:hover {
@@ -352,7 +344,6 @@
             background-color: #fefefe;
             border-radius: 30px;
             width: 50px;
-            font-size: 10px;
             height: 50px;
             display: flex;
             justify-content: center;
@@ -360,27 +351,14 @@
             transition: background-color 0.3s;
             margin-right: 12px;
             background-repeat: no-repeat;
-            /*
-    position: absolute;
-    top: 0px;
-    left: 0px;*/
         }
         
         .products__item-link:hover {
             background-color: #a3bac7;
         }
         /*
-.products__item-link::before {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-}
-*/
-        /*
-        .basket {
-            background-color: #a3bac7;
-        }*/
-        /*
+.
+       /*
 .products__item--search::before {
     background-image: url('../images/icons/search.svg');
 }
@@ -393,7 +371,6 @@
     background-image: url('../images/icons/heart.svg');
 }
 */
-        /*подумать можно ли сделать другой цвет без класса*/
         
         .nav__links-basket {
             background-color: #a3bbc8;
@@ -407,31 +384,7 @@
             transition: background-color 0.3s;
             margin-right: 12px;
         }
-        /*
-    .products__item-links {
-        background-color: #a3bbc8;
-        height: 50px;
-        width: 50px;
-        border-radius: 30px;
-    }
-    .products__content:hover {
-        transform: translateY(0);
-    }
-    .products__item-link:hover {
-        transform: translateY(0);
-    }
-}
-
-.box {
-    overflow: hidden;
-}
-
-.products__item-box:hover {
-    transform: translateY(0);
-}
-*/
         /*---------------------------------------------------------------------------*/
-        /*оформить форму как в wawe */
         
         .footer {
             list-style: none;
