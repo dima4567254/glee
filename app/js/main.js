@@ -19,7 +19,7 @@ $(function() {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpead: 2000
+        autoplaySpead: 1000
     });
 
 
