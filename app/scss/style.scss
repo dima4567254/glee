@@ -39,7 +39,7 @@
 .nav {
     display: flex;
     font-size: 33px;
-    &__ht {
+    &__search {
         background-color: #edf1f4;
         border-radius: 50%;
         width: 50px;
@@ -52,17 +52,10 @@
         background-repeat: no-repeat;
         background-position: center;
     }
-    .nav__ht:hover {
+    .nav__search:hover {
         background-color: #fcd7b6;
         /*подумать может можно одним сделать */
     }
-    /*
-    .nav__ht:not(:last-child) {
-        margin-right: 0px;
-    }
-    .nav__link:not(:last-child) {
-        margin-right: 0px;
-    }*/
     &__purchases {
         padding: 25px;
         width: 180px;
@@ -126,20 +119,26 @@
 }
 
 .slider__item {
-    z-index: +100;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 100px;
     background-image: 100%;
-    max-height: 730px;
+    max-height: 820px;
 }
 
 .slider__inner {
     background-color: #fcd7b6;
-    height: 820px;
     display: flex;
+    height: 820px;
+    position: relative;
     background-repeat: no-repeat;
+}
+
+.slider__inner::before {
+    content: "";
+    position: absolute;
+    top: 96px;
+    right: 186px;
+    height: 730px;
+    width: 755px;
+    background-position: 0 0;
 }
 
 .slider__content {
@@ -440,6 +439,10 @@
     }
 }
 
+.description-product__item {
+    background-repeat: no-repeat;
+}
+
 .description-product__item::after {
     content: "";
     position: absolute;
@@ -448,12 +451,11 @@
     width: 229px;
     height: 399px;
     background-size: cover;
+    background-image: url('../images/lampa1.png');
 }
 
-.description-product__item {
-    background-repeat: no-repeat;
-}
 
+/*
 .description-product__item--mirun::after {
     background-image: url('../images/lampa1.png');
 }
@@ -461,6 +463,7 @@
 .description-product__item--malesuada::after {
     background-image: url('../images/lampa2.png');
 }
+*/
 
 .description-product__item:last-child {
     margin-right: 0px;
