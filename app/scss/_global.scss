@@ -25,6 +25,10 @@ body {
     border: 0;
 }
 
+.title {
+    @extend %title;
+}
+
 .main {
     flex-grow: 1;
 }

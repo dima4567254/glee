@@ -36,13 +36,9 @@
     }
 }
 
-
-/*75меду боковых  60 между средних*/
-
 .nav {
     display: flex;
     font-size: 33px;
-    /*пофиксеть отступ и черточку сделать*/
     &__ht {
         background-color: #edf1f4;
         border-radius: 50%;
@@ -52,8 +48,9 @@
         justify-content: center;
         align-items: center;
         margin-right: 20px;
-        /*решил написать каждому по 20пх */
         transition: background-color 0.3s;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .nav__ht:hover {
         background-color: #fcd7b6;
@@ -80,6 +77,8 @@
         margin-right: 20px;
         position: relative;
         transition: background-color 0.3s;
+        background-repeat: no-repeat;
+        background-position: center;
         /*может можно 1 сделать  цвет кнопки  background-color #a3bbc8 */
     }
     .nav__bg:hover {
@@ -117,6 +116,8 @@
         justify-content: center;
         align-items: center;
         transition: background-color 0.3s;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .nav__burger:hover {
         background-color: #fcd7b6;
@@ -124,10 +125,21 @@
     }
 }
 
+.slider__item {
+    z-index: +100;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+    background-image: 100%;
+    max-height: 730px;
+}
+
 .slider__inner {
     background-color: #fcd7b6;
     height: 820px;
     display: flex;
+    background-repeat: no-repeat;
 }
 
 .slider__content {
@@ -234,6 +246,7 @@
         @extend %dmsans-400px;
         color: #585858;
         max-width: 200px;
+        line-height: 1.8;
     }
     .services__item--support::before {
         background-image: url('../images/icons/support.svg');
@@ -258,10 +271,7 @@
     background-size: cover;
 }
 
-.products {
-    .title {
-        @extend %title;
-    }
+.filter {
     &__list {
         display: flex;
         justify-content: center;
@@ -275,6 +285,7 @@
         transition: color 0.5s;
         border: none;
         background-color: #ffffff;
+        cursor: pointer;
     }
     &__btn:hover {
         color: #fcd7b6;
@@ -294,6 +305,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.products__item:nth-child(4n+4) {
+    margin-right: 0px;
 }
 
 .products__img {
@@ -330,8 +345,20 @@
 .products__item:hover {
     .products__item-box-link {
         transform: translateY(0);
-        color: #a3bac7;
     }
+}
+
+.products__item-box-link path {
+    fill: #a3bbc8;
+}
+
+.products__item-link:hover path {
+    fill: #ffffff;
+    /* # поменял но возможно можно лучше*/
+}
+
+.products__item-link:hover {
+    background-color: #a3bac7;
 }
 
 .products__item-box {
@@ -343,7 +370,6 @@
 }
 
 .products__item-link {
-    /*обнулить отступ*/
     background-color: #fefefe;
     border-radius: 30px;
     width: 50px;
@@ -356,10 +382,8 @@
     background-repeat: no-repeat;
 }
 
-.products__item-link:hover {
-    background-color: #a3bac7;
-    color: #f8fafb;
-    /*поменять цвет у иконок */
+.products__item-link:last-child {
+    margin-right: 0px;
 }
 
 .nav__links-basket {
@@ -376,8 +400,8 @@
 }
 
 .description-product {
+    padding: 140px 0 100px;
     &__items {
-        padding: 140px 0 100px;
         display: flex;
     }
     &__item {
@@ -409,6 +433,7 @@
         border-radius: 5px;
         border-color: #b3b7b5;
         transition: color 0.5s;
+        cursor: pointer;
     }
     &__icon {
         padding-left: 45px;
@@ -423,6 +448,10 @@
     width: 229px;
     height: 399px;
     background-size: cover;
+}
+
+.description-product__item {
+    background-repeat: no-repeat;
 }
 
 .description-product__item--mirun::after {
@@ -443,6 +472,220 @@
 
 .description-product__btn:hover {
     opacity: 0.7;
+}
+
+.filter__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px 120px;
+    /*однулить отступы*/
+}
+
+.filter__item {
+    margin-right: 30px;
+    margin-bottom: 35px;
+    transition: 0.5s;
+}
+
+.filter__item:nth-child(3n+3) {
+    margin-right: 0px;
+}
+
+.filter__item:hover {
+    opacity: 0.5;
+}
+
+
+/*проверить все ли нужно*/
+
+.video {
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: block;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.video::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../images/icons/pley.svg');
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+}
+
+
+/*
+.video:hover {
+    content: "";
+    border-radius: 50%;
+    background-color: rgb(163, 187, 200);
+    opacity: 0.4;
+    height: 125px;
+    width: 125px;
+    background-image: url('../images/icons/ellipse.svg');
+    z-index: 100;
+}*/
+
+.video:focus {
+    outline: solid $ac;
+}
+
+.video:hover {
+    opacity: 0.4;
+    border: 2px solid #000000;
+}
+
+.insights {
+    &__wraper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__title {
+        /*подумать может сделать бем блок */
+        font-size: 36px;
+        color: #191919;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {}
+    &__item {
+        display: flex;
+    }
+}
+
+.insights__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.insights__items {
+    padding: 0 338px 0 368px;
+    background-color: #fef7f0;
+    display: flex;
+    .insights__item {
+        margin-right: 30px;
+        background-color: #ffffff;
+        position: relative;
+        width: 370px;
+        padding: 35px 52px 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .insights__text {
+        line-height: 20px;
+        @extend %dmsans-500px;
+        color: #262626;
+        font-size: 18px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .insights__text::after {
+        content: "";
+        position: absolute;
+        width: 315px;
+        height: 1px;
+        background-color: #e0e0e0;
+        top: 75px;
+        right: -24px;
+    }
+    .insights__info {
+        display: flex;
+        font-size: 12px;
+        color: #222933;
+        @extend %rubik-400px;
+    }
+    .insights__info p {
+        margin-right: 30px;
+    }
+}
+
+.insights__link:hover {
+    color: $ac;
+    opacity: 0.7;
+}
+
+.insights__link-news {
+    background-color: #a3bbc8;
+    position: absolute;
+    top: -16px;
+    left: 24px;
+    width: 103px;
+    height: 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    @extend %poppins-700px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.insights__user,
+.insights__calendar {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+    }
+}
+
+.insights__calendar::before {
+    background-image: url('../images/icons/calendar.svg');
+}
+
+.insights__user::before {
+    background-image: url('../images/icons/user.svg');
+}
+
+
+/*дописать везде макс  ширена и мин высота */
+
+
+/*
+.insights__itema::before {
+    content: "NEWS";
+    background-color: #a3bbc8;
+    position: absolute;
+    top: -16px;
+    left: 24px;
+    width: 103px;
+    height: 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    @extend %poppins-700px;
+    text-align: center;
+    line-height: 30px;
+}*/
+
+.partners {
+    padding: 100px 430px 80px 415px;
+    /*удалить*/
+    background-color: #fef7f0;
+    display: flex;
+    align-items: center;
+    &__item {
+        margin-right: 100px;
+    }
 }
 
 

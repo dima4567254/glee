@@ -15,7 +15,7 @@ $title: #436372;
 }
 
 
-/*@extend %rubik-500px*/
+/*@extend %dmsans-500px*/
 
 %dmsans-400px {
     font-family: 'DMSans-Regular', sans-serif;
@@ -42,6 +42,7 @@ $title: #436372;
     display: flex;
     align-items: center;
     color: #ffffff;
+    cursor: pointer;
     @extend %rubik-500px;
 }
 
