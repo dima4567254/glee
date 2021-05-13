@@ -44,3 +44,47 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.breadcrumbs {
+    background-color: #edf1f4;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 115px;
+    &__title {
+        font-size: 36px;
+        color: #222933;
+        margin-bottom: 10px;
+        padding-right: 35px;
+        @extend %rubik-300px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        margin-right: 20px;
+        color: #979ba0;
+        position: relative;
+        &::after {
+            content: "/";
+            position: absolute;
+            top: 4px;
+            left: 48px;
+        }
+        &:last-child {
+            color: #fcd7b6;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        line-height: 1.7;
+        color: inherit;
+        /* font-style: italic;*/
+        &:hover {
+            color: #fcd7b6;
+        }
+    }
+}
