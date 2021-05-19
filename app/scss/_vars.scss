@@ -15,7 +15,7 @@ $title: #436372;
 }
 
 
-/*@extend %dmsans-500px*/
+/*@extend %dmsans-400px*/
 
 %dmsans-400px {
     font-family: 'DMSans-Regular', sans-serif;
@@ -57,6 +57,14 @@ $title: #436372;
     font-size: 36px;
     color: #191919;
     margin-bottom: 35px;
+}
+
+%checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
 
 
