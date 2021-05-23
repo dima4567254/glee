@@ -20,21 +20,32 @@
 
      $(".prise").ionRangeSlider({
          type: "double",
-         min: 0,
-         max: 1000,
-         from: 200,
-         to: 500,
-         grid: true
+         grid: true,
+         prefix: "$"
      });
 
-     $(".star").rateYo({
-         starWidth: "40px",
-         rating: 3.6,
-         normalFill: "#A0A0A0",
-         readOnly: true
+     $(".recent-products__star").rateYo({
+         /* rating: 7,*/
+         starWidth: "11px",
+         starHeight: "11px"
      });
+
+     $(".recent-products__stars").rateYo({
+         rating: 4,
+         starWidth: "18px",
+         starHeight: "18px",
+         spacing: "13px"
+             /* readOnli: true*/
+
+     });
+
+
+
+
 
  });
+
+
 
  var containerEl1 = document.querySelector('[data-ref="container-1"]');
  var containerEl2 = document.querySelector('[data-ref="container-2"]');
@@ -51,6 +62,9 @@
  var mixer3 = mixitup(containerEl3, config);
 
 
+ $("#rateYo").rateYo({
+
+ });
 
 
 

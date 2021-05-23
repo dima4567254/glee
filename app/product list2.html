@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product list 2</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="#">
+                                Home+
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Pages+
+                            </a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                News
+                            </a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="nav">
+                    <div class="nav__search">
+                        <!--похоже обертку можно удалить-->
+                        <!--style="background-image: url('../images/icons/search.svg');"-->
+                        <a class="nav__link" href="#">
+                            <img src="images/icons/search.svg" alt="basket">
+                            <span class="sr-only">search</span>
+                        </a>
+                    </div>
+
+                    <div class="nav__purchases">
+                        <a href="#" class="nav__link-num" style="background-image: url('../images/icons/heart.svg');">
+                            <img src="images/icons/heart.svg" alt="basket">
+                            <span class="sr-only">heart</span>
+                        </a>
+
+                        <a href="#" class="nav__link-num">
+                            <img src="images/icons/basket.svg" alt="basket">
+                        </a>
+                    </div>
+                    <div class="nav__burger" style="background-image: url('../images/icons/burger-menu.svg');">
+                        <a href="#" class="nav__link">
+                            <img src="images/icons/burger-menu.svg" alt="basket">
+                            <span class="sr-only">burger menu</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <section class="top">
+            <div class="breadcrumbs">
+                <h2 class="breadcrumbs__title">
+                    Product list 2
+                </h2>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="login__link" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="login__link" href="#">
+                            Product list 2
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="catalog">
+            <div class="container-container">
+                <div class="filter-category__inner">
+                    <div class="filter-category">
+                        <h2 class="filter-title">
+                            Category
+                        </h2>
+                        <form class="filter-category__form" action="#">
+                            <label class="filter-category__label" for="checkbox">
+                                <input class="filter-category__input" type="checkbox" id="checkbox" checked>
+                                <div class="filter-category__checkbox">
+                                    <span>Chair</span>
+                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                </div>
+                            </label>
+                            <label class="filter-category__label" for="checkbox2">
+                                <input class="filter-category__input" type="checkbox" id="checkbox2">
+                                <div class="filter-category__checkbox">
+                                    <span>Table</span>
+                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                </div>
+                            </label>
+                            <label class="filter-category__label" for="checkbox3">
+                                <input class="filter-category__input" type="checkbox" id="checkbox3">
+                                <div class="filter-category__checkbox">
+                                    <span>Lamp</span>
+                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                </div>
+                            </label>
+                            <label class="filter-category__label" for="checkbox4">
+                                <input class="filter-category__input" type="checkbox" id="checkbox4">
+                                <div class="filter-category__checkbox">
+                                    <span>Watch</span>
+                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                </div>
+                            </label>
+                            <label class="filter-category__label" for="checkbox5">
+                                <input class="filter-category__input" type="checkbox" id="checkbox5">
+                                <div class="filter-category__checkbox">
+                                    <span>Clock</span>
+                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                </div>
+                            </label>
+
+                        </form>
+                        <!--поменять класс filter-category -->
+                        <div class="filter-prise filter-category">
+                            <h2 class="filter-title">
+                                Price
+                            </h2>
+                            <form class="filter-prise__form" action="#" for="my_range">
+                                <label class="filter-prise__label">
+                                    <input class="prise" type="text" data-min="100.00" data-max=" 500.00"
+                                        data-from=" 200" data-to=" 400">
+                                </label>
+                            </form>
+
+                            <div class="filter-brand  filter-category">
+                                <!--поменять filter-category-->
+                                <h2 class="filter-title">
+                                    Brand
+                                </h2>
+                                <form class="filter-brand__form" action="#">
+                                    <label class="filter-brand__label" for="checkbox6">
+                                        <input class="filter-brand__input" type="checkbox" id="checkbox6" checked>
+                                        <div class="filter-brand__checkbox">
+                                            <span>rfl</span>
+                                            <span>(10)</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="filter-brand__label" for="checkbox7">
+                                        <input class="filter-brand__input" type="checkbox" id="checkbox7">
+                                        <div class="filter-brand__checkbox">
+                                            <span>Brothers</span>
+                                            <span>(21)</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="filter-brand__label" for="checkbox8">
+                                        <input class="filter-brand__input" type="checkbox" id="checkbox8">
+                                        <div class="filter-brand__checkbox">
+                                            <span>Regal</span>
+                                            <span>(3)</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="filter-brand__label" for="checkbox9">
+                                        <input class="filter-brand__input" type="checkbox" id="checkbox9">
+                                        <div class="filter-brand__checkbox">
+                                            <span>Nadia</span>
+                                            <span>(14)</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="filter-brand__label" for="checkbox10">
+                                        <input class="filter-brand__input" type="checkbox" id="checkbox10">
+                                        <div class="filter-brand__checkbox">
+                                            <span>Otobi</span>
+                                            <span>(6)</span>
+                                            <!--выровнять цифры-->
+                                        </div>
+                                    </label>
+                                </form>
+                            </div>
+
+
+                            <div class="recent-products">
+                                <h2 class="filter-title">
+                                    Recent products
+                                </h2>
+                                <div class="">
+                                    <h3 class="filter-subtitle">Pendant lamp</h3>
+                                    <!--!-->
+                                    <div class="star" data-rateyo-rating="4"></div>
+                                    <span>23$</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products-content">
+
+                        <ul class="products-content-list">
+                            <li class="products-content-list__item">
+
+                                <img class="products-content-list__img" src="images/filter-product/1.png" alt="product">
+                                <div class="products-content-list__info">
+                                    <h4 class="products-content-list__title">
+                                        <a class="products-content-list__link" href="#">
+                                            Wooden radio
+                                        </a>
+                                    </h4>
+                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    </div>
+
+                                    <p class="products-content-list__price">
+                                        <a class="products-content-list__link" href="#">
+                                            23$
+                                        </a>
+                                    </p>
+                                    <p class="products-content-list__text">
+                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    </p>
+                                    <button class="products-content-list__button">Add to cart</button>
+                                </div>
+                            </li>
+
+                            <li class="products-content-list__item">
+                                <img class="products-content-list__img" src="images/filter-product/2.png" alt="product">
+                                <div class="products-content-list__info">
+                                    <h4 class="products-content-list__title">
+                                        <a class="products-content-list__link" href="#">
+                                            Wooden chair
+                                        </a>
+                                    </h4>
+                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    </div>
+
+                                    <p class="products-content-list__price">
+                                        <a class="products-content-list__link" href="#">
+                                            23$
+                                        </a>
+                                    </p>
+                                    <p class="products-content-list__text">
+                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    </p>
+                                    <div class="products-content-list__box">
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                                               <defs>
+                                                   <style>
+                                                       .cls-1 {
+                                                           fill: #a7becb;
+                                                           fill-rule: evenodd;
+                                                       }
+                                                   </style>
+                                               </defs>
+                                               <path class="cls-1"
+                                                   d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                                                   transform="translate(-1716 -69)" />
+                                           </svg>
+                                        </a>
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                                               <defs>
+                                                   <style>
+                                                       .cls-1 {
+                                                           fill: #a7becb;
+                                                           fill-rule: evenodd;
+                                                       }
+                                                   </style>
+                                               </defs>
+                                               <path class="cls-1"
+                                                   d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                                                   transform="translate(-1639.97 -70.719)" />
+                                           </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="products-content-list__item">
+                                <img class="products-content-list__img" src="images/filter-product/3.png" alt="product">
+                                <div class="products-content-list__info">
+                                    <h4 class="products-content-list__title">
+                                        <a class="products-content-list__link" href="#">
+                                            Pendant lamp
+                                        </a>
+                                    </h4>
+                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    </div>
+
+                                    <p class="products-content-list__price">
+                                        <a class="products-content-list__link" href="#">
+                                            23$
+                                        </a>
+                                    </p>
+                                    <p class="products-content-list__text">
+                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    </p>
+
+                                    <div class="products-content-list__box">
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #a7becb;
+                                                            fill-rule: evenodd;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                                                    transform="translate(-1716 -69)" />
+                                            </svg>
+                                        </a>
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #a7becb;
+                                                            fill-rule: evenodd;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                                                    transform="translate(-1639.97 -70.719)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="products-content-list__item">
+                                <img class="products-content-list__img" src="images/filter-product/4.png" alt="product">
+                                <div class="products-content-list__info">
+                                    <h4 class="products-content-list__title">
+                                        <a class="products-content-list__link" href="#">
+                                            Retro table
+                                        </a>
+                                    </h4>
+                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                        <!---->
+                                    </div>
+
+                                    <p class="products-content-list__price">
+                                        <a class="products-content-list__link" href="#">
+                                            23$
+                                        </a>
+                                    </p>
+                                    <p class="products-content-list__text">
+                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    </p>
+                                    <div class="products-content-list__box">
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #a7becb;
+                                                            fill-rule: evenodd;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                                                    transform="translate(-1716 -69)" />
+                                            </svg>
+                                        </a>
+                                        <a class="products-content-list__link-box" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #a7becb;
+                                                            fill-rule: evenodd;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                                                    transform="translate(-1639.97 -70.719)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <a class="pagination__link pagination__link--active" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <ul class="partners">
+                <li class="partners__item">
+                    <div class="partners__contant">
+                        <a href="#">
+                            <img src="images/partners/partners1.png" alt="peterson stephanie">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="partners__item">
+                    <div class="partners__contant">
+                        <a href="#">
+                            <img src="images/partners/partners2.png" alt="peterson stephanie">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="partners__item">
+                    <div class="partners__contant">
+                        <a href="#">
+                            <img src="images/partners/partners3.png" alt="peterson stephanie">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="partners__item">
+                    <div class="partners__contant">
+                        <a href="#">
+                            <img src="images/partners/partners4.png" alt="peterson stephanie">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="partners__item">
+                    <div class="partners__contant">
+                        <a href="#">
+                            <img src="images/partners/partners5.png" alt="peterson stephanie">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="partners__item">
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container-container">
+            <ul class="footer__top">
+                <!--сделать для каждого списка-->
+                <li class="footer__item footer__contacts">
+                    <a class="logo  footer__logo" href="#">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <address class="footer-contacts__text">
+                        <div class="footer__text">
+                            <p>
+                                <a class="footer__link" href="#">
+                                    <span>Address</span>: 4772 Wines Lane Houston, TX 77032
+                                </a>
+                            </p>
+                            <p>
+                                <a class="footer__link" href="tel:+832-347-5843">
+                                    <span>Telephone:</span>+832-347-5843
+                                </a>
+                            </p>
+                            <p>
+                                <a class="footer__link" href="mailto:contact@glee.com">
+                                    <span>Email</span>: contact@Glee.com
+                                </a>
+                            </p>
+                        </div>
+                    </address>
+                </li>
+                <li class="footer__item  footer__services">
+                    <h2 class="footer__title">
+                        Services
+                    </h2>
+                    <div class="footer__text">
+                        <p>
+                            <a class="footer__link" href="#">
+                                About us
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Return policy
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Our Blog
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Contact Us
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Terms & Condition
+                            </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="footer__item footer__account">
+                    <h2 class="footer__title">
+                        Account
+                    </h2>
+                    <div class="footer__text">
+                        <p>
+                            <a class="footer__link" href="#">
+                                Your Account
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Checkout
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Login
+                            </a>
+                        </p>
+                        <p>
+                            <a class="footer__link" href="#">
+                                Register
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="footer__item footer__newsletter">
+                    <!--бэм блок-->
+                    <h2 class="footer__title">
+
+                        Newsletter</h2>
+                    </р>
+                    <div class="footer-form__text">
+                        <p>
+                            Subscribe by our newsletter and get update protidin.
+                        </p>
+                    </div>
+                    <form class="footer__form" action="#">
+                        <label class="sr-only" for="Email">Введите ваш емейл</label>
+                        <input class="footer__imput" id="Email" type="email" placeholder="Email address" required oninvalid="this.setCustomValidity('fill in this field!')">
+                        <button class="footer__btn" type="submit">
+                            Subscribe
+                        </button>
+                    </form>
+                </li>
+            </ul>
+
+
+            <div class="footer__bottom">
+
+                <div class="footer__copy">
+                    ©2020 CopyRight Example. All rights reserved
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__item-nav">
+                        <a class="footer__link-nav" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer__item-nav">
+                        <a class="footer__link-nav" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="footer__item-nav">
+                        <a class="footer__link-nav" href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="footer__item-nav">
+                        <a class="footer__link-nav" href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
