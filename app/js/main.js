@@ -25,19 +25,27 @@
      });
 
      $(".recent-products__star").rateYo({
-         /* rating: 7,*/
+         rating: 4,
          starWidth: "11px",
-         starHeight: "11px"
      });
 
      $(".recent-products__stars").rateYo({
          rating: 4,
          starWidth: "18px",
-         starHeight: "18px",
          spacing: "13px"
              /* readOnli: true*/
 
      });
+     /*
+          $(".recent-products__star-two").rateYo({
+              rating: 4,
+              starWidth: "11px",
+              spacing: "13px"
+                  /* readOnli: true
+
+          })
+     */
+
 
 
 

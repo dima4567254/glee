@@ -48,15 +48,15 @@
         justify-content: center;
         align-items: center;
         margin-right: 20px;
-        transition: background-color 0.3s;
         background-repeat: no-repeat;
         background-position: center;
+        background-image: url('../images/icons/search.svg');
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #fcd7b6;
+        }
     }
-    .nav__link:hover {
-        background-color: #fcd7b6;
-        /*подумать может можно одним сделать */
-    }
-    &__purchases {
+    &__favorites {
         padding: 25px;
         width: 180px;
         height: 50px;
@@ -65,28 +65,27 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        @extend %dmsans-400px;
-        line-height: 27px;
-        margin-right: 20px;
         position: relative;
         transition: background-color 0.3s;
         background-repeat: no-repeat;
         background-position: center;
-        /*может можно 1 сделать  цвет кнопки  background-color #a3bbc8 */
+        line-height: 27px;
+        margin-right: 20px;
+        @extend %dmsans-400px;
+        &:hover {
+            background-color: #fcd7b6;
+        }
     }
-    .nav__purchases:hover {
-        background-color: #fcd7b6;
-    }
-    &__link-num {
-        position: relative;
-    }
-    &__purchases::after {
+    &__favorites::after {
         content: '|';
         position: absolute;
         top: 9px;
         color: #fde7d3;
     }
-    &__link-num::before {
+    &__num {
+        position: relative;
+    }
+    &__num::before {
         content: '0';
         position: absolute;
         top: -6px;
@@ -99,22 +98,22 @@
         border-radius: 50%;
         text-align: center;
     }
-    .nav__burger {
+    &__burger {
         background-color: #a3bbc8;
         border-radius: 30px;
         width: 50px;
-        font-size: 10px;
         height: 50px;
+        font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: background-color 0.3s;
         background-repeat: no-repeat;
         background-position: center;
-    }
-    .nav__burger:hover {
-        background-color: #fcd7b6;
-        /*подумать может можно одним сделать  */
+        transition: background-color 0.3s;
+        background-image: url('../images/icons/burger-menu.svg');
+        &:hover {
+            background-color: #fcd7b6;
+        }
     }
 }
 
@@ -221,7 +220,7 @@
         background-color: #fef7f0;
     }
     &__item {
-        padding: 45px 150px 60px 225px;
+        padding: 45px 150px 40px 225px;
         background-repeat: no-repeat;
         border-right: 1px solid #e8e4df;
         position: relative;
@@ -239,12 +238,12 @@
     &__subtitle {
         font-size: 18px;
         color: #414141;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     &__text {
         @extend %dmsans-400px;
         color: #585858;
-        max-width: 200px;
+        max-width: 210px;
         line-height: 1.8;
     }
     .services__item--support::before {
@@ -298,7 +297,7 @@
 
 .products__item {
     padding: 25px 35px 35px 30px;
-    margin-right: 27px;
+    margin-right: 26px;
     margin-bottom: 40px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     display: flex;
@@ -698,7 +697,7 @@
         width: 100%;
         border: 1px solid #f6f6f6;
         padding: 0 15px;
-        margin: 15px 0 30px 0;
+        margin: 20px 0 25px 0;
         height: 60px;
     }
     &__button {
@@ -955,13 +954,18 @@
     &__subtitle {
         padding-top: 5px;
         margin-bottom: 10px;
+        font-size: 14px;
         &:hover {
             color: $ac;
         }
     }
     &__star {
-        margin-bottom: 10px;
+        margin-bottom: 100px;
     }
+}
+
+.recent-products__star {
+    margin-bottom: -100px;
 }
 
 
@@ -1088,7 +1092,7 @@
 }
 
 .jq-ry-container {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     padding: 0;
 }
 
