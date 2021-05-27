@@ -36,15 +36,6 @@
              /* readOnli: true*/
 
      });
-     /*
-          $(".recent-products__star-two").rateYo({
-              rating: 4,
-              starWidth: "11px",
-              spacing: "13px"
-                  /* readOnli: true
-
-          })
-     */
 
 
 

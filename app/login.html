@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glee</title>
+    <title>login</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -56,31 +56,18 @@
                 </nav>
 
                 <div class="nav">
-                    <div class="nav__search">
-                        <!--похоже обертку можно удалить-->
-                        <!--style="background-image: url('../images/icons/search.svg');"-->
-                        <a class="nav__link" href="#">
-                            <img src="images//icons/search.svg" alt="basket">
-                            <span class="sr-only">search</span>
-                        </a>
-                    </div>
-
-                    <div class="nav__purchases">
-                        <a href="#" class="nav__link-num" style="background-image: url('../images/icons/heart.svg');">
-                            <img src="images//icons/heart.svg" alt="basket">
-                            <span class="sr-only">heart</span>
-                        </a>
-
-                        <a href="#" class="nav__link-num">
-                            <img src="images//icons/basket.svg" alt="basket">
-                        </a>
-                    </div>
-                    <div class="nav__burger" style="background-image: url('../images/icons/burger-menu.svg');">
-                        <a href="#" class="nav__link">
-                            <img src="images//icons/burger-menu.svg" alt="basket">
-                            <span class="sr-only">burger menu</span>
-                        </a>
-                    </div>
+                    <a class="nav__search" href="#">
+                        <span class="sr-only">search</span>
+                    </a>
+                    <a class="nav__heart nav__num" href="#">
+                        <span class="sr-only">heart</span>
+                    </a>
+                    <a class="nav__basket nav__num" href="#">
+                        <span class="sr-only">basket</span>
+                    </a>
+                    <a class="nav__burger" href="#">
+                        <span class="sr-only">menu</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -104,8 +91,6 @@
                             Log in
                         </a>
                     </li>
-
-
                 </ul>
             </div>
 
@@ -127,8 +112,7 @@
                     <div class="modal__inner">
                         <label class="modal__label" for="Remember me">
                             <input class="modal__checkbox" type="checkbox" id="Remember me">
-                            Remember me
-                            </input>
+                            Remember me                    
                         </label>
                         <a class="modal__link" href="#">
                             Lost your password?
@@ -141,10 +125,10 @@
                         </a>
                     </p>
 
-                    <button class="modal__btn" type="button">
-                        <a class="modal__link-account" href="#">
-                            Create an account
+                    <a class="modal__link-account" href="#">
+                        <button class="modal__btn" type="button">Create an account                        
                         </a>
+                        
                     </button>
                 </form>
             </section>
@@ -197,11 +181,12 @@
             </ul>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container-container">
             <ul class="footer__top">
                 <!--сделать для каждого списка-->
-                <li class="footer__item footer__contacts">
+                <li class="footer__contacts">
                     <a class="logo  footer__logo" href="#">
                         <img src="images/logo.png" alt="logo">
                     </a>
@@ -210,23 +195,26 @@
                         <div class="footer__text">
                             <p>
                                 <a class="footer__link" href="#">
-                                    <span>Address</span>: 4772 Wines Lane Houston, TX 77032
+                                    <span>Address</span>
+                                    : 4772 Wines Lane Houston, TX 77032
                                 </a>
                             </p>
                             <p>
                                 <a class="footer__link" href="tel:+832-347-5843">
-                                    <span>Telephone:</span>+832-347-5843
+                                    <span>Telephone:</span>
+                                    +832-347-5843
                                 </a>
                             </p>
                             <p>
                                 <a class="footer__link" href="mailto:contact@glee.com">
-                                    <span>Email</span>: contact@Glee.com
+                                    <span>Email</span>
+                                    : contact@Glee.com
                                 </a>
                             </p>
                         </div>
                     </address>
                 </li>
-                <li class="footer__item  footer__services">
+                <li class="footer__services">
                     <h2 class="footer__title">
                         Services
                     </h2>
@@ -259,7 +247,7 @@
                     </div>
                 </li>
 
-                <li class="footer__item footer__account">
+                <li class="footer__account">
                     <h2 class="footer__title">
                         Account
                     </h2>
@@ -286,12 +274,10 @@
                         </p>
                     </div>
                 </li>
-                <li class="footer__item footer__newsletter">
-                    <!--бэм блок-->
+                <li class=" footer__newsletter">
                     <h2 class="footer__title">
-
-                        Newsletter</h2>
-                    </р>
+                        Newsletter
+                    </h2>
                     <div class="footer-form__text">
                         <p>
                             Subscribe by our newsletter and get update protidin.
@@ -309,7 +295,6 @@
 
 
             <div class="footer__bottom">
-
                 <div class="footer__copy">
                     ©2020 CopyRight Example. All rights reserved
                 </div>
@@ -339,8 +324,7 @@
         </div>
     </footer>
 
-
-    <script srs="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
