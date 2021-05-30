@@ -5,9 +5,8 @@
          arrows: false,
          fade: true,
          /*
-                  autoplay: true,
-                  
-                  autoplaySpead: 1000*/
+         autoplay: true,
+         autoplaySpead: 1000*/
      });
 
      $('.partners').slick({
@@ -29,7 +28,7 @@
          starWidth: "11px",
      });
 
-     $(".recent-products__stars").rateYo({
+     $(".products-content__star").rateYo({
          rating: 4,
          starWidth: "18px",
          spacing: "13px"

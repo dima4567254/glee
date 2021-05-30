@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Product Detalis</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -77,63 +77,107 @@
         <section class="top">
             <div class="breadcrumbs">
                 <h2 class="breadcrumbs__title">
-                    Log in
+                    Product Detalis
                 </h2>
                 <ul class="breadcrumbs__list">
                     <li class="breadcrumbs__item">
                         <a class="breadcrumbs__link" href="#">
-                            Home                          
+                            Home
                         </a>
-                        <span class="breadcrumbs__delimiter">/</span>
                     </li>
                     <li class="breadcrumbs__item">
                         <a class="breadcrumbs__link" href="#">
-                            Log in
+                            Product Detalis
                         </a>
                     </li>
                 </ul>
             </div>
+        </section>
 
+        <section class="Product-Detalis">
+            <div class="container-container">
+                <div class="Product-Detalis__inner">
 
-            <section class="modal">
-                <form class="modal__form" action="#">
-                    <label class="modal__label" for="email" required oninvalid="this.setCustomValidity('fill in this field!')">
-                        Username or email address *
-                        <input class="modal__input" type="text" id="email">
-                    </label>
-                    <label class="modal__label" required oninvalid="this.setCustomValidity('fill in this field!')" for="Password">
-                        Password *
-                        <input class="modal__input" type="text" id="Password">
-                    </label>
+                </div>
+            </div>
+        </section>
 
-                    <button class="modal__button" type="submit">
-                        Login
-                    </button>
-                    <div class="modal__inner">
-                        <label class="modal__label" for="Remember me">
-                            <input class="modal__checkbox" type="checkbox" id="Remember me">
-                            Remember me                    
-                        </label>
-                        <a class="modal__link" href="#">
-                            Lost your password?
+        <section class="insights">
+            <div class="container-container">
+                <div class="insights__wraper">
+                    <h2 class="insights__title">
+                        Our Insights & Articles
+                    </h2>
+                    <a class="insights__link" href="#">
+                            View All >
                         </a>
+                </div>
+                <div class="insights__inner">
+                    <a class="insights__link" href="#">
+                        <img src="images/insights/room1.jpg" alt="room">
+                    </a>
+                    <a class="insights__link" href="#">
+                        <img src="images/insights/room2.jpg" alt="room">
+                    </a>
+                    <a class="insights__link" href="#">
+                        <img src="images/insights/room3.jpg" alt="room">
+                    </a>
+                </div>
+            </div>
+
+            <ul class="insights__items">
+                <li class="insights__item">
+                    <a class="insights-news__link" href="#">NEWS</a>
+                    <div class="insights__text">
+                        <p>
+                            <a class="insights__link" href="#">
+                                    Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                </a>
+                        </p>
+                    </div>
+                    <div class="insights__info">
+                        <p class="insights__calendar"> 28 JANUARY, 2020</p>
+                        <p class="insights__user">
+                            <a class="insights__link" href="#"> BY ADMIN</a>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="insights__item">
+                    <a class="insights-news__link" href="#">NEWS</a>
+                    <div class="insights__text">
+                        <p>
+                            <a class="insights__link" href="#">
+                                    Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                </a>
+                        </p>
+                    </div>
+                    <div class="insights__info">
+                        <p class="insights__calendar"> 28 JANUARY, 2020</p>
+                        <p class="insights__user">
+                            <a class="insights__link" href="#"> BY ADMIN</a>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="insights__item">
+                    <a class="insights-news__link" href="#">NEWS</a>
+                    <div class="insights__text">
+                        <p>
+                            <a class="insights__link" href="#">
+                                    Rncididunt ut labore et dolore magna aliqua. Ut enim
+                                </a>
+                        </p>
                     </div>
 
-                    <p class="modal__text">
-                        <a class="modal__link" href="#">
-                            Not registered? No problem
-                        </a>
-                    </p>
-
-                    <a class="modal__link-account" href="#">
-                        <button class="modal__btn" type="button">Create an account                        
-                        </a>
-                        
-                    </button>
-                </form>
-            </section>
-
-
+                    <div class="insights__info">
+                        <p class="insights__calendar"> 28 JANUARY, 2020</p>
+                        <p class="insights__user">
+                            <a class="insights__link" href="#"> BY ADMIN</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
 
             <ul class="partners">
                 <li class="partners__item">
@@ -190,7 +234,6 @@
                     <a class="logo  footer__logo" href="#">
                         <img src="images/logo.png" alt="logo">
                     </a>
-
                     <address class="footer-contacts__text">
                         <div class="footer__text">
                             <p>
@@ -274,11 +317,12 @@
                         </p>
                     </div>
                 </li>
-                <li class=" footer__newsletter">
+                <li class="footer__newsletter">
                     <h2 class="footer__title">
                         Newsletter
                     </h2>
-                    <div class="footer__form">
+
+                    <div class="footer-form__text">
                         <p>
                             Subscribe by our newsletter and get update protidin.
                         </p>
@@ -292,7 +336,6 @@
                     </form>
                 </li>
             </ul>
-
 
             <div class="footer__bottom">
                 <div class="footer__copy">
@@ -325,6 +368,7 @@
     </footer>
 
     <script src="js/main.min.js"></script>
+
 </body>
 
 </html>

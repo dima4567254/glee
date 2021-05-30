@@ -81,12 +81,14 @@
                 </h2>
                 <ul class="breadcrumbs__list">
                     <li class="breadcrumbs__item">
-                        <a class="login__link" href="#">
+                        <a class="breadcrumbs__link" href="#">
                             Home
+
                         </a>
+                        <span class="breadcrumbs__delimiter">/</span>
                     </li>
                     <li class="breadcrumbs__item">
-                        <a class="login__link" href="#">
+                        <a class="breadcrumbs__link" href="#">
                             Product list 2
                         </a>
                     </li>
@@ -96,113 +98,115 @@
 
         <section class="catalog">
             <div class="container-container">
-                <div class="filter-category__inner">
-                    <div class="filter-category">
-                        <h2 class="filter-title">
-                            category
-                        </h2>
-                        <form class="filter-category__form" action="#">
-                            <label class="filter-category__label" for="checkbox">
-                                <input class="filter-category__input" type="checkbox" id="checkbox" checked>
-                                <div class="filter-category__checkbox">
-                                    <span>Chair</span>
-                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
-                                </div>
-                            </label>
-                            <label class="filter-category__label" for="checkbox2">
-                                <input class="filter-category__input" type="checkbox" id="checkbox2">
-                                <div class="filter-category__checkbox">
-                                    <span>Table</span>
-                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
-                                </div>
-                            </label>
-                            <label class="filter-category__label" for="checkbox3">
-                                <input class="filter-category__input" type="checkbox" id="checkbox3">
-                                <div class="filter-category__checkbox">
-                                    <span>Lamp</span>
-                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
-                                </div>
-                            </label>
-                            <label class="filter-category__label" for="checkbox4">
-                                <input class="filter-category__input" type="checkbox" id="checkbox4">
-                                <div class="filter-category__checkbox">
-                                    <span>Watch</span>
-                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
-                                </div>
-                            </label>
-                            <label class="filter-category__label" for="checkbox5">
-                                <input class="filter-category__input" type="checkbox" id="checkbox5">
-                                <div class="filter-category__checkbox">
-                                    <span>Clock</span>
-                                    <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
-                                </div>
-                            </label>
-                        </form>
-                        <div class="filter-prise filter-category">
-                            <h2 class="filter-title">
+                <div class="catalog__inner">
+                    <div class="catalog__filters">
+                        <div class="catalog-category">
+                            <h2 class="catalog__title">
+                                category
+                            </h2>
+                            <form class="catalog-category__form" action="#">
+                                <label class="catalog-category__label" for="checkbox">
+                                    <input class="catalog-category__input" type="checkbox" id="checkbox" checked>
+                                    <div class="catalog-category__checkbox">
+                                        <span>Chair</span>
+                                        <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                    </div>
+                                </label>
+                                <label class="catalog-category__label" for="checkbox2">
+                                    <input class="catalog-category__input" type="checkbox" id="checkbox2">
+                                    <div class="catalog-category__checkbox">
+                                        <span>Table</span>
+                                        <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                    </div>
+                                </label>
+                                <label class="catalog-category__label" for="checkbox3">
+                                    <input class="catalog-category__input" type="checkbox" id="checkbox3">
+                                    <div class="catalog-category__checkbox">
+                                        <span>Lamp</span>
+                                        <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                    </div>
+                                </label>
+                                <label class="catalog-category__label" for="checkbox4">
+                                    <input class="catalog-category__input" type="checkbox" id="checkbox4">
+                                    <div class="catalog-category__checkbox">
+                                        <span>Watch</span>
+                                        <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                    </div>
+                                </label>
+                                <label class="catalog-category__label" for="checkbox5">
+                                    <input class="catalog-category__input" type="checkbox" id="checkbox5">
+                                    <div class="catalog-category__checkbox">
+                                        <span>Clock</span>
+                                        <img src="images/icons/arrow-icon.svg" alt="arrow-icon">
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="catalog-category__prise catalog__filters">
+                            <h2 class="catalog__title">
                                 Price
                             </h2>
-                            <form class="filter-prise__form">
-                                <label class="filter-prise__label">
+                            <form class="catalog-category__form">
+                                <label class="catalog-category__label">
                                     <input class="prise" type="text" data-min="100.00" data-max=" 500.00"
                                         data-from=" 200" data-to=" 400">
                                 </label>
                             </form>
-                            <div class="filter-brand">
-                                <h2 class="filter-title">
+
+                            <div class="catalog-brand">
+                                <h2 class="catalog__title">
                                     Brand
                                 </h2>
-                                <form class="filter-brand__form" action="#">
-                                    <label class="filter-brand__label" for="checkbox6">
-                                        <input class="filter-brand__input" type="checkbox" id="checkbox6" checked>
-                                        <div class="filter-brand__checkbox">
+                                <form class="catalog-brand__form" action="#">
+                                    <label class="catalog-brand__label" for="checkbox6">
+                                        <input class="catalog-brand__input" type="checkbox" id="checkbox6" checked>
+                                        <div class="catalog-brand__checkbox">
                                             <span>Rfl</span>
                                             <span>(10)</span>
                                         </div>
                                     </label>
 
-                                    <label class="filter-brand__label" for="checkbox7">
-                                        <input class="filter-brand__input" type="checkbox" id="checkbox7">
-                                        <div class="filter-brand__checkbox">
+                                    <label class="catalog-brand__label" for="checkbox7">
+                                        <input class="catalog-brand__input" type="checkbox" id="checkbox7">
+                                        <div class="catalog-brand__checkbox">
                                             <span>Brothers</span>
-                                            <span>(21)</span>
+                                            <span> (21)</span>
                                         </div>
                                     </label>
 
-                                    <label class="filter-brand__label" for="checkbox8">
-                                        <input class="filter-brand__input" type="checkbox" id="checkbox8">
-                                        <div class="filter-brand__checkbox">
+                                    <label class="catalog-brand__label" for="checkbox8">
+                                        <input class="catalog-brand__input" type="checkbox" id="checkbox8">
+                                        <div class="catalog-brand__checkbox">
                                             <span>Regal</span>
                                             <span>(3)</span>
                                         </div>
                                     </label>
 
-                                    <label class="filter-brand__label" for="checkbox9">
-                                        <input class="filter-brand__input" type="checkbox" id="checkbox9">
-                                        <div class="filter-brand__checkbox">
+                                    <label class="catalog-brand__label" for="checkbox9">
+                                        <input class="catalog-brand__input" type="checkbox" id="checkbox9">
+                                        <div class="catalog-brand__checkbox">
                                             <span>Nadia</span>
                                             <span>(14)</span>
                                         </div>
                                     </label>
 
-                                    <label class="filter-brand__label" for="checkbox10">
-                                        <input class="filter-brand__input" type="checkbox" id="checkbox10">
-                                        <div class="filter-brand__checkbox">
+                                    <label class="catalog-brand__label" for="checkbox10">
+                                        <input class="catalog-brand__input" type="checkbox" id="checkbox10">
+                                        <div class="catalog-brand__checkbox">
                                             <span>Otobi</span>
                                             <span>(6)</span>
-                                            <!--выровнять цифры-->
                                         </div>
                                     </label>
                                 </form>
                             </div>
 
-                            <div class="recent-products">
-                                <h2 class="filter-title">
+                            <div class="recent-products catalog__filters">
+                                <h2 class="catalog__title">
                                     Recent products
                                 </h2>
-
                                 <ul class="recent-products__list">
-                                    <li class="recent-products__item" style="background-image: url('../images/recent products/recent-products1.jpg');">
+                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products1.jpg');">
                                         <h3 class="recent-products__subtitle">
                                             Pendant lamp
                                         </h3>
@@ -211,7 +215,7 @@
                                         <span>23$</span>
                                     </li>
 
-                                    <li class="recent-products__item" style="background-image: url('../images/recent products/recent-products2.jpg');">
+                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products2.jpg');">
                                         <h3 class="recent-products__subtitle">
                                             Pendant lamp
                                         </h3>
@@ -220,7 +224,7 @@
                                         <span>23$</span>
                                     </li>
 
-                                    <li class="recent-products__item" style="background-image: url('../images/recent products/recent-products3.jpg');">
+                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products3.jpg');">
                                         <h3 class="recent-products__subtitle">
                                             Pendant lamp
                                         </h3>
@@ -235,50 +239,53 @@
 
                     <div class="products-content">
                         <ul class="products-content-list">
-                            <li class="products-content-list__item">
-                                <img class="products-content-list__img" src="images/filter-product/1.png" alt="product">
-                                <div class="products-content-list__info">
-                                    <h4 class="products-content-list__title">
-                                        <a class="products-content-list__link" href="#">
+                            <li class="products-content__item">
+                                <img class="products-content__img" src="images/filter-product/1.png" alt="product">
+                                <div class="products-content__info">
+                                    <h4 class="products-content__title">
+                                        <a class="products-content__link" href="#">
                                             Wooden radio
                                         </a>
                                     </h4>
-                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    <div class="products-content__star" data-rateyo-rating="4">
                                     </div>
 
-                                    <p class="products-content-list__price">
-                                        <a class="products-content-list__link" href="#">
+                                    <p class="products-content__price">
+                                        <a class="products-content__link" href="#">
                                             23$
                                         </a>
                                     </p>
-                                    <p class="products-content-list__text">
+                                    <p class="products-content__text">
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     </p>
-                                    <button class="products-content-list__button">Add to cart</button>
+                                    <button class="products-content__button">
+                                        Add to cart
+                                    </button>
                                 </div>
                             </li>
 
-                            <li class="products-content-list__item">
-                                <img class="products-content-list__img" src="images/filter-product/2.png" alt="product">
-                                <div class="products-content-list__info">
-                                    <h4 class="products-content-list__title">
-                                        <a class="products-content-list__link" href="#">
+
+                            <li class="products-content__item">
+                                <img class="products-content__img" src="images/filter-product/2.png" alt="product">
+                                <div class="products-content__info">
+                                    <h4 class="products-content__title">
+                                        <a class="products-content__link" href="#">
                                             Wooden chair
                                         </a>
                                     </h4>
-                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    <div class="products-content__star" data-rateyo-rating="4">
                                     </div>
 
-                                    <p class="products-content-list__price">
-                                        <a class="products-content-list__link" href="#">
+                                    <p class="products-content__price">
+                                        <a class="products-content__link" href="#">
                                             23$
                                         </a>
                                     </p>
-                                    <p class="products-content-list__text">
+                                    <p class="products-content__text">
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     </p>
-                                    <div class="products-content-list__box">
-                                        <a class="products-content-list__link-box" href="#">
+                                    <div class="products-content__box">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
                                                 <defs>
                                                     <style>
@@ -294,7 +301,7 @@
                                             </svg>
                                             <span class="sr-only">basket</span>
                                         </a>
-                                        <a class="products-content-list__link-box" href="#">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
                                                 <defs>
                                                     <style>
@@ -314,29 +321,28 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li class="products-content-list__item">
-                                <img class="products-content-list__img" src="images/filter-product/3.png" alt="product">
-                                <div class="products-content-list__info">
-                                    <h4 class="products-content-list__title">
-                                        <a class="products-content-list__link" href="#">
+                            <li class="products-content__item">
+                                <img class="products-content__img" src="images/filter-product/3.png" alt="product">
+                                <div class="products-content__info">
+                                    <h4 class="products-content__title">
+                                        <a class="products-content__link" href="#">
                                             Pendant lamp
                                         </a>
                                     </h4>
-                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    <div class="products-content__star" data-rateyo-rating="4">
                                     </div>
 
-                                    <p class="products-content-list__price">
-                                        <a class="products-content-list__link" href="#">
+                                    <p class="products-content__price">
+                                        <a class="products-content__link" href="#">
                                             23$
                                         </a>
                                     </p>
-                                    <p class="products-content-list__text">
+                                    <p class="products-content__text">
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     </p>
 
-                                    <div class="products-content-list__box">
-                                        <a class="products-content-list__link-box" href="#">
+                                    <div class="products-content__box">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
                                                 <defs>
                                                     <style>
@@ -352,7 +358,7 @@
                                             </svg>
                                             <span class="sr-only">basket</span>
                                         </a>
-                                        <a class="products-content-list__link-box" href="#">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
                                                 <defs>
                                                     <style>
@@ -372,27 +378,27 @@
                                 </div>
                             </li>
 
-                            <li class="products-content-list__item">
-                                <img class="products-content-list__img" src="images/filter-product/4.png" alt="product">
-                                <div class="products-content-list__info">
-                                    <h4 class="products-content-list__title">
-                                        <a class="products-content-list__link" href="#">
+                            <li class="products-content__item">
+                                <img class="products-content__img" src="images/filter-product/4.png" alt="product">
+                                <div class="products-content__info">
+                                    <h4 class="products-content__title">
+                                        <a class="products-content__link" href="#">
                                             Retro table
                                         </a>
                                     </h4>
-                                    <div class="recent-products__stars" data-rateyo-rating="4">
+                                    <div class="products-content__star" data-rateyo-rating="4">
                                     </div>
 
-                                    <p class="products-content-list__price">
-                                        <a class="products-content-list__link" href="#">
+                                    <p class="products-content__price">
+                                        <a class="products-content__link" href="#">
                                             23$
                                         </a>
                                     </p>
-                                    <p class="products-content-list__text">
+                                    <p class="products-content__text">
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     </p>
-                                    <div class="products-content-list__box">
-                                        <a class="products-content-list__link-box" href="#">
+                                    <div class="products-content__box">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
                                                 <defs>
                                                     <style>
@@ -408,7 +414,7 @@
                                             </svg>
                                             <span class="sr-only">basket</span>
                                         </a>
-                                        <a class="products-content-list__link-box" href="#">
+                                        <a class="products-content__link-box" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
                                                 <defs>
                                                     <style>
@@ -500,7 +506,6 @@
     <footer class="footer">
         <div class="container-container">
             <ul class="footer__top">
-                <!--сделать для каждого списка-->
                 <li class="footer__contacts">
                     <a class="logo  footer__logo" href="#">
                         <img src="images/logo.png" alt="logo">
@@ -594,7 +599,7 @@
                         Newsletter
                     </h2>
 
-                    <div class="footer-form__text">
+                    <div class="footer__form">
                         <p>
                             Subscribe by our newsletter and get update protidin.
                         </p>
@@ -611,7 +616,6 @@
 
 
             <div class="footer__bottom">
-
                 <div class="footer__copy">
                     ©2020 CopyRight Example. All rights reserved
                 </div>
@@ -641,8 +645,6 @@
         </div>
 
     </footer>
-
-
 
     <script src="js/main.min.js"></script>
 
