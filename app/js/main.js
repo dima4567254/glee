@@ -7,6 +7,27 @@
          /*
          autoplay: true,
          autoplaySpead: 1000*/
+
+     });
+
+     $('.product-detalis__small').slick({
+         dots: false,
+         arrows: false,
+         asNavFor: '.product-detalis__big',
+         focusOnSelect: true,
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         vertical: true,
+         draggable: false
+
+
+     });
+
+     $('.product-detalis__big').slick({
+         dots: false,
+         arrows: false,
+         asNavFor: '.product-detalis__small',
+         draggable: false
      });
 
      $('.partners').slick({

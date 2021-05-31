@@ -962,6 +962,51 @@
     }
 }
 
+.product-detalis {
+    padding: 0 0 90px;
+    &__inner {
+        display: flex;
+    }
+    &__item {
+        width: 135px;
+        height: 160px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.product-detalis__smalls {
+    width: 620px;
+}
+
+.product-detalis-big__item {
+    width: 385px;
+    height: 540px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-detalis__img {
+    width: 385px;
+    /* height: 540px;*/
+}
+
+.product-detalis__img {}
+
+.product-detalis-list__img {
+    margin-right: 30px;
+    width: 385px;
+    /* height: 540px;*/
+    cursor: pointer;
+}
+
+.products-content-list {
+    width: 540px;
+}
+
 
 /*---------------------------------------------------------------------------*/
 
