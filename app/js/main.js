@@ -14,13 +14,13 @@
          dots: false,
          arrows: false,
          asNavFor: '.product-detalis__big',
+         /*объединяет слайдеры*/
          focusOnSelect: true,
          slidesToShow: 3,
          slidesToScroll: 1,
          vertical: true,
-         draggable: false
-
-
+         /*вертикальный слайдер*/
+         draggable: false /*что бы не двигался*/
      });
 
      $('.product-detalis__big').slick({
@@ -28,6 +28,7 @@
          arrows: false,
          asNavFor: '.product-detalis__small',
          draggable: false
+
      });
 
      $('.partners').slick({
