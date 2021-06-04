@@ -48,13 +48,16 @@
          slidesToScroll: 5
      });
 
-     $('.products__contents').slick({
+     $('.related-product').slick({
+         /*поменять класс*/
          arrows: true,
-         slidesToShow: 3,
+         slidesToShow: 4,
          slidesToScroll: 1,
+
          autoplay: true,
          autoplaySpeed: 2000,
-
+         prevArrow: '<button type="button"class="slick-prev"><img src="images/icons/prev-left.svg" alt=""></button>',
+         nextArrow: '<button type="button"class="slick-next"><img src="images/icons/prev-right.svg" alt=""></button>'
      });
 
 
