@@ -85,8 +85,11 @@ body {
     }
 }
 
+.pagination-list__indent {}
+
 .pagination {
     padding: 85px 0 135px;
+    &__indent {}
     &__list {
         display: flex;
         justify-content: center;
