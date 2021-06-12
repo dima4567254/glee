@@ -85,29 +85,32 @@ body {
     }
 }
 
-.pagination-list__indent {}
-
 .pagination {
-    padding: 85px 0 135px;
-    &__indent {}
+    padding: 85px 0 0px;
     &__list {
         display: flex;
-        justify-content: center;
     }
     &__item {
         margin-right: 15px;
+        height: 50px;
+        width: 50px;
     }
     &__link {
         padding: 15px;
         border: 1px solid #a3bbc8;
+        transition: background-color 0.5s;
         &:hover {
             background-color: $ac;
         }
     }
-    .pagination__link--active {
+    &__link--active {
         background-color: #a3bbc8;
         color: #ffffff;
     }
+}
+
+.pagination-list {
+    justify-content: center;
 }
 
 .product-item-link {

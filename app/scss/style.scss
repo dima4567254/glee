@@ -343,8 +343,7 @@
         height: 200px;
         overflow: hidden;
         position: relative;
-        display: flex;
-        align-items: center;
+        margin-bottom: 70px
     }
     &__img {
         margin: 0 auto;
@@ -360,12 +359,39 @@
     &__item-box-link path {
         fill: #a3bbc8;
     }
+    &__item-link {
+        background-color: #fefefe;
+        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+        margin-right: 12px;
+        background-repeat: no-repeat;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: #a3bac7;
+        }
+        &:hover path {
+            fill: #ffffff;
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
     &__subtitle {
         font-size: 16px;
         margin-bottom: 15px;
     }
     &__text {
         color: #a3bbc8;
+    }
+    &__item:hover {
+        .products__item-box-link {
+            transform: translateY(0);
+        }
     }
 }
 
@@ -475,7 +501,7 @@
 .insights {
     &__wraper {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 50px;
     }
@@ -557,6 +583,7 @@
         font-size: 12px;
         color: #222933;
         @extend %rubik-400px;
+        text-transform: uppercase;
     }
     &-info p {
         margin-right: 30px;
@@ -1201,10 +1228,15 @@
 }
 
 .blog {
-    padding: 0 0 55px;
+    padding: 0 0 105px;
+    /*120*/
+    /*убрать отступ в низу */
     &__item {
         position: relative;
         margin-bottom: 50px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
     }
     &__inner {
         display: flex;
@@ -1214,6 +1246,7 @@
         margin-right: 65px;
     }
     &__img {
+        position: relative;
         margin-bottom: 40px;
         cursor: pointer;
         object-fit: cover;
@@ -1223,7 +1256,7 @@
         }
     }
     &__info {
-        padding: 30px 20px 30px 30px;
+        padding: 30px 20px 30px 20px;
         background-color: #a3bbc8;
         display: flex;
         font-size: 12px;
@@ -1233,32 +1266,19 @@
         @extend %rubik-400px;
         position: absolute;
         bottom: 288px;
+        text-transform: uppercase;
     }
     &__calendar {
-        position: relative;
-        padding-left: 20px;
         margin-right: 25px;
-        &::before {
-            content: '';
-            position: absolute;
-            background-image: url('../images/icons/calendar-white.svg');
-            width: 10px;
-            height: 10px;
-            left: 0px;
-            background-size: cover;
-        }
+    }
+    &__svg {
+        margin-right: 5px;
+        vertical-align: text-top;
     }
     &__user {
-        position: relative;
-        padding-left: 20px;
-        &::before {
-            content: '';
-            position: absolute;
-            background-image: url('../images/icons/user.svg');
-            width: 10px;
-            height: 10px;
-            left: 0px;
-            background-size: cover;
+        transition: color 0.5s;
+        &:hover {
+            color: $ac;
         }
     }
     &__title {
@@ -1300,7 +1320,7 @@
     }
     .blog__input {
         padding-right: 10px;
-        max-width: 205px;
+        max-width: 220px;
         height: 45px;
         border-radius: 5px;
         border: 2px solid #eef2f5;
@@ -1308,7 +1328,8 @@
     .blog__button {
         width: 50px;
         height: 45px;
-        margin-left: -2px;
+        margin-left: -3px;
+        margin-top: -1px;
         border-radius: 5px;
         background-repeat: no-repeat;
         display: flex;
@@ -1327,6 +1348,22 @@
 }
 
 .blog-one {
+    &-info {
+        padding: 30px 20px 30px 20px;
+        background-color: #a3bbc8;
+        display: flex;
+        font-size: 12px;
+        color: #ffffff;
+        width: 270px;
+        letter-spacing: -0.4px;
+        @extend %rubik-400px;
+        position: absolute;
+        bottom: 0px;
+        text-transform: uppercase;
+    }
+    &__img {
+        margin-bottom: 40px;
+    }
     &__left {
         float: left;
         margin-right: 30px;
@@ -1334,6 +1371,9 @@
     &__right {
         float: right;
         margin-right: 30px;
+    }
+    &__texts {
+        color: #565872;
     }
     &__text {
         @extend %rubik-400px;
@@ -1356,7 +1396,7 @@
         display: block;
     }
     &__text p {
-        margin-bottom: 45px;
+        margin-bottom: 65px;
         @extend %rubik-500px;
     }
     &__title {
@@ -1379,6 +1419,12 @@
 }
 
 .recent-posts {
+    &__title {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: $default;
+        text-transform: uppercase;
+    }
     &__item {
         background-repeat: no-repeat;
         position: relative;
@@ -1408,23 +1454,11 @@
             color: $ac;
         }
     }
-    &__recent-posts__link {}
     &__calendar {
-        position: relative;
-        padding-left: 25px;
         font-size: 12px;
         @extend %rubik-400px;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0px;
-            left: -1px;
-            width: 12px;
-            height: 13px;
-            background-image: url('../images/icons/calendar.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+        color: #9a9a9a;
+        text-transform: uppercase;
     }
     &__link {
         margin-right: 15px;
@@ -1432,6 +1466,10 @@
         &:hover {
             color: $ac;
         }
+    }
+    &__svg {
+        margin-right: 5px;
+        vertical-align: text-top;
     }
 }
 
@@ -1480,7 +1518,7 @@
         align-items: baseline;
         @extend %rubik-400px;
         p {
-            margin-right: 30px;
+            margin-right: 20px;
         }
         span {
             color: #999999;
@@ -1509,7 +1547,7 @@
     }
     &__title {
         font-size: 24px;
-        @extend %rubik-500px;
+        @extend %rubik-700px;
         color: $title;
         margin-bottom: 60px;
     }
@@ -1521,6 +1559,7 @@
         border-bottom: 1px solid #e0e0e0;
         margin-bottom: 30px;
         padding-bottom: 30px;
+        display: flex;
         &:last-child() {
             border-bottom: none;
         }
@@ -1540,25 +1579,18 @@
         line-height: 1.8;
     }
     &__reply {
-        position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -124px;
-            background-image: url('..https://fontawesome.ru/icon/arrow-right');
-            width: 100px;
-            height: 100px;
-        }
+        transition: color 0.5s;
+        color: #69778a;
+        @extend %rubik-400px;
         &:hover {
             color: $ac;
+            .cls-1 {
+                fill: $ac;
+            }
         }
     }
     &__itemss {
         margin-left: 130px;
-    }
-    &__som {
-        display: flex;
     }
     &__img {
         width: 100px;
@@ -1566,52 +1598,140 @@
         object-fit: cover;
         margin-right: 30px;
     }
+    &__svg {
+        vertical-align: bottom;
+        margin-left: 5px;
+    }
 }
 
 .blog-one-form {
     margin-bottom: 55px;
     &__title {
         font-size: 24px;
-        @extend %rubik-500px;
+        @extend %rubik-700px;
         margin-bottom: 50px;
-        /*700*/
+        color: $title;
     }
-    &__textarea,
+    &__name,
     &__email,
-    &__name {
+    &__textarea {
         /*написать футеру в форме name*/
-        padding: 0px 20px;
+        padding: 0px 40px 0 20px;
         width: 400px;
         height: 50px;
-        margin-right: 0px;
-        /*сделать отступ правый*/
         margin-bottom: 20px;
         border: 1px solid #e5e5e5;
+        @extend %rubik-400px;
+        transition: border-color 0.5s;
+        &:hover {
+            border-color: #a3bbc8;
+        }
         &::placeholder {
             color: #999999;
             @extend %rubik-400px;
-        }
-        &:last-child {
-            margin-right: 0px;
         }
     }
     &__textarea {
         width: 100%;
         resize: none;
         height: 120px;
+        width: 830px;
         margin-bottom: 40px;
         padding-top: 15px;
+    }
+    &__name {
+        position: relative;
+        margin-right: 25px;
+    }
+    &__email {
+        padding-left: 20px;
     }
     &__button {
         @extend %btn;
         text-transform: uppercase;
         padding: 20px 35px;
+        border: none;
         &:hover {
             color: #fcd7b6;
         }
         &:active {
             color: #e72828;
         }
+    }
+    &__boxs {
+        /*переименовать*/
+        position: relative;
+        &::before {
+            content: '';
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 2px;
+            left: -61px;
+            width: 18px;
+            height: 15px;
+            background-image: url('../images/icons/user-blue.svg');
+        }
+    }
+    &__boxss {
+        position: relative;
+        &::before {
+            content: '';
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -133px;
+            right: 16px;
+            width: 18px;
+            height: 15px;
+            background-image: url('../images/icons/letter.svg');
+        }
+    }
+    &__boxsss {
+        position: relative;
+        &::before {
+            content: '';
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -200px;
+            right: 16px;
+            width: 18px;
+            height: 15px;
+            background-image: url('../images/icons/message.svg');
+        }
+    }
+}
+
+.contact {
+    &__title {
+        color: #a3bbc8;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__title p {
+        margin-bottom: 75px;
+        font-size: 35px;
+        @extend %poppins-700px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+    &__item {
+        margin-right: 25px;
+        max-width: 370px;
+        background-color: red;
+    }
+    &__item p {
+        color: #222222;
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-align: center;
+        width: 255px;
+    }
+    &__item span {
+        color: #565872;
+        margin-bottom: 75px;
+        @extend %rubik-400px;
     }
 }
 

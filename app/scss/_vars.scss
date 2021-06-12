@@ -4,6 +4,15 @@ $ac: #fcd7b6;
 
 $default: #243f4d;
 $title: #436372;
+
+/*@extend %rubik-400px;*/
+
+
+/*@extend %poppins-700px;*/
+
+
+/*@extend %rubik-500px;*/
+
 %dmsans-700px {
     font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;
@@ -14,12 +23,6 @@ $title: #436372;
     font-weight: 500;
 }
 
-
-/*@extend %rubik-400px;*/
-
-
-/*@extend %rubik-500px;*/
-
 %dmsans-400px {
     font-family: 'DMSans-Regular', sans-serif;
     font-weight: 400;
@@ -27,6 +30,11 @@ $title: #436372;
 
 %poppins-700px {
     font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%rubik-700px {
+    font-family: 'Rubik-bold', sans-serif;
     font-weight: 700;
 }
 
