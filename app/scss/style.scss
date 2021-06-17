@@ -231,6 +231,7 @@
         background-repeat: no-repeat;
         border-right: 1px solid #e8e4df;
         position: relative;
+        /* max-width: 586px;*/
         &::before {
             content: "";
             position: absolute;
@@ -242,13 +243,13 @@
             background-repeat: no-repeat;
         }
     }
-    .services__item--support::before {
+    &__item--support::before {
         background-image: url('../images/icons/support.svg');
     }
-    .services__item--delevery::before {
+    &__item--delevery::before {
         background-image: url('../images/icons/delevery.svg');
     }
-    .services__item--payment::before {
+    &__item--payment::before {
         background-image: url('../images/icons/payment.svg');
     }
     &__subtitle {
@@ -314,10 +315,6 @@
 
 /*index*/
 
-.products-content__item:last-child() {
-    margin-bottom: 0px;
-}
-
 .products {
     &-two {
         padding-bottom: 120px;
@@ -339,13 +336,16 @@
         align-items: center;
     }
     &__item-box {
-        width: 200px;
+        max-width: 200px;
         height: 200px;
         overflow: hidden;
         position: relative;
         margin-bottom: 70px
     }
     &__img {
+        width: 200px;
+        /*удалял*/
+        height: 200px;
         margin: 0 auto;
     }
     &__item-box-link {
@@ -396,6 +396,7 @@
 }
 
 .mixitup-control-active {
+    /*посмотреть как оно должно быть*/
     color: $ac;
 }
 
@@ -403,12 +404,14 @@
     &__items {
         display: flex;
         padding: 150px 0 30px;
+        max-width: 1880px;
     }
     &__item {
         background-color: #feefe2;
         padding: 85px 105px 80px 435px;
         margin-right: 30px;
         position: relative;
+        max-width: 100%;
         &::after {
             content: "";
             position: absolute;
@@ -422,10 +425,10 @@
             margin-right: 0px;
         }
     }
-    .description-product__item--mirun::after {
+    &__item--mirun::after {
         background-image: url('../images/lampa1.png');
     }
-    .description-product__item--malesuada::after {
+    &__item--malesuada::after {
         background-image: url('../images/lampa2.png');
     }
     &__title {
@@ -602,25 +605,16 @@
             background-size: cover;
         }
     }
-}
-
-.insights__calendar::before {
-    background-image: url('../images/icons/calendar.svg');
-}
-
-.insights__user::before {
-    background-image: url('../images/icons/user.svg');
-}
-
-.partners {
-    padding: 100px 430px 85px 415px;
-    background-color: #fef7f0;
-    display: flex;
-    align-items: center;
-    &__contant {
-        margin-right: 100px;
+    &__calendar::before {
+        background-image: url('../images/icons/calendar.svg');
+    }
+    &__user::before {
+        background-image: url('../images/icons/user.svg');
     }
 }
+
+
+/*login------------------------------------------------------*/
 
 .modal {
     max-width: 470px;
@@ -700,6 +694,7 @@
 }
 
 .catalog {
+    padding: 0 0 120px;
     &__inner {
         display: flex;
     }
@@ -727,7 +722,7 @@
 
 .catalog-category {
     &__form {
-        margin-bottom: 55px;
+        margin-bottom: 40px;
     }
     &__label {
         cursor: pointer;
@@ -860,16 +855,19 @@
 .recent-products {
     padding: 0 0 25px;
     &__item {
-        padding-left: 90px;
+        display: flex;
         font-size: 14px;
         color: #000000;
         background-repeat: no-repeat;
         background-size: 70px 70px;
         margin-bottom: 30px;
         cursor: pointer;
-        transition: color 0.3s;
+    }
+    &__img {
+        margin-right: 20px;
+        transition: opacity 0.5s;
         &:hover {
-            color: $ac;
+            opacity: 0.7;
         }
     }
     &__subtitle {
@@ -883,6 +881,12 @@
     }
     &__star {
         margin-bottom: 15px;
+    }
+    a {
+        transition: color 0.3s;
+        &:hover {
+            color: $ac;
+        }
     }
 }
 
@@ -1228,7 +1232,7 @@
 }
 
 .blog {
-    padding: 0 0 105px;
+    padding: 0 0 120px;
     /*120*/
     /*убрать отступ в низу */
     &__item {
@@ -1246,7 +1250,6 @@
         margin-right: 65px;
     }
     &__img {
-        position: relative;
         margin-bottom: 40px;
         cursor: pointer;
         object-fit: cover;
@@ -1339,15 +1342,12 @@
         border-color: #000000;
         border: none;
     }
-    .blog__img:hover {
-        .blog__info {
-            display: block;
-            /*не работает*/
-        }
-    }
 }
 
 .blog-one {
+    &-item {
+        margin-bottom: 50px;
+    }
     &-info {
         padding: 30px 20px 30px 20px;
         background-color: #a3bbc8;
@@ -1358,11 +1358,12 @@
         letter-spacing: -0.4px;
         @extend %rubik-400px;
         position: absolute;
-        bottom: 0px;
+        bottom: 47px;
         text-transform: uppercase;
     }
-    &__img {
+    &-img {
         margin-bottom: 40px;
+        object-fit: cover;
     }
     &__left {
         float: left;
@@ -1380,28 +1381,31 @@
         line-height: 1.8;
         blockquote {
             background-color: #edf1f4;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
             border-left: 4px solid #a3bbc8;
             padding: 25px 110px 20px 30px;
         }
         h2 {
+            padding-top: 20px;
             font-size: 18px;
             @extend %rubik-500px;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
     }
     &__text span {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         @extend %rubik-500px;
         display: block;
     }
     &__text p {
-        margin-bottom: 65px;
+        margin-bottom: 40px;
         @extend %rubik-500px;
+        line-height: 1.9;
     }
     &__title {
         margin-bottom: 20px;
         font-size: 36px;
+        position: relative;
     }
     &__modifier {
         padding-left: 45px;
@@ -1418,61 +1422,6 @@
     }
 }
 
-.recent-posts {
-    &__title {
-        font-size: 18px;
-        margin-bottom: 40px;
-        color: $default;
-        text-transform: uppercase;
-    }
-    &__item {
-        background-repeat: no-repeat;
-        position: relative;
-        background-size: 70px 70px;
-        margin-bottom: 25px;
-    }
-    &__inner {
-        display: flex;
-    }
-    &__img {
-        margin-right: 20px;
-        width: 70px;
-        height: 70px;
-        transition: opacity 0.5s;
-        &:hover {
-            opacity: 0.7;
-        }
-    }
-    &__text {
-        @extend %rubik-400px;
-        font-size: 14px;
-        line-height: 1.4;
-        margin-bottom: 20px;
-        width: 164px;
-        transition: color 0.5s;
-        &:hover {
-            color: $ac;
-        }
-    }
-    &__calendar {
-        font-size: 12px;
-        @extend %rubik-400px;
-        color: #9a9a9a;
-        text-transform: uppercase;
-    }
-    &__link {
-        margin-right: 15px;
-        transition: color 0.5s;
-        &:hover {
-            color: $ac;
-        }
-    }
-    &__svg {
-        margin-right: 5px;
-        vertical-align: text-top;
-    }
-}
-
 .comments {
     &__inner {
         display: flex;
@@ -1485,7 +1434,7 @@
         padding: 35px 20px 30px 0px;
         border-top: 2px solid #ebebeb;
         border-bottom: 2px solid #ebebeb;
-        margin-bottom: 65px;
+        margin-bottom: 60px;
         position: relative;
         &::after {
             content: '';
@@ -1552,7 +1501,7 @@
         margin-bottom: 60px;
     }
     &__bottom {
-        margin-bottom: 30px;
+        margin-bottom: 70px;
     }
     &__item {
         position: relative;
@@ -1604,8 +1553,61 @@
     }
 }
 
+.recent-posts {
+    &__title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: $default;
+        text-transform: uppercase;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: 70px 70px;
+        margin-bottom: 25px;
+    }
+    &__inner {
+        display: flex;
+    }
+    &__img {
+        margin-right: 20px;
+        width: 70px;
+        height: 70px;
+        transition: opacity 0.5s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &__text {
+        @extend %rubik-400px;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        width: 164px;
+        transition: color 0.5s;
+        &:hover {
+            color: $ac;
+        }
+    }
+    &__calendar {
+        font-size: 12px;
+        @extend %rubik-400px;
+        color: #9a9a9a;
+        text-transform: uppercase;
+    }
+    &__link {
+        transition: color 0.5s;
+        &:hover {
+            color: $ac;
+        }
+    }
+    &__svg {
+        margin-right: 5px;
+        vertical-align: text-top;
+    }
+}
+
 .blog-one-form {
-    margin-bottom: 55px;
     &__title {
         font-size: 24px;
         @extend %rubik-700px;
@@ -1636,7 +1638,7 @@
         resize: none;
         height: 120px;
         width: 830px;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         padding-top: 15px;
     }
     &__name {
@@ -1649,7 +1651,7 @@
     &__button {
         @extend %btn;
         text-transform: uppercase;
-        padding: 20px 35px;
+        padding: 16px 30px;
         border: none;
         &:hover {
             color: #fcd7b6;
@@ -1658,41 +1660,41 @@
             color: #e72828;
         }
     }
-    &__boxs {
+    &__user {
         /*переименовать*/
         position: relative;
         &::before {
             content: '';
             background-repeat: no-repeat;
             position: absolute;
-            top: 2px;
-            left: -61px;
+            top: -2px;
+            left: -66px;
             width: 18px;
             height: 15px;
             background-image: url('../images/icons/user-blue.svg');
         }
     }
-    &__boxss {
+    &__letter {
         position: relative;
         &::before {
             content: '';
             background-repeat: no-repeat;
             position: absolute;
-            top: -133px;
-            right: 16px;
+            top: -125px;
+            right: 23px;
             width: 18px;
             height: 15px;
             background-image: url('../images/icons/letter.svg');
         }
     }
-    &__boxsss {
+    &__message {
         position: relative;
         &::before {
             content: '';
             background-repeat: no-repeat;
             position: absolute;
-            top: -200px;
-            right: 16px;
+            top: -196px;
+            right: 23px;
             width: 18px;
             height: 15px;
             background-image: url('../images/icons/message.svg');
@@ -1701,15 +1703,21 @@
 }
 
 .contact {
-    &__title {
-        color: #a3bbc8;
-        margin-bottom: 20px;
-        text-align: center;
+    padding: 0 0 140px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
     }
-    &__title p {
+    &__title {
+        text-align: center;
         margin-bottom: 75px;
         font-size: 35px;
-        @extend %poppins-700px;
+        color: #436372;
+    }
+    &__title p {
+        color: #a3bbc8;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
     &__items {
         display: flex;
@@ -1717,22 +1725,94 @@
         margin-bottom: 120px;
     }
     &__item {
+        padding: 70px 60px 80px 60px;
         margin-right: 25px;
-        max-width: 370px;
-        background-color: red;
+        background-color: #fbfbfb;
+        text-align: center;
+        font-style: normal;
+        transition: border 1s;
+        border: 3px solid #fbfbfb;
+        /*
+        height: 385px; 
+        width: 375px;*/
+        &:hover {
+            border: 3px solid #a3bbc8;
+        }
     }
     &__item p {
-        color: #222222;
-        margin-bottom: 25px;
-        font-size: 20px;
-        text-align: center;
-        width: 255px;
+        color: #565872;
+        margin-bottom: 15px;
+        @extend %rubik-400px;
+        width: 270px;
     }
     &__item span {
-        color: #565872;
-        margin-bottom: 75px;
-        @extend %rubik-400px;
+        color: #222222;
+        display: block;
+        margin-bottom: 25px;
+        font-size: 20px;
     }
+    &__box {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 65px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        transition: background-color 0.5s;
+        background-repeat: no-repeat;
+        &:hover {
+            background-color: #a3bbc8;
+            .cls-1 {
+                fill: #ffffff;
+            }
+        }
+    }
+    &__link {
+        transition: color 0.5s;
+        &:hover {
+            color: $ac;
+        }
+    }
+    &__name,
+    &__email,
+    &__textarea {
+        /*написать футеру в форме name*/
+        padding: 0px 40px 0 20px;
+        width: 300px;
+        height: 50px;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        border: none;
+        @extend %rubik-400px;
+        text-transform: uppercase;
+        &::placeholder {
+            color: #565872;
+            @extend %rubik-400px;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        resize: none;
+        height: 180px;
+        width: 630px;
+        margin-bottom: 35px;
+        padding-top: 15px;
+    }
+    &__name {
+        position: relative;
+        margin-right: 25px;
+    }
+    &__email {
+        padding-left: 20px;
+    }
+}
+
+#map {
+    width: 500px;
+    height: 335px;
 }
 
 
@@ -1810,7 +1890,8 @@
     &__btn {
         border: none;
         background-color: #a3bbc8;
-        padding: 11px 20px 13px 17px;
+        padding: 13px 20px 13px 17px;
+        margin-left: -6px;
         color: #ffffff;
         cursor: pointer;
         &:hover {

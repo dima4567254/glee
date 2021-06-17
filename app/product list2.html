@@ -101,7 +101,7 @@
                 <div class="catalog__inner">
                     <div class="catalog__filters">
                         <div class="catalog-category">
-                            <h2 class="catalog__title">
+                            <h2 class="catalog-title">
                                 category
                             </h2>
                             <form class="catalog-category__form" action="#">
@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="catalog-category__prise catalog__filters">
-                            <h2 class="catalog__title">
+                            <h2 class="catalog-title">
                                 Price
                             </h2>
                             <form class="catalog-category__form">
@@ -155,7 +155,7 @@
                             </form>
 
                             <div class="catalog-brand">
-                                <h2 class="catalog__title">
+                                <h2 class="catalog-title">
                                     Brand
                                 </h2>
                                 <form class="catalog-brand__form" action="#">
@@ -202,37 +202,53 @@
                             </div>
 
                             <div class="recent-products catalog__filters">
-                                <h2 class="catalog__title">
+                                <h2 class="catalog-title">
                                     Recent products
                                 </h2>
                                 <ul class="recent-products__list">
-                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products1.jpg');">
-                                        <!--если не работает то переделать через имг-->
-                                        <h3 class="recent-products__subtitle">
-                                            Pendant lamp
-                                        </h3>
-                                        <div class="recent-products__star" data-rateyo-rating="4">
+                                    <li class="recent-products__item">
+                                        <a class="recent-products__link" href="#">
+                                            <img class="recent-products__img" src="images/recent-products/recent-products1.jpg" alt="products">
+                                        </a>
+                                        <div class="recent-products__comtent">
+                                            <h3 class="recent-products__subtitle">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="recent-products__star" data-rateyo-rating="4">
+                                            </div>
+                                            <a>23$</a>
                                         </div>
-                                        <span>23$</span>
                                     </li>
 
-                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products2.jpg');">
-                                        <h3 class="recent-products__subtitle">
-                                            Pendant lamp
-                                        </h3>
-                                        <div class="recent-products__star" data-rateyo-rating="4">
+                                    <li class="recent-products__item">
+                                        <a class="recent-products__link" href="#">
+                                            <img class="recent-products__img" src="images/recent-products/recent-products2.jpg" alt="products">
+                                        </a>
+                                        <div class="recent-products__comtent">
+                                            <h3 class="recent-products__subtitle">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="recent-products__star" data-rateyo-rating="4">
+                                            </div>
+                                            <a>23$</a>
                                         </div>
-                                        <span>23$</span>
                                     </li>
 
-                                    <li class="recent-products__item" style="background-image: url('../images/recent-products/recent-products3.jpg');">
-                                        <h3 class="recent-products__subtitle">
-                                            Pendant lamp
-                                        </h3>
-                                        <div class="recent-products__star" data-rateyo-rating="4">
+                                    <li class="recent-products__item">
+                                        <a class="recent-products__link" href="#">
+                                            <img class="recent-products__img" src="images/recent-products/recent-products3.jpg" alt="products">
+                                        </a>
+                                        <div class="recent-products__comtent">
+                                            <h3 class="recent-products__subtitle">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="recent-products__star" data-rateyo-rating="4">
+                                            </div>
+                                            <a>23$</a>
                                         </div>
-                                        <span>23$</span>
                                     </li>
+
+
                                 </ul>
                             </div>
                         </div>
@@ -437,26 +453,27 @@
                         </ul>
                     </div>
                 </div>
+                <div class="pagination">
+                    <ul class="pagination__list pagination-list">
+
+                        <li class="pagination__item">
+                            <a class="pagination__link pagination__link--active" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section>
-        <section>
-            <div class="pagination">
-                <ul class="pagination__list pagination-list">
-                    <!--решить проблему с отступом и назвать секции-->
-                    <li class="pagination__item">
-                        <a class="pagination__link pagination__link--active" href="#">1</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">3</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">Next</a>
-                    </li>
-                </ul>
-            </div>
+
+
+
         </section>
         <section>
             <ul class="partners">

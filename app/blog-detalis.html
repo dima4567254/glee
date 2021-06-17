@@ -105,7 +105,7 @@
             <div class="container-container">
                 <div class="blog__inner">
                     <div class="blog__left">
-                        <div class="blog__item">
+                        <div class="blog-one-item">
                             <div class="blog-one-info">
                                 <p class="blog__calendar">
                                     <svg class="blog__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10pt" height="10pt" viewBox="0 0 10 10" version="1.1">
@@ -129,18 +129,12 @@
                                     </a>
                                 </p>
                             </div>
-                            <img class="blog__img" src="images/blog/room1.jpg" alt="room">
-
-
+                            <img class="blog-one-img" src="images/blog/room1.jpg" alt="room">
                             <!--подумать стоит ли делать синюю полоску при наведении и придумать как сделать значек белым -->
 
-
-
-                            <a class="blog__link" href="#">
-                                <h2 class="blog-one__title">
-                                    Fonsectetur adipisicing eiusmod
-                                </h2>
-                            </a>
+                            <h2 class="blog-one__title">
+                                Fonsectetur adipisicing eiusmod
+                            </h2>
                             <div class="blog-one__text">
                                 <span> 
                                 Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -312,7 +306,7 @@
                                                 </div>
                                             </div>
                                             <div class="comments__text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra
                                             </div>
                                             <a class="comments__reply" href="#">
                                                 Reply
@@ -341,7 +335,7 @@
                                                 </div>
                                             </div>
                                             <div class="comments__text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem,
                                             </div>
                                             <a class="comments__reply" href="#">
                                                 Reply                                                                                                                     
@@ -369,18 +363,18 @@
                                 <h2 class="blog-one-form__title">
                                     Leave A Comment
                                 </h2>
-                                <!-- <label class="sr-only" for="name">Enter your name</label>-->
+                                <label class="sr-only" for="name">Enter your name</label>
                                 <label class="blog-one-form__label " for="name"></label>
 
                                 <input class="blog-one-form__name " name="name" id="name" type="text" placeholder="Name" required oninvalid="this.setCustomValidity('fill in this field!')">
-
-                                <label class=" blog-one-form__label blog-one-form__boxs" for="email"></label>
+                                <span class="blog-one-form__user"></span>
+                                <label class=" blog-one-form__label " for="email"></label>
                                 <input class="blog-one-form__email" type="email" placeholder="youremail@gmail.com" name="email" id="email" required oninvalid="this.setCustomValidity('fill in this field!')">
 
                                 <label class="sr-only" for="Comment">Enter your Comment</label>
                                 <textarea class="blog-one-form__textarea" placeholder="Comment" id="Comment" name="Comment" required oninvalid="this.setCustomValidity('fill in this field!')"></textarea>
-                                <span class="blog-one-form__boxss"></span>
-                                <span class="blog-one-form__boxsss"></span>
+                                <span class="blog-one-form__letter"></span>
+                                <span class="blog-one-form__message"></span>
                                 <button class="blog-one-form__button" type="submit">
                                     Post Comment
                                 </button>
