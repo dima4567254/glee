@@ -17,6 +17,9 @@
                     <img src="images/logo.png" alt="logo">
                 </a>
                 <nav class="menu">
+                    <button class="menu__btn"> 
+                        <span></span> 
+                    </button>
                     <ul class="menu__items">
                         <li class="menu__item">
                             <a class="menu__link menu__link--active" href="#">
@@ -72,6 +75,7 @@
             </div>
         </div>
     </header>
+
     <main class="main">
         <section class="slider">
             <ul class="slider__items">
@@ -779,11 +783,12 @@
             </div>
 
 
+
             <div class="filter">
                 <div data-ref="container-2" class="container-container">
-                    <h2 class="filter__title title">
+                    <h3 class="filter__title title">
                         New Design
-                    </h2>
+                    </h3>
                     <ul class="filter__list">
                         <li class="filter__items">
                             <button class="filter__btn" type="button" data-filter="all">
@@ -812,46 +817,76 @@
                         </li>
                     </ul>
 
-                    <ul class="filter__content">
-                        <li class="filter__item mix category-a">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/1.jpg" alt="sofa">
-                            </a>
-                        </li>
-                        <li class="filter__item mix category-b">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/2.jpg" alt="sofa">
-                            </a>
-                        </li>
-                        <li class="filter__item mix category-a  category-c">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/3.jpg" alt="sofa">
-                            </a>
-                        </li>
-                        <li class="filter__item mix category-a">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/4.jpg" alt="sofa">
-                            </a>
-                        </li>
-                        <li class="filter__item mix  category-b category-c">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/5.jpg" alt="armchair">
-                            </a>
-                        </li>
-                        <li class="filter__item mix category-a">
-                            <a class="filter__link" href="#">
-                                <img src="images/filter-design/6.jpg" alt="sofa">
-                            </a>
-                        </li>
+                    <div class="design">
+                        <ul class="design__content">
+                            <li class="design__item mix category-a">
+                                <h4 class="design__subtitle">
+                                    Beat Flat Pendant Black
+                                </h4>
+                                <p> Classic</p>
+                                <a class="design__link" href="#">
+                                    <img src="images/design/design7.png" alt="sofa">
+                                </a>
+                            </li>
+                            <li class="design__item mix category-b">
+                                <h4 class="design__subtitle">
+                                    Lampe Sur Pieds Bamboo
+                                </h4>
+                                <p> Classic</p>
+                                <a class="designr__link" href="#">
+                                    <img src="images/design/design8.png" alt="sofa">
+                                </a>
+                            </li>
+                            <li class="design__item mix category-a  category-c">
+                                <div class="design__top">
+                                    <div class="design__battom">
+                                        <h4 class="design__subtitle">
+                                            Rattan Rocking Chair
+                                        </h4>
+                                        <p> Classic</p>
+                                    </div>
+                                    <img src="images/design/design8.png" alt="sofa">
+                                </div>
+                                <a class="design__link" href="#"></a>
 
-                    </ul>
+                            </li>
+                            <li class="design__item mix category-a">
+                                <h4 class="design__subtitle">
+                                    Rattan Rocking Chair
+                                </h4>
+                                <p> Classic</p>
+                                <a class="design__link" href="#">
+                                    <img src="images/design/design4.png" alt="sofa">
+                                </a>
+                            </li>
+                            <li class="design__item mix  category-b category-c">
+                                <h4 class="design__subtitle">
+                                    Rattan Rocking Chair
+                                </h4>
+                                <p> Classic</p>
+                                <a class="design__link" href="#">
+                                    <img src="images/design/design5.png" alt="sofa">
+                                </a>
+                            </li>
+                            <li class="design__item mix category-a">
+                                <h4 class="design__subtitle">
+                                    Lampe Sur Pieds Bamboo
+                                </h4>
+                                <p> Classic</p>
+                                <a class="design__link" href="#">
+                                    <img src="images/design/design6.png" alt="sofa">
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <a class="video" data-fancybox style="background-image: url('images/vidio-bg.jpg')" href="https://www.youtube.com/watch?v=Z89W-XF5VTs&t=14s&ab_channel=%D0%9E%D1%820%D0%B4%D0%BE1">
                 <span class="sr-only">youTube videos</span>
             </a>
-
+            <!--
         </section>
 
         <section class="insights">
@@ -933,7 +968,7 @@
             </ul>
 
             <ul class="partners">
-                <!-- <div class="container-container">-->
+                <!-- <div class="container-container">
                 <li class="partners__item">
                     <div class="partners__contant">
                         <a href="#">
@@ -981,15 +1016,15 @@
 
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container-container">
-            <ul class="footer__top">
-                <li class="footer__contacts">
-                    <a class="logo  footer__logo" href="#">
-                        <img src="images/logo.png" alt="logo">
-                    </a>
-                    <address class="footer-contacts__text">
+-->
+            <footer class="footer">
+                <div class="container-container">
+                    <ul class="footer__top">
+                        <li class="footer__contacts">
+                            <a class="logo  footer__logo" href="#">
+                                <img src="images/logo.png" alt="logo">
+                            </a>
+                            <address class="footer-contacts__text">
                         <div class="footer__text">
                             <p>
                                 <a class="footer__link" href="#">
@@ -1011,117 +1046,117 @@
                             </p>
                         </div>
                     </address>
-                </li>
-                <li class="footer__services">
-                    <h2 class="footer__title">
-                        Services
-                    </h2>
-                    <div class="footer__text">
-                        <p>
-                            <a class="footer__link" href="#">
+                        </li>
+                        <li class="footer__services">
+                            <h2 class="footer__title">
+                                Services
+                            </h2>
+                            <div class="footer__text">
+                                <p>
+                                    <a class="footer__link" href="#">
                                 About us
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Return policy
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Our Blog
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Contact Us
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Terms & Condition
                             </a>
-                        </p>
-                    </div>
-                </li>
+                                </p>
+                            </div>
+                        </li>
 
-                <li class="footer__account">
-                    <h2 class="footer__title">
-                        Account
-                    </h2>
-                    <div class="footer__text">
-                        <p>
-                            <a class="footer__link" href="#">
+                        <li class="footer__account">
+                            <h2 class="footer__title">
+                                Account
+                            </h2>
+                            <div class="footer__text">
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Your Account
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Checkout
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Login
                             </a>
-                        </p>
-                        <p>
-                            <a class="footer__link" href="#">
+                                </p>
+                                <p>
+                                    <a class="footer__link" href="#">
                                 Register
                             </a>
-                        </p>
-                    </div>
-                </li>
-                <li class="footer__newsletter">
-                    <h2 class="footer__title">
-                        Newsletter
-                    </h2>
-                    <div class="footer__form">
-                        <p>
-                            Subscribe by our newsletter and get update protidin.
-                        </p>
-                    </div>
-                    <form class="footer__form" action="#">
-                        <label class="sr-only" for="Email">
+                                </p>
+                            </div>
+                        </li>
+                        <li class="footer__newsletter">
+                            <h2 class="footer__title">
+                                Newsletter
+                            </h2>
+                            <div class="footer__form">
+                                <p>
+                                    Subscribe by our newsletter and get update protidin.
+                                </p>
+                            </div>
+                            <form class="footer__form" action="#">
+                                <label class="sr-only" for="Email">
                             Enter your email
                         </label>
-                        <input class="footer__imput" id="Email" type="email" placeholder="Email address" required oninvalid="this.setCustomValidity('fill in this field!')">
-                        <button class="footer__btn" type="submit">
+                                <input class="footer__imput" id="Email" type="email" placeholder="Email address" required oninvalid="this.setCustomValidity('fill in this field!')">
+                                <button class="footer__btn" type="submit">
                             Subscribe
                         </button>
-                    </form>
-                </li>
+                            </form>
+                        </li>
 
-            </ul>
+                    </ul>
 
-            <div class="footer__bottom">
-                <div class="footer__copy">
-                    ©2020 CopyRight Example. All rights reserved
-                </div>
-                <ul class="footer__list">
-                    <li class="footer__item-nav">
-                        <a class="footer__link-nav" href="#">
+                    <div class="footer__bottom">
+                        <div class="footer__copy">
+                            ©2020 CopyRight Example. All rights reserved
+                        </div>
+                        <ul class="footer__list">
+                            <li class="footer__item-nav">
+                                <a class="footer__link-nav" href="#">
                             Home
                         </a>
-                    </li>
-                    <li class="footer__item-nav">
-                        <a class="footer__link-nav" href="#">
+                            </li>
+                            <li class="footer__item-nav">
+                                <a class="footer__link-nav" href="#">
                             About
                         </a>
-                    </li>
-                    <li class="footer__item-nav">
-                        <a class="footer__link-nav" href="#">
+                            </li>
+                            <li class="footer__item-nav">
+                                <a class="footer__link-nav" href="#">
                             Blog
                         </a>
-                    </li>
-                    <li class="footer__item-nav">
-                        <a class="footer__link-nav" href="#">
+                            </li>
+                            <li class="footer__item-nav">
+                                <a class="footer__link-nav" href="#">
                             Contact
                         </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
 
-    <script src="js/main.min.js"></script>
+            <script src="js/main.min.js"></script>

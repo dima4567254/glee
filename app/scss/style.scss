@@ -9,11 +9,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 }
 
 .menu {
     display: flex;
+    &__btn {
+        display: none;
+    }
     &__items {
         display: flex;
     }
@@ -83,7 +87,6 @@
         width: 1px;
         height: 30px;
         background-color: #fde7d3;
-        z-index: +10;
     }
     &__num {
         position: relative;
@@ -192,7 +195,7 @@
 .slick-dots {
     display: flex;
     position: absolute;
-    bottom: 45px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     li:not(:last-child) {
@@ -239,7 +242,7 @@
             left: 147px;
             height: 50px;
             width: 60px;
-            background-size: 86%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
     }
@@ -289,26 +292,46 @@
     &__btn:hover {
         color: #fcd7b6;
     }
+}
+
+.design {
     &__content {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -20px 70px;
     }
+    &__subtitle {
+        font-size: 20px;
+        color: #191919;
+        margin-bottom: 20px;
+        width: 185px;
+    }
     &__item {
+        padding: 40px 0 0 30px;
         margin-right: 30px;
         margin-bottom: 35px;
+        width: 370px;
+        height: 250px;
+        background-color: #f8f8f8;
         transition: opacity 0.5s;
+        &::after {
+            background-repeat: no-repeat;
+            background-image: url();
+        }
         &:hover {
             opacity: 0.5;
         }
-        &:nth-child(3n+3) {
-            margin-right: 0px;
-        }
     }
-    &__link {
-        width: 370px;
-        height: 250px;
-        display: block;
+    p {
+        display: flex;
+        color: #a3bbc8;
+    }
+    &__link img {
+        /* height: 140px;
+        width: 285px;*/
+    }
+    &__top {
+        display: flex;
     }
 }
 
@@ -328,8 +351,7 @@
     }
     &__item {
         padding: 25px 35px 35px 30px;
-        margin-right: 26px;
-        margin-bottom: 40px;
+        margin: 0 13px 40px 13px;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
         display: flex;
         flex-direction: column;
@@ -411,7 +433,6 @@
         padding: 85px 105px 80px 435px;
         margin-right: 30px;
         position: relative;
-        max-width: 100%;
         &::after {
             content: "";
             position: absolute;
@@ -479,6 +500,7 @@
     opacity: 1;
     margin-bottom: 115px;
     transition: opacity 0.4s;
+    max-width: 100%;
     &:hover {
         opacity: 0.4;
         border: 2px solid #000000;
