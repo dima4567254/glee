@@ -313,22 +313,17 @@
         width: 370px;
         height: 250px;
         background-color: #f8f8f8;
-        transition: opacity 0.5s;
-        &::after {
-            background-repeat: no-repeat;
-            background-image: url();
-        }
-        &:hover {
-            opacity: 0.5;
-        }
+        background-repeat: no-repeat;
+        /* background-size: 100%;*/
     }
     p {
-        display: flex;
         color: #a3bbc8;
     }
-    &__link img {
-        /* height: 140px;
-        width: 285px;*/
+    &__link {
+        transition: opacity 0.5s;
+        &:hover {
+            color: $ac;
+        }
     }
     &__top {
         display: flex;

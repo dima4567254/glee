@@ -15,11 +15,6 @@
                 font-size: 50px;
             }
         }
-        .footer {
-            &__imput {
-                max-width: 110px;
-            }
-        }
         .services {
             &__item {
                 padding: 45px 40px 40px 100px;
@@ -47,6 +42,19 @@
                     height: 220px;
                     background-size: cover;
                 }
+            }
+        }
+        .design {
+            &__content {
+                justify-content: center;
+            }
+            &__item {
+                margin: 0 30px 30px;
+            }
+        }
+        .footer {
+            &__imput {
+                max-width: 110px;
             }
         }
     }
@@ -185,6 +193,11 @@
                 margin: 0 -20px 60px;
             }
         }
+        .design {
+            &__item {
+                margin: 0 15px 30px;
+            }
+        }
         .footer {
             &__top {
                 /*возможно придется пересмотреть*/
@@ -269,6 +282,9 @@
                 margin-bottom: 20px;
                 &::after {
                     background-image: none;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
                 }
             }
             &__title {
@@ -361,6 +377,24 @@
             }
             &__text {
                 max-width: none;
+            }
+        }
+        .design {
+            &__content {
+                margin: 0 -20px 40px;
+            }
+            &__item {
+                background-image: none !important;
+                padding: 20px;
+                height: 100px;
+                margin: 0 15px 20px;
+            }
+            h4 {
+                text-align: center;
+                width: 100%;
+            }
+            p {
+                text-align: center;
             }
         }
         .footer {
@@ -460,6 +494,17 @@
             .products {
                 &__item {
                     margin-bottom: 20px;
+                }
+            }
+            .design {
+                &__content {
+                    margin: 0 -20px 20px;
+                }
+                h4 {
+                    font-size: 17px;
+                }
+                p {
+                    font-size: 14px;
                 }
             }
             .footer {
