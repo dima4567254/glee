@@ -308,8 +308,7 @@
     }
     &__item {
         padding: 40px 0 0 30px;
-        margin-right: 30px;
-        margin-bottom: 35px;
+        margin: 0 15px 30px;
         width: 370px;
         height: 250px;
         background-color: #f8f8f8;
@@ -421,7 +420,6 @@
     &__items {
         display: flex;
         padding: 150px 0 30px;
-        max-width: 1880px;
     }
     &__item {
         background-color: #feefe2;
@@ -451,6 +449,7 @@
         font-size: 26px;
         line-height: 1.2;
         margin-bottom: 10px;
+        letter-spacing: -0.4px;
     }
     &__text {
         @extend %rubik-500px;
@@ -459,11 +458,10 @@
         width: 330px;
         letter-spacing: -0.4px;
     }
-    &-btn {
+    &-link {
         padding: 22px 17px 22px 22px;
         background-color: #feefe2;
         display: flex;
-        align-items: center;
         color: $title;
         @extend %rubik-500px;
         font-size: 15px;
@@ -471,6 +469,8 @@
         border-color: #b3b7b5;
         transition: color 0.5s;
         cursor: pointer;
+        border: 1px solid #b3b7b5;
+        max-width: 185px;
         &:hover {
             color: $ac;
         }
@@ -484,13 +484,23 @@
     &__icon {
         padding-left: 45px;
     }
+    .description-product-link2 {}
+    .description-product__text2 {}
+    .description-product__inner {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #b3b7b5;
+        padding: 22px 17px 22px 22px;
+        width: 200px;
+    }
 }
 
 .video {
     background-position: center;
     background-size: cover;
     height: 500px;
-    display: block;
+    display: flex;
+    justify-content: center;
     position: relative;
     opacity: 1;
     margin-bottom: 115px;
@@ -531,22 +541,23 @@
     }
     &__link {
         transition: color 0.3s;
+        vertical-align: auto;
         &:hover {
             color: $ac;
             opacity: 0.7;
         }
     }
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__img {
+    &__link img {
         width: 370px;
         height: 250px;
         transition: color 0.3s;
         &:hover {
             opacity: 0.7;
         }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
     }
     &__items {
         padding: 0 338px 0 368px;
@@ -555,13 +566,12 @@
     }
     &__item {
         margin-right: 30px;
-        background-color: #ffffff;
-        position: relative;
-        max-width: 370px;
+    }
+    &__box {
         padding: 35px 52px 20px 30px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        background-color: #ffffff;
+        max-width: 370px;
+        position: relative;
     }
     &__news {
         background-color: #a3bbc8;
@@ -573,6 +583,7 @@
         border-radius: 30px;
         color: #ffffff;
         font-size: 14px;
+        z-index: 100;
         @extend %poppins-700px;
         text-align: center;
         line-height: 30px;
@@ -581,13 +592,18 @@
             background-color: $ac;
         }
     }
-    &__text {
+    &__subtitle {
         line-height: 20px;
         @extend %dmsans-500px;
         color: #262626;
         font-size: 18px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         position: relative;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 20px;
+        /*min-height: 85px;*/
+        display: block;
+        /*
         &::after {
             content: "";
             position: absolute;
@@ -596,7 +612,7 @@
             background-color: #e0e0e0;
             top: 75px;
             right: -24px;
-        }
+        }*/
     }
     &-info {
         display: flex;
@@ -1830,6 +1846,25 @@
 #map {
     width: 500px;
     height: 335px;
+}
+
+
+/*abaut-us*/
+
+.abaut-us {
+    padding: 0px 0px 120px 620px;
+    &__info {
+        padding: 75px 0;
+    }
+    &__inner {
+        display: flex;
+    }
+    &__box {
+        font-size: 140px;
+        @extend %rubik-700px;
+        color: #a3bbc8;
+        margin-right: 25px;
+    }
 }
 
 

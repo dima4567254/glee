@@ -136,14 +136,11 @@ body {
 }
 
 .partners {
-    padding: 100px 430px 85px 415px;
-    /*padding: 0px 430px 0px 415px;*/
+    padding: 100px 430px 85px;
     height: 270px;
     background-color: #fef7f0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    &__contant {
-        margin-right: 100px;
-    }
 }
