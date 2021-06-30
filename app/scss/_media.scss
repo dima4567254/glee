@@ -89,6 +89,16 @@
         &__items {
             justify-content: center;
         }
+        &-info {
+            padding: 20px;
+        }
+        &__box {
+            height: 69%;
+            padding: 30px 30px 0px 30px;
+        }
+        &__wraper {
+            margin-bottom: 80px;
+        }
     }
     .partners {
         padding: 80px 120px 80px;
@@ -271,6 +281,28 @@
             margin-right: 30px;
         }
     }
+    .insights {
+        &-info {
+            padding: 15px;
+        }
+        &__box {
+            height: 72%;
+            padding: 20px 15px 0px 15px;
+        }
+        &__wraper {
+            margin-bottom: 50px;
+        }
+        .insights-info p:not(:last-child) {
+            margin-right: 15px;
+        }
+        .insights__user,
+        .insights__calendar {
+            padding-left: 15px;
+        }
+        .insights__item:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
     .footer {
         &__top {
             padding: 50px 50px;
@@ -389,6 +421,36 @@
             margin-right: 30px;
         }
     }
+    .insights {
+        .insights__items {
+            display: block;
+        }
+        /*
+        .insights__link img {
+            display: none;
+        }
+        &-info {
+            max-width: 100%;
+            padding: 15px 15px 30px 15px;
+        }
+        &__box {
+            padding: 30px 15px 15px 15px;
+            max-width: 100%;
+        }
+        &__wraper {
+            margin-bottom: 50px;
+        }
+        .insights-info p:not(:last-child) {
+            margin-right: 15px;
+        }
+        .insights__user,
+        .insights__calendar {
+            padding-left: 15px;
+        }
+        .insights__item:not(:last-child) {
+            margin-right: 15px;
+        }*/
+    }
     .footer {
         &__top {
             padding: 50px 0 50px;
@@ -472,6 +534,10 @@
         &__list {
             margin-bottom: 40px;
         }
+        &__title {
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
     }
     .products {
         &__item {
@@ -522,10 +588,6 @@
             display: block;
             width: 200px;
         }
-    }
-    .filter__title {
-        padding-top: 40px;
-        margin-bottom: 20px;
     }
 }
 

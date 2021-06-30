@@ -218,6 +218,9 @@
     background-color: #fde3cc;
 }
 
+
+/*!*/
+
 .slick-track {
     display: flex;
     align-items: center;
@@ -234,7 +237,6 @@
         background-repeat: no-repeat;
         border-right: 1px solid #e8e4df;
         position: relative;
-        /* max-width: 586px;*/
         &::before {
             content: "";
             position: absolute;
@@ -255,6 +257,7 @@
     &__item--payment::before {
         background-image: url('../images/icons/payment.svg');
     }
+    /*!*/
     &__subtitle {
         font-size: 18px;
         color: #414141;
@@ -313,7 +316,6 @@
         height: 250px;
         background-color: #f8f8f8;
         background-repeat: no-repeat;
-        /* background-size: 100%;*/
     }
     p {
         color: #a3bbc8;
@@ -413,6 +415,7 @@
 
 .mixitup-control-active {
     /*посмотреть как оно должно быть*/
+    /*!*/
     color: $ac;
 }
 
@@ -440,6 +443,7 @@
         }
     }
     &__item--mirun::after {
+        /*!*/
         background-image: url('../images/lampa1.png');
     }
     &__item--malesuada::after {
@@ -484,8 +488,7 @@
     &__icon {
         padding-left: 45px;
     }
-    .description-product-link2 {}
-    .description-product__text2 {}
+    /*!*/
     .description-product__inner {
         display: flex;
         justify-content: center;
@@ -541,16 +544,20 @@
     }
     &__link {
         transition: color 0.3s;
-        vertical-align: auto;
         &:hover {
             color: $ac;
             opacity: 0.7;
         }
     }
+    &__link:not(:last-child) {
+        margin-right: 30px;
+    }
     &__link img {
         width: 370px;
         height: 250px;
         transition: color 0.3s;
+        object-fit: cover;
+        border-radius: 5px;
         &:hover {
             opacity: 0.7;
         }
@@ -559,19 +566,27 @@
         display: flex;
         justify-content: space-between;
     }
+    &__images {
+        display: flex;
+        justify-content: center;
+        padding: 0 15px;
+        background-color: #ffffff;
+    }
     &__items {
-        padding: 0 338px 0 368px;
         background-color: #fef7f0;
         display: flex;
+        justify-content: center;
+        padding: 0 15px;
     }
-    &__item {
+    &__item:not(:last-child) {
         margin-right: 30px;
     }
     &__box {
-        padding: 35px 52px 20px 30px;
+        padding: 35px 52px 0px 30px;
         background-color: #ffffff;
         max-width: 370px;
         position: relative;
+        height: 63%;
     }
     &__news {
         background-color: #a3bbc8;
@@ -586,7 +601,7 @@
         z-index: 100;
         @extend %poppins-700px;
         text-align: center;
-        line-height: 30px;
+        line-height: 2.1;
         transition: color 0.3s;
         &:hover {
             background-color: $ac;
@@ -597,31 +612,22 @@
         @extend %dmsans-500px;
         color: #262626;
         font-size: 18px;
-        margin-bottom: 20px;
         position: relative;
         border-bottom: 1px solid #e0e0e0;
+        height: 100%;
         padding-bottom: 20px;
-        /*min-height: 85px;*/
-        display: block;
-        /*
-        &::after {
-            content: "";
-            position: absolute;
-            width: 315px;
-            height: 1px;
-            background-color: #e0e0e0;
-            top: 75px;
-            right: -24px;
-        }*/
     }
     &-info {
+        padding: 20px 20px 25px 30px;
         display: flex;
         font-size: 12px;
         color: #222933;
         @extend %rubik-400px;
         text-transform: uppercase;
+        background-color: #ffffff;
+        max-width: 370px;
     }
-    &-info p {
+    &-info p:not(:last-child) {
         margin-right: 30px;
     }
     &__user,
@@ -638,6 +644,7 @@
             background-size: cover;
         }
     }
+    /*!*/
     &__calendar::before {
         background-image: url('../images/icons/calendar.svg');
     }
@@ -693,6 +700,7 @@
         justify-content: space-between;
     }
     &__error {
+        /*!*/
         font-size: 14px;
     }
     &__text {
@@ -961,7 +969,7 @@
     &__text {
         @extend %rubik-400px;
         margin-bottom: 25px;
-        line-height: 30px;
+        line-height: 1, 8;
     }
     &__box {
         display: flex;
@@ -1100,6 +1108,7 @@
         line-height: 1.8;
     }
     .slick-track {
+        /*!*/
         display: block;
     }
 }
@@ -1268,6 +1277,7 @@
     padding: 0 0 120px;
     /*120*/
     /*убрать отступ в низу */
+    /*!*/
     &__item {
         position: relative;
         margin-bottom: 50px;
@@ -1336,9 +1346,11 @@
     &__text p {
         @extend %rubik-500px;
         /*шрифт не работает*/
+        /*!*/
         margin-bottom: 25px;
     }
     .description-product-btn {
+        /*!*/
         background-color: #ffffff;
         color: #a3bbc8;
         border-color: #a3bbc8;
@@ -1441,6 +1453,8 @@
         position: relative;
     }
     &__modifier {
+        /*!*/
+        /*страное название*/
         padding-left: 45px;
         position: relative;
         &::after {
@@ -1572,6 +1586,7 @@
         }
     }
     &__itemss {
+        /*!*/
         margin-left: 130px;
     }
     &__img {
@@ -1859,11 +1874,56 @@
     &__inner {
         display: flex;
     }
+    &__box1 {
+        margin-bottom: 25px;
+    }
     &__box {
         font-size: 140px;
         @extend %rubik-700px;
         color: #a3bbc8;
-        margin-right: 25px;
+        margin-right: 20px;
+    }
+    &__text2 {
+        padding-top: 30px;
+        letter-spacing: -0.4px;
+    }
+    &__text2 p {
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 36px;
+        line-height: 1.1;
+        margin-bottom: 35px;
+    }
+    &__text {
+        margin-bottom: 65px;
+        /*width: 630px;*/
+        line-height: 1.8;
+    }
+    &__text p {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -65px;
+            left: 0px;
+            height: 2px;
+            width: 500px;
+            background-color: #ebeef3;
+        }
+    }
+    &__subtitle {
+        font-size: 36px;
+        line-height: 1.4;
+    }
+    &__text span {
+        color: #4c4c4c;
+    }
+    &__items {
+        display: flex;
+    }
+    &__item {
+        padding: 35px 25px 15px 55px;
     }
 }
 
@@ -1891,7 +1951,6 @@
     &__text p {
         margin-bottom: 16px;
         font-style: normal;
-        line-height: 15px;
     }
     &__form p {
         margin-bottom: 25px;
