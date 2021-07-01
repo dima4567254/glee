@@ -15,7 +15,7 @@
          $($(this).attr('href')).addClass('product-tabs__content-item--active'); /*убирает добовляет класс*/
      });
 
-     $('.slider__items').slick({
+     $('.trendy__items').slick({
          dots: true,
          arrows: false,
          fade: true,
@@ -45,14 +45,14 @@
          draggable: false
 
      });
-     /*
-          $('.partners').slick({
-              arrows: false,
-              slidesToShow: 5,
-              infinite: true,
-              slidesToScroll: 5
-          });
-     */
+
+     $('.partners').slick({
+         arrows: false,
+         slidesToShow: 5,
+         infinite: true,
+         slidesToScroll: 5
+     });
+
      $('.related-product').slick({
          /*поменять класс*/
          arrows: true,
