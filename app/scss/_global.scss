@@ -45,6 +45,87 @@ body {
     padding: 0 15px;
 }
 
+.slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    li:not(:last-child) {
+        margin-right: 11px;
+    }
+    button {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #fde3cc;
+    }
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+    transform: translateY(-2px);
+    background-color: #ffffff;
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.product-item-link {
+    background-color: #fefefe;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    &:hover path {
+        fill: #ffffff;
+    }
+    &:hover {
+        background-color: #a3bac7;
+    }
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.partners {
+    padding: 90px 420px 85px;
+    background-color: #fef7f0;
+    &__peterson {
+        margin-left: 0px;
+    }
+    &__kmn {
+        margin-left: -60px;
+    }
+    &__chainforce {
+        margin-left: -50px;
+    }
+    &__nextg3n {
+        margin-left: -40px;
+    }
+    &__vintage {
+        margin-left: -15px;
+    }
+}
+
+.slick-slide {
+    width: 218px;
+    /*233*/
+}
+
+.slick-track {
+    left: 60px;
+}
+
 .breadcrumbs {
     background-color: #edf1f4;
     text-align: center;
@@ -103,44 +184,11 @@ body {
             background-color: $ac;
         }
     }
+    &-list {
+        justify-content: center;
+    }
     &__link--active {
         background-color: #a3bbc8;
         color: #ffffff;
     }
-}
-
-.pagination-list {
-    justify-content: center;
-}
-
-.product-item-link {
-    background-color: #fefefe;
-    border-radius: 30px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    margin-right: 12px;
-    background-repeat: no-repeat;
-    &:hover path {
-        fill: #ffffff;
-    }
-    &:hover {
-        background-color: #a3bac7;
-    }
-    &:last-child {
-        margin-right: 0px;
-    }
-}
-
-.partners {
-    padding: 100px 430px 85px;
-    height: 270px;
-    background-color: #fef7f0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }

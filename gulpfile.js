@@ -7,18 +7,14 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-
-
 function browsersync() {
     browserSync.init({
         server: {
             baseDir: 'app/'
         },
         notify: false
-
     })
 }
-
 
 function styles() {
     return src('app/scss/style.scss')
@@ -33,7 +29,6 @@ function styles() {
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
-
 
 function scripts() {
     return src([
@@ -70,9 +65,7 @@ function images() {
 
         ]))
         .pipe(dest('dist/images'))
-
 }
-
 
 function build() {
     return src([
@@ -88,12 +81,10 @@ function cleanDist() {
     return del('dist')
 }
 
-
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
-
 }
 
 exports.styles = styles;
@@ -103,5 +94,4 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-
 exports.default = parallel(styles, scripts, browsersync, watching);

@@ -7,7 +7,7 @@
 
 
      $('.product-tabs__item').on('click', function(e) {
-         e.preventDefault(); /*отменяет работу сылки*/
+         e.preventDefault();
          $('.product-tabs__item').removeClass('product-tabs__item--active');
          $(this).addClass('product-tabs__item--active');
 
@@ -19,23 +19,20 @@
          dots: true,
          arrows: false,
          fade: true,
-         /*
-         autoplay: true,
-         autoplaySpead: 1000*/
 
+         autoplay: true,
+         autoplaySpead: 1000
      });
 
      $('.product-detalis__small').slick({
          dots: false,
          arrows: false,
          asNavFor: '.product-detalis__big',
-         /*объединяет слайдеры*/
          focusOnSelect: true,
          slidesToShow: 3,
          slidesToScroll: 1,
          vertical: true,
-         /*вертикальный слайдер*/
-         draggable: false /*что бы не двигался*/
+         draggable: false
      });
 
      $('.product-detalis__big').slick({
@@ -46,19 +43,52 @@
 
      });
 
+
      $('.partners').slick({
          arrows: false,
-         slidesToShow: 5,
          infinite: true,
-         slidesToScroll: 5
+         slidesToScroll: 1,
+         autoplaySpeed: 2000,
+         autoplay: true,
+         variableWidth: true,
+         responsive: [{
+                 breakpoint: 1800,
+                 settings: {
+                     slidesToShow: 5,
+
+                 }
+             },
+
+             {
+                 breakpoint: 1685,
+                 settings: {
+                     slidesToShow: 4,
+
+                 }
+             },
+             {
+                 breakpoint: 1050,
+                 settings: {
+                     slidesToShow: 3,
+                 }
+             },
+
+
+             {
+                 breakpoint: 400,
+                 settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 2,
+                 }
+             },
+         ]
      });
 
+
      $('.related-product').slick({
-         /*поменять класс*/
          arrows: true,
          slidesToShow: 4,
          slidesToScroll: 1,
-
          autoplay: true,
          autoplaySpeed: 2000,
          prevArrow: '<button type="button"class="slick-prev"><img src="images/icons/prev-left.svg" alt=""></button>',
@@ -80,12 +110,8 @@
      $(".products-content__star").rateYo({
          rating: 4,
          starWidth: "18px",
-         spacing: "13px" /*расстояние между звездами*/
-             /* readOnli: true*/
-
+         spacing: "13px"
      });
-
-
 
      $(".product-detalis__star").rateYo({
          rating: 4,
@@ -93,11 +119,7 @@
          spacing: "11px"
      });
 
-     $('.product-detalis__input').styler(); /*возможно точку*/
-
-
-
-
+     $('.product-detalis__input').styler();
 
      var containerEl1 = document.querySelector('[data-ref="container-1"]');
      var containerEl2 = document.querySelector('[data-ref="container-2"]');
@@ -113,25 +135,5 @@
      var mixer2 = mixitup(containerEl2, config);
      var mixer3 = mixitup(containerEl3, config);
 
-
-     $("#rateYo").rateYo({
-
-     });
-
-
-
-     /* var containerEl1 = document.querySelector('[data-ref="container-1"]');
-     var containerEl2 = document.querySelector('[data-ref="container-2"]');
-     var containerEl3 = document.querySelector('[data-ref="container-3"]');
-
-     var config = {
-         controls: {
-             scope: 'local'
-         }
-     };
-
-     var mixer1 = mixitup(containerEl1, config);
-     var mixer2 = mixitup(containerEl2, config);
-     var mixer3 = mixitup(containerEl3, config);*/
-
+     $("#rateYo").rateYo({});
  });
