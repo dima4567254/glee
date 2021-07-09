@@ -49,7 +49,7 @@
          infinite: true,
          slidesToScroll: 1,
          autoplaySpeed: 2000,
-         autoplay: true,
+         /*autoplay: true,*/
          variableWidth: true,
          responsive: [{
                  breakpoint: 1800,

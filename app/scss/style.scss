@@ -300,7 +300,7 @@
         &__content {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -20px 85px;
+            margin: 0 -20px 80px;
         }
         &__subtitle {
             font-size: 20px;
@@ -435,7 +435,7 @@
         }
         &__item {
             background-color: #feefe2;
-            padding: 85px 105px 80px 435px;
+            padding: 85px 100px 80px 435px;
             margin-right: 30px;
             position: relative;
             &::after {
@@ -644,7 +644,7 @@
             padding-bottom: 20px;
         }
         &-info {
-            padding: 20px 20px 25px 30px;
+            padding: 25px 20px 25px 30px;
             display: flex;
             font-size: 12px;
             color: #222933;
@@ -2078,7 +2078,7 @@
         font-size: 14px;
         color: #7b7b7b;
         &__top {
-            padding: 85px 0 60px;
+            padding: 80px 0 60px;
             border-bottom: 1px solid #dae4e9;
             display: flex;
         }
@@ -2092,7 +2092,7 @@
         }
         &__text-contacts {
             font-style: normal;
-            line-height: 1.7;
+            line-height: 1.8;
             letter-spacing: -0px;
         }
         &__text-contacts p {
@@ -2119,7 +2119,7 @@
             margin-right: 170px;
         }
         &__text {
-            line-height: 1.5;
+            line-height: 1.6;
         }
         &__text p {
             margin-bottom: 10px;
@@ -2127,9 +2127,9 @@
         &__title {
             color: #1f2044;
             text-transform: uppercase;
-            margin-bottom: 5px;
+            margin-bottom: 0px;
             letter-spacing: -0.4px;
-            line-height: 3;
+            line-height: 3.3;
             font-size: 16px;
         }
         &__account {

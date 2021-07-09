@@ -98,32 +98,27 @@ body {
 }
 
 .partners {
-    padding: 90px 420px 85px;
+    padding: 90px 370px 85px 391px;
     background-color: #fef7f0;
     &__peterson {
-        margin-left: 0px;
+        margin-left: 25px;
     }
     &__kmn {
-        margin-left: -60px;
+        margin-left: 0px;
     }
     &__chainforce {
-        margin-left: -50px;
+        margin-left: -5px;
     }
     &__nextg3n {
-        margin-left: -40px;
+        margin-left: 10px;
     }
     &__vintage {
-        margin-left: -15px;
+        margin-left: 40px;
     }
 }
 
 .slick-slide {
-    width: 218px;
-    /*233*/
-}
-
-.slick-track {
-    left: 60px;
+    width: 233px;
 }
 
 .breadcrumbs {
