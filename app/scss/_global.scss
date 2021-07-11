@@ -98,8 +98,10 @@ body {
 }
 
 .partners {
-    padding: 90px 0px 85px 0px;
-    background-color: #fef7f0;
+    padding: 90px 0px 85px;
+    &__color {
+        background-color: #fef7f0;
+    }
     &__peterson {
         margin-left: 25px;
     }
@@ -118,8 +120,16 @@ body {
 }
 
 .slick-slide {
-    width: 290px;
+    max-width: 290px;
+    margin-right: 110px;
+    /*140*/
 }
+
+
+/*
+.slick-slide:first-child {
+    width: 130px;
+}*/
 
 .breadcrumbs {
     background-color: #edf1f4;

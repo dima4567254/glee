@@ -300,7 +300,7 @@
         &__content {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -20px 80px;
+            margin: 0 20px 80px;
         }
         &__subtitle {
             font-size: 20px;
@@ -366,7 +366,6 @@
         }
         &__img {
             width: 200px;
-            /*удалял*/
             height: 200px;
             margin: 0 auto;
             object-fit: contain;
@@ -537,10 +536,6 @@
     }
     
     .insights {
-        &__itemk {
-            display: flex;
-            justify-content: center;
-        }
         &__wraper {
             display: flex;
             align-items: flex-end;
