@@ -13,7 +13,7 @@
         }
     }
     
-    .slick .menu {
+    .menu {
         display: flex;
         &__btn {
             display: none;
@@ -40,7 +40,7 @@
             &:active {
                 color: #e72828;
             }
-            &__link--active {
+            &--active {
                 color: $ac;
             }
         }
@@ -300,7 +300,7 @@
         &__content {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 20px 80px;
+            margin: 0 -20px 80px;
         }
         &__subtitle {
             font-size: 20px;
@@ -494,9 +494,9 @@
             &:active {
                 color: red;
             }
-        }
-        &__icon {
-            padding-left: 45px;
+            &__icon {
+                padding-left: 45px;
+            }
         }
     }
     
@@ -547,9 +547,8 @@
             color: #191919;
             letter-spacing: -0.1px;
         }
-        &__link:not(:last-child) {
+        &__link {
             transition: color 0.3s;
-            margin-right: 30px;
             &:focus {
                 outline: solid #00B2A0;
             }
@@ -559,6 +558,9 @@
             }
             &:active {
                 color: #e72828;
+            }
+            &:not(:last-child) {
+                margin-right: 30px;
             }
         }
         &__link img {

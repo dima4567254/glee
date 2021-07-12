@@ -47,14 +47,16 @@
      $('.partners').slick({
          arrows: false,
          infinite: true,
-         slidesToScroll: 1,
          slidesToShow: 5,
+         slidesToScroll: 1,
          autoplaySpeed: 2000,
+         autoplay: true,
 
-         /* autoplay: true,*/
+
          /*variableWidth: true,*/
 
          responsive: [
+
 
              {
                  breakpoint: 1150,
@@ -63,7 +65,7 @@
                  }
              },
              {
-                 breakpoint: 1051,
+                 breakpoint: 1000,
                  settings: {
                      slidesToShow: 3,
                  }
