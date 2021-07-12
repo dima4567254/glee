@@ -48,34 +48,28 @@
          arrows: false,
          infinite: true,
          slidesToScroll: 1,
+         slidesToShow: 5,
          autoplaySpeed: 2000,
-         autoplay: true,
-         variableWidth: true,
-         responsive: [{
-                 breakpoint: 1850,
-                 settings: {
-                     slidesToShow: 5,
 
-                 }
-             },
+         /* autoplay: true,*/
+         /*variableWidth: true,*/
+
+         responsive: [
 
              {
-                 breakpoint: 1685,
+                 breakpoint: 1150,
                  settings: {
                      slidesToShow: 4,
-
                  }
              },
              {
-                 breakpoint: 1050,
+                 breakpoint: 1051,
                  settings: {
                      slidesToShow: 3,
                  }
              },
-
-
              {
-                 breakpoint: 400,
+                 breakpoint: 620,
                  settings: {
                      slidesToShow: 2,
                      slidesToScroll: 2,

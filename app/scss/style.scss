@@ -13,7 +13,7 @@
         }
     }
     
-    .menu {
+    .slick .menu {
         display: flex;
         &__btn {
             display: none;
@@ -1178,10 +1178,12 @@
             @extend %rubik-400px;
             line-height: 1.8;
         }
+        /*
         .slick-track {
             /*!*/
+        /*
             display: block;
-        }
+        }/*/
     }
     
     .product-tabs {

@@ -102,6 +102,7 @@ body {
     &__color {
         background-color: #fef7f0;
     }
+    /*
     &__peterson {
         margin-left: 25px;
     }
@@ -116,13 +117,26 @@ body {
     }
     &__vintage {
         margin-left: 40px;
-    }
+    }*/
 }
 
 .slick-slide {
-    max-width: 290px;
-    margin-right: 110px;
+    /*width: 134px;*/
+    /*290*/
+    /* margin-right: 30px;*/
+}
+
+
+/*
+    margin-right: 100px;
     /*140*/
+
+
+/*
+}*/
+
+.slick-track {
+    left: 4px;
 }
 
 
