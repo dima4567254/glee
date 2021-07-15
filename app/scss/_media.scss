@@ -22,9 +22,6 @@
     .partners {
         height: 240px;
         &__link img {
-            /*
-            width: 85px;
-            height: 65px;*/
             object-fit: contain;
         }
     }
@@ -60,7 +57,7 @@
             justify-content: center;
         }
         &__item {
-            padding: 10px 10px 10px 10px;
+            padding: 10px;
         }
     }
     .description-product {
@@ -86,13 +83,14 @@
             max-width: 160px;
         }
         &__icon {
-            padding-left: 20px;
+            margin-left: 20px;
         }
     }
     .design {
         &__content {
             justify-content: center;
             flex-wrap: wrap;
+            margin: 0 -15px 80px;
         }
     }
     .video {
@@ -203,7 +201,7 @@
             width: 100%;
         }
         &__content {
-            padding: 150px 40px 0 40px;
+            padding: 150px 40px 0;
         }
         &__img {
             padding-top: 100px;
@@ -257,6 +255,9 @@
         &-link {
             padding: 15px;
         }
+        &__icon {
+            margin-left: 30px;
+        }
     }
     .filter {
         &__content {
@@ -272,6 +273,9 @@
         }
     }
     .design {
+        &__content {
+            margin: 0 -15px 80px;
+        }
         &__item {
             margin: 0 15px 30px;
         }
@@ -281,16 +285,11 @@
         height: 400px;
     }
     .partners {
-        padding: 50px 0px 50px 0px;
+        padding: 50px 0px;
         height: 190px;
-        /*     display: flex;/*!*/
-        /*
-        flex-wrap: wrap;*/
-        /*
         &__peterson {
             margin-left: 70px;
         }
-        */
         &__kmn {
             margin-left: 0px;
         }
@@ -367,9 +366,6 @@
         }
         &__btn {
             padding: 10px;
-        }
-        &__icon {
-            padding-left: 20px;
         }
     }
     .services {
@@ -647,8 +643,9 @@
         margin-bottom: 40px;
         height: 300px;
     }
+    /*
     .partners {
-        /*
+        
         &__item {
             margin-left: 50px;
         }
@@ -667,7 +664,6 @@
         &__vintage {
             margin-left: 0px;
         }*/
-    }
     .footer {
         &__top {
             flex-wrap: wrap;

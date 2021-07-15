@@ -32,7 +32,7 @@
             font-weight: 700;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -63,10 +63,10 @@
             background-image: url('../images/icons/search.svg');
             margin-right: 20px;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
-                color: $ac;
+                background-color: #a3bbc8;
             }
             &:active {
                 color: #e72828;
@@ -87,23 +87,15 @@
             background-image: url('../images/icons/heart.svg');
             @extend %dmsans-400px;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
+                z-index: 1;
             }
             &:hover {
-                color: $ac;
+                background-color: #a3bbc8
             }
             &:active {
                 color: #e72828;
             }
-        }
-        &__heart::after {
-            content: '';
-            position: absolute;
-            top: 9px;
-            right: 0px;
-            width: 1px;
-            height: 30px;
-            background-color: #fde7d3;
         }
         &__num {
             position: relative;
@@ -137,10 +129,10 @@
             background-image: url('../images/icons/basket.svg');
             @extend %dmsans-400px;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
-                background-color: #a3bbc8
+                background-color: #a3bbc8;
             }
             &:active {
                 color: #e72828;
@@ -160,10 +152,10 @@
             transition: background-color 0.3s;
             background-image: url('../images/icons/burger-menu.svg');
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
-                background-color: #a3bbc8
+                background-color: $ac;
             }
             &:active {
                 color: #e72828;
@@ -268,7 +260,7 @@
         &__title {
             text-align: center;
             padding-top: 70px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         &__list {
             display: flex;
@@ -285,7 +277,7 @@
             cursor: pointer;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -324,7 +316,7 @@
         &__link {
             transition: opacity 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -394,7 +386,7 @@
             background-repeat: no-repeat;
             transition: background-color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: #a3bac7
@@ -459,14 +451,14 @@
         &__title {
             font-size: 26px;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             letter-spacing: -0.4px;
             vertical-align: bottom;
             height: 25%;
         }
         &__text {
             @extend %rubik-500px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             line-height: 1.8;
             width: 330px;
             letter-spacing: -0.4px;
@@ -494,9 +486,9 @@
             &:active {
                 color: red;
             }
-            &__icon {
-                padding-left: 45px;
-            }
+        }
+        &__icon {
+            margin-left: 45px;
         }
     }
     
@@ -550,7 +542,7 @@
         &__link {
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -570,7 +562,7 @@
             object-fit: cover;
             border-radius: 5px;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 opacity: 0.7;
@@ -621,7 +613,7 @@
             line-height: 2.1;
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: $ac;
@@ -704,7 +696,7 @@
             cursor: pointer;
             transform: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: #fcd7b6;
@@ -737,7 +729,7 @@
             margin-bottom: 30px;
             transform: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -753,7 +745,7 @@
             background-color: #ffffff;
             transform: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -817,7 +809,7 @@
             padding: 13px 20px 14px 13px;
             color: #4c636e;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: $ac;
@@ -849,7 +841,7 @@
             display: flex;
             justify-content: space-between;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: $ac;
@@ -952,7 +944,7 @@
             margin-right: 20px;
             transition: opacity 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 opacity: 0.7;
@@ -967,7 +959,7 @@
             font-size: 14px;
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -982,7 +974,7 @@
         a {
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1018,7 +1010,7 @@
         &__link {
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1052,7 +1044,7 @@
             margin-right: 10px;
             transform: background-color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: #a2bac7;
@@ -1079,7 +1071,7 @@
             text-transform: uppercase;
             transition: background-color 0.3s;
             &:focus {
-                outline: #00B2A0;
+                outline: #000000;
             }
             &:hover {
                 background-color: $ac;
@@ -1200,7 +1192,7 @@
             margin-right: 10px;
             transition: background-color 0.4s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: $ac;
@@ -1268,7 +1260,7 @@
     }
     
     .product-detalis__button:focus {
-        outline: solid #00B2A0;
+        outline: solid #000000;
     }
     
     .product-detalis__button:hover {
@@ -1276,7 +1268,7 @@
     }
     
     .product-detalis__button-list:focus {
-        outline: solid #00B2A0;
+        outline: solid #000000;
     }
     
     .product-detalis__button-list:hover {
@@ -1368,7 +1360,7 @@
             object-fit: cover;
             transition: opacity 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 opacity: 0.7;
@@ -1400,7 +1392,7 @@
         &__user {
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1417,7 +1409,7 @@
             position: relative;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1444,7 +1436,7 @@
             border-color: #a3bbc8;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1626,7 +1618,7 @@
             margin-right: 10px;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1658,6 +1650,9 @@
                 border-bottom: none;
             }
         }
+        &__indent {
+            margin-left: 130px;
+        }
         &__subtitle {
             margin-bottom: 20px;
             color: $title;
@@ -1683,10 +1678,6 @@
                     fill: $ac;
                 }
             }
-        }
-        &__itemss {
-            /*!*/
-            margin-left: 130px;
         }
         &__img {
             width: 100px;
@@ -1722,7 +1713,7 @@
             height: 70px;
             transition: opacity 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 opacity: 0.7;
@@ -1739,7 +1730,7 @@
             width: 164px;
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1757,7 +1748,7 @@
         &__link {
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1791,7 +1782,7 @@
             @extend %rubik-400px;
             transition: border-color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 border-color: #a3bbc8;
@@ -1825,7 +1816,7 @@
             padding: 16px 30px;
             border: none;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -1911,7 +1902,7 @@
         width: 375px;*/
             /* &:hover {}*/
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 border: 3px solid #a3bbc8;
@@ -1945,7 +1936,7 @@
             transition: background-color 0.5s;
             background-repeat: no-repeat;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 background-color: #a3bbc8;
@@ -1960,7 +1951,7 @@
         &__link {
             transition: color 0.5s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -2010,25 +2001,31 @@
     /*abaut-us*/
     
     .abaut-us {
-        padding: 0px 0px 120px 620px;
-        &__info {
-            padding: 75px 0;
-        }
+        padding: 75px 0px 195px 620px;
         &__inner {
             display: flex;
-        }
-        &__box1 {
             margin-bottom: 25px;
         }
-        &__box {
+        &__inner span {
             font-size: 140px;
+            position: relative;
             @extend %rubik-700px;
             color: #a3bbc8;
             margin-right: 20px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: -70px;
+                right: 215px;
+                background-image: url('../images/аbaut-us/abaut-us.jpg');
+                width: 575px;
+                height: 675px;
+            }
         }
         &__text2 {
-            padding-top: 30px;
+            padding-top: 40px;
             letter-spacing: -0.4px;
+            line-height: 0.7;
         }
         &__text2 p {
             margin-bottom: 20px;
@@ -2040,8 +2037,9 @@
         }
         &__text {
             margin-bottom: 65px;
-            /*width: 630px;*/
+            width: 550px;
             line-height: 1.8;
+            letter-spacing: -0.3px;
         }
         &__text p {
             position: relative;
@@ -2055,18 +2053,85 @@
                 background-color: #ebeef3;
             }
         }
-        &__subtitle {
-            font-size: 36px;
-            line-height: 1.4;
-        }
-        &__text span {
-            color: #4c4c4c;
-        }
         &__items {
             display: flex;
         }
         &__item {
-            padding: 35px 25px 15px 55px;
+            padding: 35px 65px 15px 55px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 47px;
+                left: -3px;
+                width: 43px;
+                height: 39px;
+                background-repeat: no-repeat;
+            }
+            &--notebook::before {
+                background-image: url('../images/icons/notebook.svg');
+            }
+            &--megaphone::before {
+                background-image: url('../images/icons/megaphone.svg');
+            }
+            &--medal::before {
+                background-image: url('../images/icons/medal.svg');
+            }
+        }
+        &__item p {
+            font-size: 36px;
+            line-height: 1.4;
+        }
+        &__item span {
+            color: #4c4c4c;
+        }
+    }
+    
+    .statistics {
+        padding: 0 0 110px;
+        &__color {
+            background-color: #fcd7b6;
+        }
+        &__items {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 320px;
+            padding: 165px 15px 85px;
+        }
+        &__item {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -73px;
+                left: 38px;
+                width: 78px;
+                height: 64px;
+                background-repeat: no-repeat;
+            }
+            &--monitor::before {
+                background-image: url('../images/icons/monitor.svg');
+            }
+            &--car::before {
+                background-image: url('../images/icons/car.svg');
+            }
+            &--clock::before {
+                background-image: url('../images/icons/clock.svg');
+            }
+            &--brands::before {
+                background-image: url('../images/icons/brands.svg');
+            }
+        }
+        &__item span {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        &__number {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-align: center;
         }
     }
     /*---------------------------------------------------------------------------*/
@@ -2077,7 +2142,7 @@
         font-size: 14px;
         color: #7b7b7b;
         &__top {
-            padding: 80px 0 60px;
+            padding: 85px 0 60px;
             border-bottom: 1px solid #dae4e9;
             display: flex;
         }
@@ -2101,7 +2166,7 @@
             transition: color 0.3s;
             background-position: center;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -2126,7 +2191,6 @@
         &__title {
             color: #1f2044;
             text-transform: uppercase;
-            margin-bottom: 0px;
             letter-spacing: -0.4px;
             line-height: 3.3;
             font-size: 16px;
@@ -2163,7 +2227,7 @@
             cursor: pointer;
             transition: color 0.4s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -2187,7 +2251,7 @@
             padding-left: 12px;
             transition: color 0.3s;
             &:focus {
-                outline: solid #00B2A0;
+                outline: solid #000000;
             }
             &:hover {
                 color: $ac;
@@ -2198,6 +2262,11 @@
             &:last-child {
                 border-right: none;
                 padding-right: 0px;
+            }
+            &__link-nav {
+                &:focus {
+                    outline: solid #000000;
+                }
             }
         }
     }
