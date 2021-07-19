@@ -28,8 +28,7 @@
          dots: true,
          arrows: false,
          fade: true,
-
-         autoplay: true,
+         autoplay: false,
          autoplaySpead: 1000
      });
 
@@ -53,17 +52,14 @@
      });
 
 
-     $('.partners').slick({
+     $('.partners__list').slick({
          arrows: false,
          infinite: true,
          slidesToShow: 5,
          slidesToScroll: 1,
          autoplaySpeed: 2000,
          autoplay: true,
-
-
          /*variableWidth: true,*/
-
          responsive: [
 
 
