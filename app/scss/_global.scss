@@ -45,37 +45,6 @@ body {
     padding: 0 15px;
 }
 
-.slick-dots {
-    display: flex;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    li:not(:last-child) {
-        margin-right: 11px;
-    }
-    button {
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        border: none;
-        cursor: pointer;
-        background-color: #fde3cc;
-        font-size: 11px;
-    }
-}
-
-.slick-dots .slick-active button {
-    opacity: 1;
-    transform: translateY(-2px);
-    background-color: #ffffff;
-}
-
-.slick-track {
-    display: flex;
-    align-items: center;
-}
-
 .product-item-link {
     background-color: #fefefe;
     border-radius: 30px;

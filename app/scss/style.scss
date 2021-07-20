@@ -164,6 +164,19 @@
     }
 }
 
+.Ellipse_34 {
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    position: absolute;
+    left: 1026px;
+    top: 243px;
+    width: 634px;
+    height: 634px;
+    z-index: 231;
+}
+
 .trendy {
     &__inner {
         background-color: $ac;
@@ -173,6 +186,31 @@
     }
     &__content {
         padding: 215px 90px 0 300px;
+        position: relative;
+        &::after {
+            content: "";
+            border-radius: 50%;
+            background-image: -moz-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            background-image: -webkit-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            background-image: -ms-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            position: absolute;
+            background-image: url("../images/trendy-top/ellipse.png");
+            left: 977px;
+            top: 103px;
+            width: 634px;
+            height: 634px;
+            z-index: 231;
+            /*
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: -moz-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            background-image: -webkit-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            background-image: -ms-linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            border-radius: 50%;
+            width: 609px;
+            height: 634px;*/
+        }
     }
     &__text span {
         font-size: 72px;
@@ -224,8 +262,38 @@
     }
     &__img {
         padding-top: 100px;
-        height: 730px;
-        max-width: 755px;
+        height: 264px;
+        max-width: 640px;
+        background-size: cover;
+        position: relative;
+    }
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        li:not(:last-child) {
+            margin-right: 11px;
+        }
+        button {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            background-color: #fde3cc;
+            font-size: 11px;
+        }
+    }
+    .slick-dots .slick-active button {
+        opacity: 1;
+        transform: translateY(-2px);
+        background-color: #ffffff;
+    }
+    .slick-track {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -331,7 +399,6 @@
     }
     &__wraper {
         max-width: 200px;
-        height: 200px;
         overflow: hidden;
         position: relative;
         margin-bottom: 70px;
@@ -404,10 +471,9 @@
     &__item {
         background-color: #feefe2;
         padding: 85px 100px 80px 435px;
-        margin-right: 30px;
         position: relative;
-        &:last-child {
-            margin-right: 0px;
+        &:not(:last-child) {
+            margin-right: 30px;
         }
     }
     &__img {
@@ -424,14 +490,15 @@
         line-height: 1.2;
         margin-bottom: 20px;
         letter-spacing: -0.4px;
+        /*
         vertical-align: bottom;
-        height: 25%;
+        height: 25%; сказали удалить   */
     }
     &__text {
         @extend %rubik-500px;
         margin-bottom: 30px;
         line-height: 1.8;
-        width: 330px;
+        max-width: 330px;
         letter-spacing: -0.4px;
     }
     &__link {
@@ -439,16 +506,13 @@
         /*поменял с бем блока на обычный кнопки на мокете могут сломаться */
         padding: 22px 17px 22px 22px;
         background-color: #feefe2;
-        display: flex;
-        align-items: center;
+        display: inline;
         color: $title;
         @extend %rubik-500px;
         font-size: 15px;
         border-radius: 5px;
         border-color: #b3b7b5;
-        cursor: pointer;
         border: 1px solid #b3b7b5;
-        max-width: 185px;
         outline-color: #000000;
         /*!*/
         transition: opacity 0.5s;
@@ -483,7 +547,7 @@
         font-size: 20px;
         color: #191919;
         margin-bottom: 20px;
-        width: 185px;
+        max-width: 185px;
         line-height: 1.1;
         display: block;
         transition: color 0.5s;
@@ -501,8 +565,7 @@
         padding: 35px 0 0 40px;
         /*!*/
         margin: 0 15px 30px;
-        width: 370px;
-        height: 250px;
+        max-width: 370px;
         background-color: #f8f8f8;
         background-repeat: no-repeat;
         background-size: cover;
@@ -588,12 +651,12 @@
             margin-right: 30px;
         }
     }
-    &__link img {
+    &__img {
+        display: block;
         width: 370px;
         height: 250px;
         object-fit: cover;
         border-radius: 5px;
-        display: block;
         opacity: 1;
         transition: opacity 1.0s;
         &:focus {
@@ -631,15 +694,14 @@
         background-color: #ffffff;
         max-width: 370px;
         position: relative;
-        height: 62%;
+        /* height: 62%;  сказали удалить а то текст вылазит за блоки */
     }
     &__news {
         background-color: #a3bbc8;
         position: absolute;
         top: -16px;
         left: 24px;
-        width: 103px;
-        height: 30px;
+        padding: 0px 32px 0px 32px;
         border-radius: 30px;
         color: #ffffff;
         font-size: 14px;
@@ -665,7 +727,7 @@
         font-size: 18px;
         position: relative;
         border-bottom: 1px solid #e0e0e0;
-        height: 100%;
+        /*сказали удалитьheight: 100%;*/
         padding-bottom: 20px;
     }
     &-info {
@@ -677,9 +739,9 @@
         text-transform: uppercase;
         background-color: #ffffff;
         max-width: 370px;
-    }
-    &-info p:not(:last-child) {
-        margin-right: 30px;
+        p:not(:last-child) {
+            margin-right: 30px;
+        }
     }
     &__user,
     &__calendar {
@@ -2197,7 +2259,6 @@
 /*---------------------------------------------------------------------------*/
 
 .footer {
-    list-style: none;
     @extend %rubik-400px;
     font-size: 14px;
     color: #7b7b7b;
@@ -2266,9 +2327,8 @@
     &__newsletter {
         max-width: 275px;
     }
-    &__imput {
+    &__input {
         max-width: 170px;
-        height: 40px;
         padding: 15px;
         border: none;
         background-color: #fef7f0;
@@ -2309,7 +2369,7 @@
         }
     }
     &__bottom {
-        height: 90px;
+        padding: 35px 0 35px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
