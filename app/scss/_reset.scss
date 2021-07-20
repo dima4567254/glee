@@ -37,13 +37,13 @@
         margin: 0;
     }
     
-    ul[class] {
+    ul {
         list-style: none;
     }
     
     img {
         max-width: 100%;
-        display: block;
+        /* display: block;*/
     }
     
     input,
@@ -51,4 +51,8 @@
     textarea,
     select {
         font: inherit;
+    }
+    
+    button {
+        cursor: pointer;
     }

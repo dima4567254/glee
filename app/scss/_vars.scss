@@ -2,8 +2,45 @@ $ac: #fcd7b6;
 
 /*accent*/
 
+$antique:#fde7d3;
 $default: #243f4d;
 $title: #436372;
+$Cream: #feefe2;
+$Crayola: #c2d2db;
+$red: #e72828;
+$orange: #ffa500;
+$blue1: #4c636e;
+$blue2: #1638cc;
+$blue3: #234969;
+$blue4: #a3bbc8;
+$blue5: #436372;
+$black: #000000;
+$black: #414141;
+$black: #333333;
+$white1: #191919;
+$white2: #eef2f5;
+$white3: #fef7f0;
+$white4: #e8e4df;
+$white5:#fefefe;
+$white6:#fafafa;
+$white7:#dae4e9;
+$white8:#e5e5e5;
+$white9:#fbfbfb;
+$white10:#fffefe;
+$white11: #f2f2f2;
+$white12:#f8f8f8;
+$white13:#ffffff;
+$white14: #edf1f4;
+$white15:#ebeef3;
+$grey1:#4c4c4c;
+$grey2:#666666;
+$grey3:#585858;
+$grey4:#69778a;
+$grey5:#e0e0e0;
+$grey6: #9a9a9a;
+$grey7:#ebebeb;
+$grey8:#b8b8b8;
+$grey9: #999999;
 
 /*@extend %rubik-400px;*/
 
@@ -16,6 +53,15 @@ $title: #436372;
 
 /*@extend %rubik-500px;*/
 
+$dmsans: 'DMSans',
+sans-serif;
+
+/*лутьше использовать переменые */
+
+$poppins: 'Poppins',
+sans-serif;
+$rubik: 'Rubik',
+sans-serif;
 %dmsans-700px {
     font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;

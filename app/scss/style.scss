@@ -57,127 +57,116 @@
             color: $ac;
         }
     }
-    &__nav {
+    .nav {
         display: flex;
-    }
-    &__search {
-        background-color: #edf1f4;
-        border-radius: 30px;
-        width: 50px;
-        height: 50px;
-        font-size: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: background-color 0.3s;
-        background-image: url('../images/icons/search.svg');
-        margin-right: 20px;
-        &:focus {
-            outline: solid #000000;
+        &__item {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-color 0.3s;
+            position: relative;
+            &--search {
+                background-color: #edf1f4;
+                border-radius: 30px;
+                width: 50px;
+                font-size: 10px;
+                background-image: url('../images/icons/search.svg');
+                margin-right: 20px;
+                &:focus {
+                    outline: solid #000000;
+                }
+                &:hover {
+                    background-color: #a3bbc8;
+                }
+                &:active {
+                    color: #e72828;
+                }
+            }
+            &--heart {
+                width: 90px;
+                background-color: #fcd7b6;
+                border-radius: 30px 0 0 30px;
+                background-image: url('../images/icons/heart.svg');
+                @extend %dmsans-400px;
+                &:focus {
+                    outline: solid #000000;
+                    z-index: 1;
+                }
+                &:hover {
+                    background-color: #a3bbc8;
+                }
+                &:active {
+                    color: #e72828;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 9px;
+                    right: 0px;
+                    width: 1px;
+                    height: 30px;
+                    background-color: #fde7d3;
+                }
+            }
+            &--basket {
+                width: 90px;
+                background-color: #fcd7b6;
+                border-radius: 0 30px 30px 0;
+                margin-right: 20px;
+                background-image: url('../images/icons/basket.svg');
+                @extend %dmsans-400px;
+                &:focus {
+                    outline: solid #000000;
+                }
+                &:hover {
+                    background-color: #a3bbc8;
+                }
+                &:active {
+                    color: #e72828;
+                }
+            }
+            &--burger {
+                background-color: #a3bbc8;
+                border-radius: 30px;
+                width: 50px;
+                font-size: 10px;
+                background-image: url('../images/icons/burger-menu.svg');
+                &:focus {
+                    outline: solid #000000;
+                }
+                &:hover {
+                    background-color: $ac;
+                }
+                &:active {
+                    color: #e72828;
+                }
+            }
         }
-        &:hover {
-            background-color: #a3bbc8;
-        }
-        &:active {
-            color: #e72828;
-        }
-    }
-    &__heart {
-        width: 90px;
-        height: 50px;
-        background-color: #fcd7b6;
-        border-radius: 30px 0 0 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        transition: background-color 0.3s;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('../images/icons/heart.svg');
-        @extend %dmsans-400px;
-        &:focus {
-            outline: solid #000000;
-            z-index: 1;
-        }
-        &:hover {
-            background-color: #a3bbc8
-        }
-        &:active {
-            color: #e72828;
-        }
-    }
-    &__num {
-        position: relative;
-    }
-    &__num::before {
-        content: '0';
-        position: absolute;
-        top: 11px;
-        right: 29px;
-        background-color: #ffffff;
-        width: 15px;
-        height: 15px;
-        font-size: 10px;
-        line-height: 1.5;
-        border-radius: 50%;
-        text-align: center;
-    }
-    &__basket {
-        width: 90px;
-        height: 50px;
-        background-color: #fcd7b6;
-        border-radius: 0 30px 30px 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        transition: background-color 0.3s;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-right: 20px;
-        background-image: url('../images/icons/basket.svg');
-        @extend %dmsans-400px;
-        &:focus {
-            outline: solid #000000;
-        }
-        &:hover {
-            background-color: #a3bbc8;
-        }
-        &:active {
-            color: #e72828;
-        }
-    }
-    &__burger {
-        background-color: #a3bbc8;
-        border-radius: 30px;
-        width: 50px;
-        height: 50px;
-        font-size: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: background-color 0.3s;
-        background-image: url('../images/icons/burger-menu.svg');
-        &:focus {
-            outline: solid #000000;
-        }
-        &:hover {
-            background-color: $ac;
-        }
-        &:active {
-            color: #e72828;
+        &__item span {
+            position: relative;
+            font-size: 10px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 11px;
+                right: 29px;
+                background-color: #ffffff;
+                width: 15px;
+                height: 15px;
+                line-height: 1.5;
+                border-radius: 50%;
+                text-align: center;
+            }
         }
     }
 }
 
 .trendy {
     &__inner {
-        background-color: #fcd7b6;
+        background-color: $ac;
         display: flex;
         height: 820px;
         background-repeat: no-repeat;
@@ -744,7 +733,7 @@
     &__input {
         display: block;
         width: 100%;
-        border: 1px solid #f6f6f6;
+        border: 1px solid #b8b8b8;
         padding: 0 15px;
         margin: 20px 0 25px 0;
         height: 60px;
@@ -761,7 +750,7 @@
             outline: solid #000000;
         }
         &:hover {
-            color: #fcd7b6;
+            color: $ac;
         }
         &:active {
             color: #e72828;
@@ -1142,7 +1131,7 @@
             background-color: $ac;
         }
         &:active {
-            background-color: blue;
+            background-color: #1638cc;
         }
     }
 }
@@ -2159,7 +2148,7 @@
 .statistics {
     padding: 0 0 110px;
     &__color {
-        background-color: #fcd7b6;
+        background-color: $ac;
     }
     &__items {
         display: flex;
@@ -2256,8 +2245,12 @@
     &__text {
         line-height: 1.6;
     }
-    &__text p {
+    &__text li {
         margin-bottom: 10px;
+    }
+    &__text p {
+        margin-bottom: 30px;
+        line-height: 1.8;
     }
     &__title {
         color: #1f2044;
@@ -2272,10 +2265,6 @@
     }
     &__newsletter {
         max-width: 275px;
-    }
-    &__form p {
-        margin-bottom: 30px;
-        line-height: 1.8;
     }
     &__imput {
         max-width: 170px;
