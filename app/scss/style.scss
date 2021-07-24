@@ -10,7 +10,13 @@
     right: 0;
     z-index: 999;
     /*  background: rgba(36, 33, 33, 0.5);*/
-    background-color: #6ba3c2;
+    background-color: #fefefe;
+}
+
+@mixin text-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
 }
 
 .menu {
@@ -19,20 +25,10 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    &__logo img {
+    .logo {
         object-fit: cover;
-        max-width: 160px;
-        min-height: 50px;
-    }
-    &__logo {
-        object-fit: cover;
-        max-width: 160px;
-        min-height: 50px;
-    }
-    &__logos {
-        object-fit: cover;
-        max-width: 160px;
-        min-height: 50px;
+        max-width: 146px;
+        min-height: 39px;
     }
     &__btn {
         display: none;
@@ -41,6 +37,7 @@
         display: flex;
     }
     &__item {
+        letter-spacing: 0.18px;
         &:not(:last-child) {
             margin-right: 35px;
         }
@@ -176,6 +173,7 @@
 .trendy {
     &__inner {
         margin-top: 75px;
+        /*/*!*/
         /*не знаю можно ли так */
         background-color: $ac;
         display: flex;
@@ -203,6 +201,7 @@
         max-width: 460px;
         margin-bottom: 25px;
         display: block;
+        letter-spacing: -1.6px;
     }
     &__text p {
         color: #436372;
@@ -212,10 +211,15 @@
         line-height: 1.6;
         @extend %rubik-400px;
         margin-bottom: 60px;
+        /*
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        overflow: hidden;
+        overflow: hidden;*/
+    }
+    p {
+        @include truncate(2,
+        24px);
     }
     &__link {
         padding: 22px 100px 22px 27px;
@@ -223,6 +227,7 @@
         transition: opacity 0.3s;
         display: inline;
         position: relative;
+        letter-spacing: 0.18px;
         &:focus {
             outline: solid #000000;
         }
@@ -317,12 +322,14 @@
         font-size: 18px;
         color: #414141;
         margin-bottom: 10px;
+        letter-spacing: 0.72px
     }
     &__text {
         @extend %dmsans-400px;
         color: #585858;
         max-width: 210px;
         line-height: 1.8;
+        letter-spacing: 0.38px;
     }
 }
 
@@ -434,9 +441,13 @@
             margin-right: 0px;
         }
     }
+    &__info {
+        letter-spacing: 0.64px;
+    }
     &__subtitle {
         font-size: 16px;
         margin-bottom: 15px;
+        @extend %dmsans-500px;
     }
     &__text {
         color: #a3bbc8;
@@ -446,6 +457,11 @@
             transform: translateY(0);
         }
     }
+}
+
+.dis {
+    display: flex;
+    flex-direction: column;
 }
 
 .description-products {
@@ -461,20 +477,27 @@
             margin-right: 30px;
         }
     }
+    &__cart {
+        display: inline-block;
+        vertical-align: baseline;
+    }
     &__img {
         position: absolute;
         top: -101px;
         left: 152px;
-        width: 229px;
-        height: 399px;
-        background-size: cover;
-        background-repeat: no-repeat;
+        max-width: 233px;
+        height: 405px;
+        object-fit: cover;
     }
     &__title {
+        max-width: 340px;
+        /*! удалить*/
         font-size: 26px;
         line-height: 1.2;
         margin-bottom: 20px;
-        letter-spacing: -0.4px;
+        letter-spacing: 0.0px;
+        display: flex;
+        flex-wrap: wrap;
         /*
         vertical-align: bottom;
         height: 25%; сказали удалить   */
@@ -483,15 +506,15 @@
         @extend %rubik-500px;
         margin-bottom: 30px;
         line-height: 1.8;
-        max-width: 330px;
-        letter-spacing: -0.4px;
+        max-width: 340px;
+        letter-spacing: 0.48px;
     }
     &__link {
         /*!*/
         /*поменял с бем блока на обычный кнопки на мокете могут сломаться */
         padding: 22px 17px 22px 22px;
         background-color: #feefe2;
-        display: inline;
+        display: inline-block;
         color: $title;
         @extend %rubik-500px;
         font-size: 15px;
@@ -499,6 +522,7 @@
         border-color: #b3b7b5;
         border: 1px solid #b3b7b5;
         outline-color: #000000;
+        letter-spacing: 0.18px;
         /*!*/
         transition: opacity 0.5s;
         &:hover {
@@ -536,6 +560,7 @@
         line-height: 1.1;
         display: block;
         transition: color 0.5s;
+        letter-spacing: 0px;
         &:focus {
             outline: solid #000000;
         }
@@ -572,6 +597,7 @@
 
 .video {
     height: 500px;
+    max-width: 1920px;
     display: flex;
     justify-content: center;
     background-position: center;
@@ -581,6 +607,7 @@
     transition: opacity 0.7s;
     max-width: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
     &:focus {
         outline: solid $ac;
     }
@@ -694,6 +721,7 @@
         @extend %poppins-700px;
         text-align: center;
         line-height: 2.1;
+        letter-spacing: 0.28px;
         transition: background-color 1.3s;
         &:focus {
             outline: solid #000000;
@@ -732,6 +760,7 @@
     &__calendar {
         position: relative;
         padding-left: 20px;
+        letter-spacing: 0.36px;
         transition: color 1.0s;
         &:focus {
             outline: solid #000000;
@@ -2267,6 +2296,7 @@
     }
     &__info p {
         margin-bottom: 10px;
+        letter-spacing: 0.3px;
     }
     &__link {
         transition: color 0.3s;
@@ -2290,6 +2320,7 @@
     }
     &__text {
         line-height: 1.6;
+        letter-spacing: 0.2px;
     }
     &__text li {
         margin-bottom: 10px;
@@ -2313,14 +2344,14 @@
         max-width: 275px;
     }
     &__input {
-        max-width: 170px;
+        max-width: 160px;
         padding: 15px;
         border: none;
         background-color: #fef7f0;
         width: 100%;
         &:focus {
             outline: solid #000000;
-            z-index: 100;
+            z-index: 999;
         }
         &:hover {
             color: $ac;
@@ -2341,7 +2372,7 @@
         color: #ffffff;
         cursor: pointer;
         transition: color 0.4s;
-        z-index: -1;
+        z-index: -100;
         &:focus {
             outline: solid #000000;
             z-index: 100;
@@ -2358,9 +2389,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        letter-spacing: 0.3px;
     }
     &__list {
         display: flex;
+        letter-spacing: 1.1px;
     }
     &__item-nav {
         border-right: 1px solid #000000;
