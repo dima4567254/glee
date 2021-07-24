@@ -498,6 +498,7 @@
         letter-spacing: 0.0px;
         display: flex;
         flex-wrap: wrap;
+        min-height: 62px
         /*
         vertical-align: bottom;
         height: 25%; сказали удалить   */
@@ -634,12 +635,33 @@
 }
 
 .insights {
+    &__text {}
+    &__title2 {
+        padding: 35px 52px 20px 30px;
+        margin-top: .5rem;
+        font-size: 18px;
+        color: #191919;
+        letter-spacing: -0.1px;
+        max-width: 370px;
+    }
+    &__type {}
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
     &__wraper {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 50px;
     }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__cart {}
     &__title {
         font-size: 36px;
         color: #191919;
@@ -660,7 +682,7 @@
             color: #e72828;
         }
         &:not(:last-child) {
-            margin-right: 30px;
+            margin-right: 15px;
         }
     }
     &__img {
@@ -702,12 +724,13 @@
         margin-right: 30px;
     }
     &__box {
-        padding: 35px 52px 0px 30px;
+        padding: 35px 52px 20px 30px;
         background-color: #ffffff;
         max-width: 370px;
         position: relative;
-        /* height: 62%;  сказали удалить а то текст вылазит за блоки */
+        min-height: 189px;
     }
+    /* height: 62%;  сказали удалить а то текст вылазит за блоки*/
     &__news {
         background-color: #a3bbc8;
         position: absolute;
@@ -734,6 +757,8 @@
         }
     }
     &__subtitle {
+        display: flex;
+        flex-wrap: wrap;
         line-height: 1.1;
         @extend %dmsans-500px;
         color: #262626;
@@ -742,9 +767,13 @@
         border-bottom: 1px solid #e0e0e0;
         /*сказали удалитьheight: 100%;*/
         padding-bottom: 20px;
+        height: 100%;
+        /*box*/
+        /* min-height: 78px;*/
     }
-    &-info {
-        padding: 25px 20px 25px 30px;
+    &__info {
+        /*был бем блок*/
+        padding: 25px 0px 0px 0px;
         display: flex;
         font-size: 12px;
         color: #222933;
