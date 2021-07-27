@@ -468,13 +468,13 @@
         background-color: #feefe2;
         padding: 85px 100px 80px 435px;
         position: relative;
+        height: 100%;
         &:not(:last-child) {
             margin-right: 30px;
         }
     }
     &__cart {
-        display: inline-block;
-        vertical-align: baseline;
+        height: 100%;
     }
     &__img {
         position: absolute;
@@ -493,7 +493,7 @@
         letter-spacing: 0.0px;
         display: flex;
         flex-wrap: wrap;
-        min-height: 62px
+        /*min-height: 62px*/
         /*
         vertical-align: bottom;
         height: 25%; сказали удалить   */
@@ -649,32 +649,12 @@
 }
 
 .insights {
-    &__flex {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__text {}
-    &__title2 {
-        margin-bottom: 20px;
-        background-color: red;
-        max-width: 370px;
-    }
-    &__type {}
-    &__body {
-        display: flex;
-        flex-wrap: wrap;
-    }
     &__wraper {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 50px;
     }
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__cart {}
     &__title {
         font-size: 36px;
         color: #191919;
@@ -695,7 +675,26 @@
             color: #e72828;
         }
         &:not(:last-child) {
-            margin-right: 15px;
+            margin-right: 30px;
+        }
+    }
+    &__items {
+        background-color: #fef7f0;
+        display: flex;
+        justify-content: center;
+        padding: 0 15px;
+        /*!*/
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -35px;
+    }
+    &__item {
+        /* width: calc(100% / 3);*/
+        margin-bottom: 90px;
+        padding: 0 35px;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 30px;
         }
     }
     &__img {
@@ -717,33 +716,16 @@
             color: #e72828;
         }
     }
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__images {
-        display: flex;
-        justify-content: center;
-        padding: 0 15px;
-        background-color: #ffffff;
-    }
-    &__items {
-        background-color: #fef7f0;
-        display: flex;
-        justify-content: center;
-        padding: 0 15px;
-    }
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
     &__box {
-        padding: 35px 52px 20px 30px;
+        padding: 35px 35px 0px 30px;
         background-color: #ffffff;
         max-width: 370px;
         position: relative;
-        min-height: 189px;
+        /*!*/
+        margin-bottom: 25px;
+        flex-grow: 1;
+        /* height: 62%;  сказали удалить а то текст вылазит за блоки */
     }
-    /* height: 62%;  сказали удалить а то текст вылазит за блоки*/
     &__news {
         background-color: #a3bbc8;
         position: absolute;
@@ -770,8 +752,6 @@
         }
     }
     &__subtitle {
-        display: flex;
-        flex-wrap: wrap;
         line-height: 1.1;
         @extend %dmsans-500px;
         color: #262626;
@@ -780,20 +760,19 @@
         border-bottom: 1px solid #e0e0e0;
         /*сказали удалитьheight: 100%;*/
         padding-bottom: 20px;
-        height: 100%;
-        /*box*/
-        /* min-height: 78px;*/
     }
-    &__info {
-        /*был бем блок*/
-        padding: 25px 0px 0px 0px;
+    &-info {
+        /*  padding: 25px 20px 25px 30px;*/
+        padding: 25px 0px 25px 0px;
         display: flex;
         font-size: 12px;
+        background-color: red;
         color: #222933;
         @extend %rubik-400px;
         text-transform: uppercase;
         background-color: #ffffff;
         max-width: 370px;
+        flex-grow: 1;
         p:not(:last-child) {
             margin-right: 30px;
         }
@@ -834,6 +813,220 @@
         background-image: url('../images/icons/user.svg');
     }
 }
+
+.catalog-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog-nav__wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.catalog-nav__btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    min-width: 150px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #e6e6e6;
+    border-right: 1px solid #e5e5e5;
+    transition: border .2s, background .2s, color .2s;
+}
+
+.catalog-nav__btn.is-active {
+    background: #1f1f1f;
+    color: #fff;
+    border-color: #1f1f1f;
+}
+
+.catalog-nav__btn:not(.is-active):hover {
+    background: #ffa650;
+    color: #fff;
+    border-right-color: #ffa650;
+}
+
+.catalog-nav__item:last-of-type .catalog-nav__btn {
+    border-right: 0;
+}
+
+@media (max-width: 767px) {
+    .catalog-nav {
+        width: 500px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .catalog-nav__wrapper {
+        flex-wrap: wrap;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .catalog-nav__item {
+        width: 50%;
+        flex-grow: 1;
+    }
+    .catalog-nav__btn {
+        min-width: 0;
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+    }
+    .catalog-nav__item:nth-of-type(1) .catalog-nav__btn,
+    .catalog-nav__item:nth-of-type(2) .catalog-nav__btn {
+        border-top: 0;
+    }
+    .catalog-nav__item:nth-of-type(even) .catalog-nav__btn {
+        border-right: 0;
+    }
+}
+
+
+/* catalog-nav end */
+
+
+/* catalog start */
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -35px;
+}
+
+.catalog__item {
+    width: calc(100% / 3);
+    margin-bottom: 90px;
+    padding: 0 35px;
+    position: relative;
+}
+
+.catalog__item::before {
+    content: '';
+    background: #f7f7f7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.catalog__item:nth-of-type(3n+1)::before {
+    content: none;
+}
+
+
+/* product start */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product__img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.product__title {
+    margin: 0 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.product__description {
+    margin: 0;
+    color: #9f9f9f;
+}
+
+.product__content {
+    margin-bottom: 25px;
+    flex-grow: 1;
+    background-color: red;
+}
+
+.product__sizes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-radius: 21px;
+    overflow: hidden;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.product__size {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    color: #e6e6e6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding: 13px 33px;
+    border-radius: 21px;
+}
+
+.product__size.is-active {
+    color: #a2a2a2;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.product__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product__btn {
+    box-shadow: none;
+    background: #ffa650;
+    width: 200px;
+    padding: 14px 20px;
+}
+
+.product__btn:hover {
+    background: #ff7c21;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .product__size {
+        padding: 13px 25px;
+    }
+}
+
+@media (max-width: 370px) {
+    .product__size {
+        padding: 13px 25px;
+    }
+}
+
+@media (max-width: 370px) {
+    .product__price {
+        font-size: 18px;
+    }
+}
+
+
+/* product end */
 
 
 /*login------------------------------------------------------*/
@@ -928,6 +1121,8 @@
     }
 }
 
+
+/*
 .catalog {
     padding: 0 0 120px;
     &__inner {
@@ -954,6 +1149,7 @@
         }
     }
 }
+*/
 
 .catalog-category {
     &__form {
