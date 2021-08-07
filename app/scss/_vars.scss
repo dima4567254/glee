@@ -13,10 +13,9 @@ $blue1: #4c636e;
 $blue2: #1638cc;
 $blue3: #234969;
 $blue4: #a3bbc8;
-$blue5: #436372;
-$black: #000000;
-$black: #414141;
-$black: #333333;
+$black1: #000000;
+$black2: #414141;
+$black3: #333333;
 $white1: #191919;
 $white2: #eef2f5;
 $white3: #fef7f0;
@@ -56,8 +55,16 @@ $grey9: #999999;
 
 /*@extend %rubik-500px;*/
 
+
+/*@extend %rubik-500px;*/
+
 $dmsans: 'DMSans',
 sans-serif;
+
+/*font-family: $dmsans;
+font-weight: 700;
+*/
+
 
 /*лутьше использовать переменые */
 
