@@ -13,6 +13,31 @@
     background-color: #fefefe;
 }
 
+.logo__link,
+.nav__item--searsh,
+.nav__item--heart,
+.nav__item--basket,
+.nav__item--burger,
+.trendy__link,
+.filters__btn,
+.week-products__icon,
+.description-products__link,
+.design__subtitle,
+.video,
+.insights__link,
+.insights__img,
+.insights__news,
+.insights__user,
+.insights__calendar,
+.footer__link,
+.footer__input,
+.footer__btn,
+.footer__item-nav {
+    &:active {
+        color: #e72828;
+    }
+}
+
 @mixin text-clamp($lines) {
     display: -webkit-box;
     -webkit-line-clamp: $lines;
@@ -53,13 +78,10 @@
         outline-offset: 5px;
         transition: color 0.5s;
         &:focus {
-            color: green;
+            color: $green;
         }
         &:hover {
             color: $ac;
-        }
-        &:active {
-            color: #e72828;
         }
         &--active {
             color: $ac;
@@ -218,10 +240,11 @@
         -webkit-box-orient: vertical;
         overflow: hidden;*/
     }
+    /*
     p {
         @include truncate(2,
         24px);
-    }
+    }*/
     &__link {
         padding: 22px 100px 22px 27px;
         @extend %btn;
@@ -234,9 +257,6 @@
         }
         &:hover {
             opacity: 0.7;
-        }
-        &:active {
-            color: #e72828;
         }
         &::after {
             content: "";
@@ -350,7 +370,7 @@
         outline-color: #000000;
         outline-offset: 5px;
         &:focus {
-            color: green;
+            color: $green;
             /*!*/
         }
         &:hover {
@@ -392,8 +412,8 @@
     }
     &__wraper {
         max-width: 200px;
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
         margin-bottom: 70px;
     }
     &__img {
@@ -528,7 +548,7 @@
             border-color: #ffa500;
         }
         &:focus {
-            color: green;
+            color: $green;
         }
         &:active {
             color: red;
@@ -667,8 +687,9 @@
         display: block;
         opacity: 1;
         transition: color 1.0s;
+        outline-color: #000000;
         &:focus {
-            outline: solid #000000;
+            color: $green;
             z-index: 1;
         }
         &:hover {
@@ -707,13 +728,14 @@
         object-fit: cover;
         border-radius: 5px;
         opacity: 1;
-        transition: opacity 1.0s;
+        transition: opacity 1s, scale 1s;
         &:focus {
             outline: solid #000000;
             z-index: 1;
         }
         &:hover {
             opacity: 0.7;
+            transform: scale(1.05);
         }
         &:active {
             color: #e72828;
@@ -763,6 +785,17 @@
         border-bottom: 1px solid #e0e0e0;
         /*сказали удалитьheight: 100%;*/
         padding-bottom: 20px;
+        transition: color 0.5s;
+        outline-color: #000000;
+        &:focus {
+            color: $green;
+        }
+        &:hover {
+            color: $ac;
+        }
+        &:active {
+            color: #fb0909;
+        }
     }
     &-info {
         /*  padding: 25px 20px 25px 30px;*/
@@ -786,16 +819,6 @@
         padding-left: 20px;
         letter-spacing: 0.36px;
         transition: color 1.0s;
-        &:focus {
-            outline: solid #000000;
-            z-index: 1;
-        }
-        &:hover {
-            color: $ac;
-        }
-        &:active {
-            color: #e72828;
-        }
         &:not(:last-child) {
             margin-right: 30px;
         }
