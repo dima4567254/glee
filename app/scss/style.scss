@@ -399,6 +399,100 @@
     &__content {
         display: flex;
         flex-wrap: wrap;
+        margin-left: -10px;
+        &.week-products__content--list {
+            margin-left: 0px;
+            .week-products__item {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+                .week-products__cart {
+                    flex-direction: inherit;
+                    align-items: end;
+                    margin-bottom: 45px;
+                    .week-products__list {
+                        display: none;
+                    }
+                    .week-products__img {
+                        padding: 0px 35px 0px 35px;
+                        line-height: 0px;
+                        /*!*/
+                        height: 500px;
+                        width: 370px;
+                        margin-right: 60px;
+                        border: 2px solid #f2f2f2;
+                        object-fit: contain;
+                    }
+                    .week-products__info {
+                        padding-top: 15px;
+                        .week-products__subtitle {
+                            font-size: 40px;
+                            /*не работает весь */
+                            @extend %rubik-400px;
+                            letter-spacing: 1;
+                            margin-bottom: 20px;
+                        }
+                        .week-products__star {
+                            display: block;
+                            .jq-ry-group-wrapper {
+                                margin-bottom: 35px;
+                            }
+                        }
+                        .week-products__price {
+                            margin-bottom: 25px;
+                            font-size: 30px;
+                            color: #333333;
+                            @extend %rubik-400px;
+                        }
+                        .week-products__price span {
+                            order: 1;
+                        }
+                        .week-products__text {
+                            @extend %rubik-400px;
+                            margin-bottom: 25px;
+                            line-height: 1.8;
+                            display: block;
+                        }
+                        .week-products__box {
+                            display: flex;
+                        }
+                        .week-products__link-box {
+                            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+                            background-repeat: no-repeat;
+                            width: 55px;
+                            height: 55px;
+                            background-color: #ffffff;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            transform: background-color 0.3s;
+                            &:focus {
+                                outline: solid #000000;
+                            }
+                            &:hover {
+                                background-color: #a2bac7;
+                                .cls-1 {
+                                    fill: #ffffff;
+                                }
+                            }
+                            &:active {
+                                color: #e72828;
+                            }
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                            /*кнопки*/
+                        }
+                    }
+                }
+            }
+            /*возможно удалить*/
+            /*-------------------------------------------*/
+            /*-------------------------------------------*/
+            /*возможно удалить*/
+        }
     }
     &__item {
         padding: 25px 35px 35px 30px;
@@ -469,13 +563,22 @@
         margin-bottom: 15px;
         @extend %dmsans-500px;
     }
-    &__text {
+    &__price {
         color: #a3bbc8;
+    }
+    &__text {
+        display: none;
     }
     &__item:hover {
         .week-products__list {
             transform: translateY(0);
         }
+    }
+    &__box {
+        display: none;
+    }
+    &__star {
+        display: none;
     }
 }
 
@@ -1148,7 +1251,8 @@
 }
 
 
-/*
+/*product 1 */
+
 .catalog {
     padding: 0 0 120px;
     &__inner {
@@ -1156,7 +1260,7 @@
     }
     &__filters {
         width: 270px;
-        margin-right: 25px;
+        margin-right: 35px;
         margin-bottom: 60px;
     }
     &-title {
@@ -1175,7 +1279,95 @@
         }
     }
 }
-*/
+
+
+/*выпадающие меню*/
+
+.filter-selects {
+    width: 97.5%;
+    /*!*/
+    padding: 20px 50px 20px 30px;
+    border: 1px solid $grey7;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        padding: 0;
+        border: none;
+        margin-left: 15px;
+        line-height: 0;
+    }
+    .filter-selects__View {
+        color: $grey11;
+    }
+    /*
+    .filter-selects__button .filter-selects__button--active {
+        path {
+            fill: red;
+        }
+    }*/
+    .filter-selects__button--active {
+        path {
+            fill: $red1;
+        }
+    }
+    .jq-selectbox li,
+    .jq-select-multiple li {
+        padding: 10px;
+        margin-left: 40px;
+    }
+}
+
+.jq-selectbox__select {
+    display: flex;
+    transition: color 0.5s;
+    margin-left: 50px;
+    /*
+    height: 32px;
+    padding: 0 45px 0 10px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: $default;
+    text-shadow: none;*/
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 5px;
+    right: -19px;
+    background-image: url('../images/icons/angle-down.svg');
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 5px;
+    margin-left: 25px;
+    border: none;
+    /*не нужно*/
+    /* для подкючения потом удалить
+@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler.theme';*/
+}
+
+.jq-selectbox__select-text {
+    color: $grey11;
+}
+
+.styler {
+    cursor: pointer;
+}
+
+.filter-selects__form {
+    /*
+    display: flex;
+    align-items: center;*/
+}
 
 .catalog-category {
     &__form {
@@ -1379,6 +1571,9 @@
 
 
 /*Product list 2*/
+
+
+/*4*/
 
 .products-content {
     &__item {

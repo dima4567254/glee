@@ -15,6 +15,24 @@
      });
 
 
+     $('input, select').styler();
+
+
+
+     $('.filter-selects__button').on('click', function() {
+         $('.filter-selects__button').removeClass('filter-selects__button--active');
+         $(this).addClass('filter-selects__button--active');
+     });
+
+     $('.button-list').on('click', function() {
+         $('.week-products__content').addClass('week-products__content--list');
+     });
+
+     $('.button-grid').on('click', function() {
+         $('.week-products__content').removeClass('week-products__content--list');
+     });
+
+
      $('.product-tabs__item').on('click', function(e) {
          e.preventDefault();
          $('.product-tabs__item').removeClass('product-tabs__item--active');
@@ -108,7 +126,7 @@
          starWidth: "11px",
      });
 
-     $(".products-content__star").rateYo({
+     $(".week-products__star").rateYo({
          rating: 4,
          starWidth: "18px",
          spacing: "13px"
