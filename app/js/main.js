@@ -19,6 +19,7 @@
 
 
 
+
      $('.filter-selects__button').on('click', function() {
          $('.filter-selects__button').removeClass('filter-selects__button--active');
          $(this).addClass('filter-selects__button--active');
