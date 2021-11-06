@@ -67,30 +67,7 @@ body {
     }
 }
 
-.partners {
-    background-color: #fef7f0;
-    &__list {
-        padding: 90px 0px 85px;
-    }
-    &__peterson {
-        margin-left: 45px;
-    }
-    &__kmn {
-        margin-left: -10px;
-    }
-    &__chainforce {
-        margin-left: 5px;
-    }
-    &__nextg3n {
-        margin-left: 20px;
-    }
-    &__vintage {
-        margin-left: 60px;
-    }
-    .slick-track {
-        left: 10px;
-    }
-}
+
 
 .breadcrumbs {
     background-color: #edf1f4;
@@ -159,4 +136,5 @@ body {
         background-color: #a3bbc8;
         color: #ffffff;
     }
+   
 }
