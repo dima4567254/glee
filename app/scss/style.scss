@@ -232,39 +232,38 @@
         margin-top: 75px;
         /*/*!*/
         /*не знаю можно ли так */
-       
         display: flex;
         justify-content: space-between;
-        background-repeat: no-repeat; position: relative;
+        position: relative;
+
         &::after {
             content: "";
             position: absolute;
             background-image: url("../images/trendy-top/ellipse.png");
+            background-repeat: no-repeat;
             right: 0px;
             top: -100px;
             width: 634px;
             height: 634px;
+            background-size: cover;
         }
         /*
-        background-size: auto;
-        background-repeat: no-repeat;
+        
+        
         background-position: right center;
         background-image: url("../images/trendy-top/ellipse.png");*/
         /*
        */
     }
-    
+
     &__info {
-        padding: 215px 90px 280px 300px; background-color: $ac;
+        padding: 215px 160px 280px 300px;
+        background-color: $ac;
     }
 
 
 
-    &__content {
-
-        
-       
-    }
+    &__content {}
 
     &__text {
         margin-right: 70px;
@@ -337,10 +336,6 @@
         object-fit: contain;
         z-index: 1;
         margin-right: 80px;
-
-
-
-
     }
 
     .slick-dots {
@@ -349,7 +344,6 @@
         bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
-
         li:not(:last-child) {
             margin-right: 11px;
         }
