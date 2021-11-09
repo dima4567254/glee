@@ -1,32 +1,11 @@
 @media (max-width: 1800px) {
-
-    /*
-    .trendy {
-        &__inner {
-            padding: 215px 90px 245px 150px;
-        }
-
-        &__text span {
-            font-size: 60px;
-        }
-
-        &__img {
-            max-width: 500px;
-        }
-
-        &__content {
-            &::after {
-                right: 0px;
-            }
-        }
-    }
-*/
     .trendy {
         &__inner {
             &::after {
                 right: -50px;
                 width: 550px;
                 height: 570px;
+                top: -110px;
             }
         }
 
@@ -49,9 +28,42 @@
             /*height: 230px;*/
         }
     }
+
+    .services {
+        &__item {
+            padding: 45px 65px 40px 120px;
+
+            &::before {
+                left: 50px;
+            }
+        }
+    }
+/*
+    .description-products {
+
+        &__items {
+            justify-content: center;
+
+        }
+
+        &__item {
+            padding: 85px 50px 80px 230px;
+
+        }
+
+        &__img {
+
+            top: 60px;
+            left: 35px;
+            max-width: 233px;
+            height: 275px;
+
+        }
+    }*/
 }
 
 /*--------------------------------------------------------------------------------*/
+/*p115*/
 @media (max-width: 1200px) {
 
 
@@ -163,6 +175,48 @@
             padding: 150px 90px 200px 50px;
         }
     }
+
+    .services {
+        &__item {
+            padding: 45px 20px 40px 95px;
+
+            &::before {
+                left: 20px;
+            }
+        }
+
+        &__items {
+            justify-content: center;
+        }
+    }
+
+    .week-products {
+        /*проверить все отступы в низ*/
+
+
+
+        &__content {
+            justify-content: center;
+        }
+
+        &__list {
+
+            transform: translateY(0%);
+
+        }
+    }
+/**
+    .description-products {
+        &__items {
+            display: block;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 0px;
+            }
+        }
+    }*/
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -190,6 +244,11 @@
             font-size: 45px;
             max-width: 430px;
         }
+    }
+
+    .week-products__item:hover .week-products__list {
+
+        transform: translateY(400%);
     }
 }
 
@@ -311,5 +370,27 @@
         &__link {
             margin-bottom: 20px;
         }
+    }
+
+    /*проверить потом все отступы в низ*/
+    .services {
+        &__item {
+            padding: 20px 20px 20px 85px;
+
+            &::before {
+                left: 10px;
+            }
+        }
+
+
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .filters {
+        overflow: scroll;
+        margin-bottom: 20px;
     }
 }

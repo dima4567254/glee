@@ -242,9 +242,9 @@
             background-image: url("../images/trendy-top/ellipse.png");
             background-repeat: no-repeat;
             right: 0px;
-            top: -100px;
+            top: -140px;
             width: 634px;
-            height: 634px;
+            height: 665px;
             background-size: cover;
         }
         /*
@@ -376,6 +376,7 @@
         display: flex;
         justify-content: space-between;
         background-color: #fef7f0;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -477,7 +478,7 @@
     &__content {
         display: flex;
         flex-wrap: wrap;
-        margin-left: -10px;
+       /* margin-left: -10px;*/
 
         &.week-products__content--list {
             margin-left: 0px;
